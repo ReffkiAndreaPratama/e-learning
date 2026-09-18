@@ -3,450 +3,461 @@ import type { QuizQuestion } from '../types'
 export const quizzes: Record<string, QuizQuestion[]> = {
   'pengenalan-python': [
     {
-      id: 'p1', question: 'Python adalah bahasa pemrograman yang bersifat...', options: ['Compiled', 'Interpretasi', 'Mesin biner', 'Semantik'],
-      correctIndex: 1, explanation: 'Python menggunakan interpreter yang mengeksekusi kode baris per baris.',
-      codeSnippet: 'print("Hello")'
+      id: 'p1', question: 'Bahasa pemrograman yang dieksekusi baris per baris oleh penerjemah disebut bahasa...', options: ['Terkompilasi', 'Interpretasi', 'Mesin biner', 'Semantik'],
+      correctIndex: 1, explanation: 'Bahasa interpretasi dieksekusi oleh interpreter baris per baris.',
+      codeSnippet: 'tulis("Halo")'
     },
     {
-      id: 'p2', question: 'Siapa yang menciptakan bahasa Python?', options: ['Bill Gates', 'Guido van Rossum', 'James Gosling', 'Dennis Ritchie'],
-      correctIndex: 1, explanation: 'Python dibuat oleh Guido van Rossum pada tahun 1991.'
+      id: 'p2', question: 'Langkah berpikir logis untuk menyelesaikan masalah secara runtut disebut...', options: ['Algoritma', 'Indeks', 'Kompilator', 'Variabel'],
+      correctIndex: 0, explanation: 'Algoritma adalah urutan langkah logis untuk menyelesaikan masalah.'
     },
     {
       id: 'p3', question: 'Apa output dari kode berikut?', options: ['0\n1\n2\n3\n4', '1\n2\n3\n4\n5', '0\n1\n2\n3\n4\n5', '4\n3\n2\n1\n0'],
-      correctIndex: 0, explanation: 'range(5) menghasilkan 0-4.',
-      codeSnippet: 'for i in range(5):\n    print(i)'
+      correctIndex: 0, explanation: 'Perulangan untuk i dari 0 sampai 4 menampilkan 0 sampai 4.',
+      codeSnippet: 'untuk i <- 0 sampai 4\ntulis(i)\nakhiruntuk'
     },
     {
-      id: 'p4', question: 'Komentar di Python ditulis dengan simbol...', options: ['//', '/* */', '#', '<!-- -->'],
-      correctIndex: 2, explanation: 'Komentar Python menggunakan tanda pagar #.'
+      id: 'p4', question: 'Komentar/keterangan pada pseudocode ditulis dengan simbol...', options: ['##', '/* */', '#', '<!-- -->'],
+      correctIndex: 2, explanation: 'Komentar pseudocode menggunakan tanda pagar #.'
     },
     {
-      id: 'p5', question: 'Manakah yang merupakan kegunaan utama Python?', options: ['Pengembangan web', 'Ilmu data dan machine learning', 'Automation dan scripting', 'Semua benar'],
-      correctIndex: 3, explanation: 'Python digunakan di banyak bidang termasuk web, data science, otomasi, dan IoT.'
+      id: 'p5', question: 'Manakah yang merupakan kegunaan utama bahasa pemrograman?', options: ['Pengembangan web', 'Ilmu data dan machine learning', 'Otomasi dan skrip', 'Semua benar'],
+      correctIndex: 3, explanation: 'Pemrograman dipakai di banyak bidang, termasuk web, data, otomasi, dan IoT.'
     },
     {
-      id: 'p6', question: 'Apa output dari print("Python")?', options: ['Python', '"Python"', '[Python]', 'Error'],
-      correctIndex: 0, explanation: 'print() menampilkan isi string tanpa tanda kutip.',
-      codeSnippet: 'print("Python")'
+      id: 'p6', question: 'Apa output dari kode berikut?', options: ['Halo', '"Halo"', '[Halo]', 'Error'],
+      correctIndex: 0, explanation: 'tulis() menampilkan isi string tanpa tanda kutip.',
+      codeSnippet: 'tulis("Halo")'
     },
     {
       id: 'p7', question: 'Apa output dari kode berikut?', options: ['10', '10 20', '20 10', 'Error'],
-      correctIndex: 0, explanation: 'Karena x=y=10, keduanya bernilai 10.',
-      codeSnippet: 'x = y = 10\nprint(x)'
+      correctIndex: 0, explanation: 'y mengambil nilai x yaitu 10, lalu tulis(x) menampilkan 10.',
+      codeSnippet: 'x <- 10\ny <- x\ntulis(x)'
     },
     {
-      id: 'p8', question: 'Python menggunakan... untuk menandai blok kode.', options: ['Kurung {}', 'Indentasi', 'Kata END', 'Tag HTML'],
-      correctIndex: 1, explanation: 'Python menggunakan indentasi (umumnya 4 spasi) untuk blok kode.'
+      id: 'p8', question: 'Akhir dari blok perulangan "untuk" pada pseudocode ditandai kata kunci...', options: ['akhiruntuk', 'akhirjika', 'akhirselama', 'keluar'],
+      correctIndex: 0, explanation: 'Blok perulangan untuk ditutup dengan kata kunci akhiruntuk.'
     },
     {
-      id: 'p9', question: 'Python pertama kali dirilis pada tahun...', options: ['1985', '1991', '2000', '1995'],
-      correctIndex: 1, explanation: 'Guido van Rossum merilis Python pertama pada tahun 1991.'
+      id: 'p9', question: 'Hal pertama yang dilakukan saat akan membuat program untuk memecahkan masalah adalah...', options: ['Menganalisis masalah', 'Menulis kode', 'Menjalankan program', 'Menghapus file'],
+      correctIndex: 0, explanation: 'Analisis masalah dilakukan sebelum menulis kode dan menguji program.'
     },
     {
-      id: 'p10', question: 'Fungsi yang digunakan untuk menampilkan output di Python adalah...', options: ['print()', 'echo()', 'output()', 'console.log()'],
-      correctIndex: 0, explanation: 'print() adalah fungsi output bawaan Python.'
+      id: 'p10', question: 'Fungsi untuk menampilkan output pada pseudocode adalah...', options: ['tulis', 'cetak', 'output', 'show'],
+      correctIndex: 0, explanation: 'tulis() adalah fungsi bawaan untuk menampilkan output ke layar.'
     }
   ],
   'variabel-tipe-data': [
     {
-      id: 'v1', question: 'Manakah nama variabel yang VALID di Python?', options: ['2nama', 'nama-siswa', 'nama_siswa', 'for'],
-      correctIndex: 2, explanation: 'Nama variabel harus dimulai huruf/underscore, tanpa spasi/karakter khusus, dan bukan keyword.'
+      id: 'v1', question: 'Manakah nama variabel yang benar?', options: ['2nama', 'nama-siswa', 'nama_siswa', 'nama siswa'],
+      correctIndex: 2, explanation: 'Nama variabel harus diawali huruf atau underscore, tanpa spasi dan karakter khusus.'
     },
     {
-      id: 'v2', question: 'Apa tipe data dari nilai True?', options: ['int', 'str', 'bool', 'float'],
-      correctIndex: 2, explanation: 'True dan False adalah tipe boolean.'
+      id: 'v2', question: 'Apa tipe data dari nilai benar (benar/salah)?', options: ['int', 'str', 'bool', 'float'],
+      correctIndex: 2, explanation: 'Nilai benar dan salah adalah tipe boolean.'
     },
     {
-      id: 'v3', question: 'Apa output dari kode berikut?', options: ['<class \'str\'>', '<class \'int\'>', '<class \'float\'>', 'Error'],
-      correctIndex: 1, explanation: 'input() menghasilkan string, tapi 20 tanpa kutip adalah integer.',
-      codeSnippet: 'umur = 20\nprint(type(umur))'
+      id: 'v3', question: 'Apa output dari kode berikut?', options: ['20', '"20"', '20.0', 'Error'],
+      correctIndex: 0, explanation: 'tulis() menampilkan nilai variabel umur yaitu 20.',
+      codeSnippet: 'umur <- 20\ntulis(umur)'
     },
     {
       id: 'v4', question: '3.14 adalah contoh tipe data...', options: ['int', 'float', 'str', 'bool'],
       correctIndex: 1, explanation: 'Bilangan dengan desimal termasuk tipe float.'
     },
     {
-      id: 'v5', question: 'Hasil dari int("85") adalah...', options: ['"85"', '85', '85.0', 'Error'],
-      correctIndex: 1, explanation: 'int() mengkonversi string "85" menjadi integer 85.'
+      id: 'v5', question: 'Hasil dari konversi string angka "85" menjadi integer adalah...', options: ['"85"', '85', '85.0', 'Error'],
+      correctIndex: 1, explanation: 'Konversi string angka "85" menghasilkan integer 85.'
     },
     {
-      id: 'v6', question: 'Fungsi untuk mengecek tipe data adalah...', options: ['type()', 'typeof()', 'checktype()', 'datatype()'],
-      correctIndex: 0, explanation: 'Python menggunakan type() untuk mengecek tipe data.'
+      id: 'v6', question: 'Operator yang digunakan untuk menyimpan nilai ke dalam variabel adalah...', options: ['<-', '=>', '->', '::'],
+      correctIndex: 0, explanation: 'Nilai disimpan ke variabel menggunakan operator <-.'
     },
     {
       id: 'v7', question: 'Apa output dari kode berikut?', options: ['HaloBudi', 'Halo Budi', 'Halo\nBudi', 'Error'],
-      correctIndex: 0, explanation: 'String digabungkan dengan + tanpa spasi.',
-      codeSnippet: 'a = "Halo"\nb = "Budi"\nprint(a + b)'
+      correctIndex: 0, explanation: 'Operator + menggabungkan string tanpa spasi: "Halo" + "Budi".',
+      codeSnippet: 'a <- "Halo"\nb <- "Budi"\ntulis(a + b)'
     },
     {
-      id: 'v8', question: 'Nilai None memiliki tipe...', options: ['NoneType', 'null', 'void', 'undefined'],
-      correctIndex: 0, explanation: 'None adalah objek dari tipe NoneType.'
+      id: 'v8', question: 'Nilai kosong (tidak ada nilai) pada pseudocode dinyatakan dengan kata...', options: ['kosong', 'benar', 'salah', 'nol'],
+      correctIndex: 0, explanation: 'Nilai kosong menyatakan variabel yang belum memiliki nilai.'
     },
     {
       id: 'v9', question: 'Apa output dari kode berikut?', options: ['3', '5', '2', 'Error'],
-      correctIndex: 0, explanation: 'len("abc") mengembalikan 3.',
-      codeSnippet: 'nama = "abc"\nprint(len(nama))'
+      correctIndex: 0, explanation: 'panjang("abc") mengembalikan 3.',
+      codeSnippet: 'nama <- "abc"\ntulis(panjang(nama))'
     },
     {
-      id: 'v10', question: 'Apa output dari "Python"[0]?', options: ['P', 'y', '"P"', 'Error'],
-      correctIndex: 0, explanation: 'Index 0 mengambil karakter pertama string.'
+      id: 'v10', question: 'Apa output dari kode berikut?', options: ['P', 'e', 'm', 'Error'],
+      correctIndex: 0, explanation: 'Indeks string dimulai dari 1, jadi kata[1] = "P".',
+      codeSnippet: 'kata <- "Pemrograman"\ntulis(kata[1])'
     }
   ],
   operator: [
     {
-      id: 'o1', question: 'Hasil dari 10 // 3 adalah...', options: ['3.33', '3', '4', '1'],
-      correctIndex: 1, explanation: 'Floor division // membagi lalu membulatkan ke bawah: 10//3 = 3.'
+      id: 'o1', question: 'Hasil dari 10 div 3 adalah...', options: ['3.33', '3', '4', '1'],
+      correctIndex: 1, explanation: 'div membagi lalu membulatkan ke bawah: 10 div 3 = 3.'
     },
     {
-      id: 'o2', question: 'Hasil dari 10 % 3 adalah...', options: ['3', '1', '0', '3.33'],
-      correctIndex: 1, explanation: 'Modulus menghasilkan sisa bagi: 10 % 3 = 1.'
+      id: 'o2', question: 'Hasil dari 10 mod 3 adalah...', options: ['3', '1', '0', '3.33'],
+      correctIndex: 1, explanation: 'mod memberikan sisa bagi: 10 mod 3 = 1.'
     },
     {
-      id: 'o3', question: 'Operator untuk membandingkan "sama dengan" adalah...', options: ['=', '==', '===', '=>'],
-      correctIndex: 1, explanation: 'AAA == membandingkan, satu = untuk assignment.'
+      id: 'o3', question: 'Operator yang digunakan untuk membandingkan kesamaan dua nilai adalah...', options: ['=', '<-', '+', '**'],
+      correctIndex: 0, explanation: 'Untuk membandingkan kesamaan digunakan = (atau ==).'
     },
     {
-      id: 'o4', question: 'Hasil dari True and False adalah...', options: ['True', 'False', 'Error', 'None'],
-      correctIndex: 1, explanation: 'and menghasilkan True hanya jika kedua operand True.'
+      id: 'o4', question: 'Hasil dari benar dan salah adalah...', options: ['Benar', 'Salah', 'Error', 'Kosong'],
+      correctIndex: 1, explanation: 'dan menghasilkan benar hanya jika kedua operand benar.'
     },
     {
-      id: 'o5', question: 'X += 5 sama dengan...', options: ['X = 5', 'X = X + 5', 'X + 5', 'X = 5 + 5'],
-      correctIndex: 1, explanation: 'Augmented assignment += sama dengan X = X + 5.'
+      id: 'o5', question: 'X <- X + 5 berarti...', options: ['X diubah menjadi 5', 'nilai X ditambah 5 lalu disimpan ke X', '5 ditambah 5', 'X selalu 5'],
+      correctIndex: 1, explanation: 'nilai lama X ditambah 5, lalu hasilnya disimpan kembali ke X.'
     },
     {
-      id: 'o6', question: 'Apa output dari print(2 ** 3)?', options: ['6', '8', '9', '23'],
-      correctIndex: 1, explanation: '** adalah operator pangkat: 2 ** 3 = 8.'
+      id: 'o6', question: 'Apa output dari kode berikut?', options: ['6', '8', '9', '23'],
+      correctIndex: 1, explanation: '** adalah operator pangkat: 2 ** 3 = 8.',
+      codeSnippet: 'tulis(2 ** 3)'
     },
     {
-      id: 'o7', question: 'Hasil dari 7 >= 7 adalah...', options: ['7', 'True', 'False', 'Error'],
-      correctIndex: 1, explanation: '>= berarti lebih besar atau sama dengan, 7 >= 7 adalah True.'
+      id: 'o7', question: 'Hasil dari 7 >= 7 adalah...', options: ['7', 'true', 'false', 'Error'],
+      correctIndex: 1, explanation: '>= berarti lebih besar atau sama dengan, jadi 7 >= 7 bernilai true.'
     },
     {
-      id: 'o8', question: 'Apa output dari print(10 > 5 and 5 > 3)?', options: ['True', 'False', 'Error', 'None'],
-      correctIndex: 0, explanation: 'Kedua kondisi True, sehingga True and True = True.'
+      id: 'o8', question: 'Apa output dari kode berikut?', options: ['true', 'false', 'Error', 'null'],
+      correctIndex: 0, explanation: '10 > 5 benar dan 5 > 3 benar, sehingga hasilnya true.',
+      codeSnippet: 'tulis(10 > 5 dan 5 > 3)'
     },
     {
-      id: 'o9', question: 'not True menghasilkan...', options: ['True', 'False', '1', 'None'],
-      correctIndex: 1, explanation: 'not membalik nilai boolean: not True = False.'
+      id: 'o9', question: 'Hasil dari tidak benar (not true) adalah...', options: ['Benar', 'Salah', '1', 'Kosong'],
+      correctIndex: 1, explanation: 'tidak membalik nilai boolean: tidak benar = salah.'
     },
     {
-      id: 'o10', question: 'Hasil dari 15 // 4 adalah...', options: ['3.75', '3', '4', '0'],
-      correctIndex: 1, explanation: '15 // 4 membagi lalu membulatkan ke bawah menjadi 3.'
+      id: 'o10', question: 'Hasil dari 15 div 4 adalah...', options: ['3.75', '3', '4', '0'],
+      correctIndex: 1, explanation: '15 div 4 = 3 karena pembulatan ke bawah.'
     }
   ],
   'input-output': [
     {
-      id: 'i1', question: 'Fungsi untuk menerima input dari pengguna adalah...', options: ['println()', 'input()', 'read()', 'scanf()'],
-      correctIndex: 1, explanation: 'input() digunakan untuk menerima masukan keyboard.'
+      id: 'i1', question: 'Fungsi untuk menerima masukan dari pengguna pada pseudocode adalah...', options: ['tulis', 'cetak', 'baca', 'output'],
+      correctIndex: 2, explanation: 'baca() digunakan untuk menerima masukan dari keyboard.'
     },
     {
-      id: 'i2', question: 'input() selalu mengembalikan nilai bertipe...', options: ['int', 'float', 'str', 'bool'],
-      correctIndex: 2, explanation: 'input() selalu menghasilkan string, perlu konversi untuk angka.'
+      id: 'i2', question: 'baca() selalu mengembalikan nilai bertipe...', options: ['int', 'float', 'str', 'bool'],
+      correctIndex: 2, explanation: 'baca() selalu menghasilkan string, perlu konversi untuk angka.'
     },
     {
-      id: 'i3', question: 'Untuk menerima angka bulat dari input, gunakan...', options: ['str(input())', 'int(input())', 'float(input())', 'bool(input())'],
-      correctIndex: 1, explanation: 'int(input()) mengkonversi input string menjadi integer.'
+      id: 'i3', question: 'Untuk menerima angka bulat dari input, gunakan...', options: ['str(baca("Umur: "))', 'int(baca("Umur: "))', 'float(baca("Umur: "))', 'bool(baca("Umur: "))'],
+      correctIndex: 1, explanation: 'int(baca()) mengubah hasil baca yang berupa string menjadi integer.'
     },
     {
       id: 'i4', question: 'Apa output dari kode berikut?', options: ['A-B-C', 'A B C', 'A-B C', 'ABC'],
-      correctIndex: 0, explanation: 'Parameter sep menentukan pemisah antar nilai.',
-      codeSnippet: 'print("A", "B", "C", sep="-")'
+      correctIndex: 0, explanation: 'Operator + menggabungkan string sehingga membentuk "A-B-C".',
+      codeSnippet: 'tulis("A" + "-" + "B" + "-" + "C")'
     },
     {
-      id: 'i5', question: 'Cara paling modern untuk format output adalah...', options: ['%s', '.format()', 'f-string', 'printf'],
-      correctIndex: 2, explanation: 'f-string (f"...") adalah cara terbaik dan modern di Python 3.6+.'
+      id: 'i5', question: 'Untuk menampilkan nilai variabel di dalam teks output, gunakan operator...', options: ['+ (penggabungan)', '* (perkalian)', '- (pengurangan)', '/ (pembagian)'],
+      correctIndex: 0, explanation: 'Operator + menggabungkan string dengan variabel, contoh tulis("Nama: " + nama).'
     },
     {
-      id: 'i6', question: 'print("Hasil:", end="...") akan mencetak...', options: ['Hasil:...', 'Hasil: \\n', 'Hasil:', 'Hasil ...'],
-      correctIndex: 0, explanation: 'Parameter end menggantikan karakter akhir (bukan ganti baris lagi).'
+      id: 'i6', question: 'Apa output dari kode berikut?', options: ['Hasil: 5', 'Hasil:5', 'Hasil', 'Error'],
+      correctIndex: 0, explanation: 'Beberapa argumen pada tulis() dipisahkan satu spasi: "Hasil: 5".',
+      codeSnippet: 'tulis("Hasil:", 5)'
     },
     {
-      id: 'i7', question: 'Apa output dari print(f"Skor {0.85:.1%}")?', options: ['Skor 0.8%', 'Skor 85.0%', 'Skor 0.9%', 'Skor 85%'],
-      correctIndex: 1, explanation: 'Format .1% mengubah decimal menjadi persen 1 desimal.'
+      id: 'i7', question: 'Apa output dari kode berikut?', options: ['Skor 85', 'Skor85', '85', 'Error'],
+      correctIndex: 0, explanation: 'tulis() menampilkan "Skor 85" sebagai satu baris output.',
+      codeSnippet: 'tulis("Skor" + " 85")'
     },
     {
-      id: 'i8', question: 'Apa output dari kode berikut?', options: ['3.0', '3', "'3'", 'Error'],
-      correctIndex: 0, explanation: 'float(3) menghasilkan 3.0.',
-      codeSnippet: 'print(float(3))'
+      id: 'i8', question: 'Apa output dari kode berikut?', options: ['3', '3.5', '4', 'Error'],
+      correctIndex: 0, explanation: '7 div 2 = 3 karena pembagian dibulatkan ke bawah.',
+      codeSnippet: 'tulis(7 div 2)'
     },
     {
-      id: 'i9', question: 'int("abc") akan menghasilkan...', options: ['0', 'abc', 'Error', 'None'],
-      correctIndex: 2, explanation: 'Konversi string non-numerik ke int menghasilkan ValueError.'
+      id: 'i9', question: 'Apa output dari kode berikut?', options: ['15', '105', '10', 'Error'],
+      correctIndex: 0, explanation: 'int("10") menjadi 10, lalu 10 + 5 = 15.',
+      codeSnippet: 'tulis(int("10") + 5)'
     },
     {
-      id: 'i10', question: 'print("Harga", 5000) di f-string f"Harga Rp{harga:,}" dengan harga=5000 menghasilkan...', options: ['Harga Rp5000', 'Harga Rp5,000', 'Harga Rp5000,', 'Error'],
-      correctIndex: 1, explanation: 'Format :, menambahkan pemisah ribuan.'
+      id: 'i10', question: 'Jika harga <- 50000, hasil dari tulis("Harga: " + harga) adalah...', options: ['Harga: 50000', 'Harga:50000', 'Harga Rp50.000', 'Error'],
+      correctIndex: 0, explanation: 'Operator + menggabungkan teks dengan nilai variabel menjadi "Harga: 50000".'
     }
   ],
   percabangan: [
     {
-      id: 'c1', question: 'Apa output dari kode berikut?', options: ['Lulus', 'Tidak Lulus', 'Lulus\\nTidak Lulus', 'Error'],
-      correctIndex: 0, explanation: 'nilai 85 >= 70 sehingga mencetak "Lulus".',
-      codeSnippet: 'nilai = 85\nif nilai >= 70:\n    print("Lulus")\nelse:\n    print("Tidak Lulus")'
+      id: 'c1', question: 'Apa output dari kode berikut?', options: ['Lulus', 'Tidak Lulus', 'Lulus\nTidak Lulus', 'Error'],
+      correctIndex: 0, explanation: 'nilai 85 >= 70, sehingga mencetak "Lulus".',
+      codeSnippet: 'nilai <- 85\njika nilai >= 70 maka\n    tulis("Lulus")\nselainnya\n    tulis("Tidak Lulus")\nakhirjika'
     },
     {
-      id: 'c2', question: 'Sintaks untuk percabangan lebih dari dua kondisi adalah...', options: ['if / else if', 'if / elif / else', 'switch', 'case'],
-      correctIndex: 1, explanation: 'Python menggunakan elif untuk banyak kondisi.'
+      id: 'c2', question: 'Pada pseudocode, percabangan dengan banyak kondisi biasanya disusun dengan...', options: ['menumpuk blok jika-selainnya', 'menggunakan perintah pilihan ganda', 'switch', 'case'],
+      correctIndex: 0, explanation: 'Kondisi bertingkat dibuat dengan menumpuk blok jika-selainnya secara bersarang.'
     },
     {
-      id: 'c3', question: 'Setelah baris if kondisi:, blok kode harus di...', options: ['diawali tanda {', 'indentasi 4 spasi', 'akhir dengan ;', 'diberi kurung ()'],
-      correctIndex: 1, explanation: 'Python menggunakan indentasi untuk menandai blok kode.'
+      id: 'c3', question: 'Akhir dari blok percabangan pada pseudocode ditandai kata kunci...', options: ['akhirjika', 'selainnya', 'untuk', 'akhiruntuk'],
+      correctIndex: 0, explanation: 'Blok percabangan ditutup dengan kata kunci akhirjika.'
     },
     {
-      id: 'c4', question: 'Jika kondisi if False dan elif False, blok yang dijalankan adalah...', options: ['if', 'elif', 'else', 'semua'],
-      correctIndex: 2, explanation: 'else dijalankan jika semua kondisi sebelumnya False.'
+      id: 'c4', question: 'Jika semua kondisi pada percabangan tidak terpenuhi, blok yang dijalankan adalah...', options: ['selainnya', 'perulangan', 'akhirjika', 'semua blok'],
+      correctIndex: 0, explanation: 'Blok selainnya dijalankan ketika semua kondisi sebelumnya salah.'
     },
     {
       id: 'c5', question: 'Apa output dari kode berikut?', options: ['A', 'B', 'C', 'Error'],
-      correctIndex: 1, explanation: 'nilai 75 < 90, drop ke elif berikutnya. 75 >= 80 salah, 75 >= 70 benar → C.',
-      codeSnippet: 'nilai = 75\nif nilai >= 90:\n    grade = "A"\nelif nilai >= 80:\n    grade = "B"\nelif nilai >= 70:\n    grade = "C"\nelse:\n    grade = "D"\nprint(grade)'
+      correctIndex: 2, explanation: 'nilai 75: kurang dari 90 dan 80, tetapi >= 70, sehingga grade = C.',
+      codeSnippet: 'nilai <- 75\njika nilai >= 90 maka\n    grade <- "A"\nselainnya\n    jika nilai >= 80 maka\n        grade <- "B"\n    selainnya\n        jika nilai >= 70 maka\n            grade <- "C"\n        selainnya\n            grade <- "D"\n        akhirjika\n    akhirjika\nakhirjika\ntulis(grade)'
     },
     {
-      id: 'c6', question: 'Operator yang tepat untuk kondisi "usia >= 17 DAN punya KTP" adalah...', options: ['or', 'and', 'not', 'xor'],
-      correctIndex: 1, explanation: 'and mengharuskan kedua kondisi benar.'
+      id: 'c6', question: 'Operator yang mengharuskan kedua kondisi benar adalah...', options: ['dan', 'atau', 'tidak', 'mod'],
+      correctIndex: 0, explanation: 'dan (and) mengharuskan kedua kondisi bernilai benar.'
     },
     {
-      id: 'c7', question: 'Apa output dari kode berikut?', options: ['True', 'False', 'Error', 'None'],
-      correctIndex: 1, explanation: '5 > 10 False dan tidak perlu cek kedua.',
-      codeSnippet: 'if 5 > 10 and 10 > 5:\n    print(True)\nelse:\n    print(False)'
+      id: 'c7', question: 'Apa output dari kode berikut?', options: ['true', 'false', 'Error', 'null'],
+      correctIndex: 1, explanation: '5 > 10 salah, sehingga hasil keseluruhan false.',
+      codeSnippet: 'jika 5 > 10 dan 10 > 5 maka\n    tulis(true)\nselainnya\n    tulis(false)\nakhirjika'
     },
     {
-      id: 'c8', question: 'Percabangan di dalam percabangan disebut...', options: ['loop', 'nested if', 'recursion', 'switch'],
-      correctIndex: 1, explanation: 'if di dalam if disebut nested if.'
+      id: 'c8', question: 'Percabangan yang berada di dalam percabangan lain disebut percabangan...', options: ['bersarang', 'perulangan', 'rekursi', 'pemilihan ganda'],
+      correctIndex: 0, explanation: 'Percabangan di dalam percabangan disebut bersarang (nested).'
     },
     {
       id: 'c9', question: 'Apa output dari kode berikut?', options: ['dewasa', 'remaja', 'anak', 'Error'],
-      correctIndex: 1, explanation: 'usia 16: bukan >= 18, bukan >= 13? Ya, sehingga "remaja".',
-      codeSnippet: 'usia = 16\nif usia >= 18:\n    print("dewasa")\nelif usia >= 13:\n    print("remaja")\nelse:\n    print("anak")'
+      correctIndex: 1, explanation: 'usia 16: bukan >= 18, tetapi >= 13, sehingga mencetak "remaja".',
+      codeSnippet: 'usia <- 16\njika usia >= 18 maka\n    tulis("dewasa")\nselainnya\n    jika usia >= 13 maka\n        tulis("remaja")\n    selainnya\n        tulis("anak")\n    akhirjika\nakhirjika'
     },
     {
-      id: 'c10', question: 'Berapa blok maksimal yang dieksekusi dalam if-elif-else?', options: ['Semua', 'Satu', 'Dua', 'Nol'],
-      correctIndex: 1, explanation: 'Hanya satu blok yang bisa dijalankan di if-elif-else.'
+      id: 'c10', question: 'Berapa blok maksimal yang dieksekusi dalam satu rangkaian percabangan jika-selainnya?', options: ['Satu blok', 'Semua blok', 'Dua blok', 'Nol blok'],
+      correctIndex: 0, explanation: 'Hanya satu blok yang dieksekusi dalam satu rangkaian percabangan.'
     }
   ],
   perulangan: [
     {
-      id: 'l1', question: 'range(3) menghasilkan...', options: ['1,2,3', '0,1,2', '0,1,2,3', '3'],
-      correctIndex: 1, explanation: 'range(n) menghasilkan 0 sampai n-1.'
+      id: 'l1', question: 'Perulangan untuk i <- 0 sampai 2 menghasilkan nilai i berurutan...', options: ['0, 1, 2', '1, 2, 3', '0, 1, 2, 3', '2'],
+      correctIndex: 0, explanation: 'i berjalan dari 0 sampai 2 (inklusif): 0, 1, 2.'
     },
     {
-      id: 'l2', question: 'Apa output dari kode berikut?', options: ['0 1 2 3 4', '1 2 3 4 5', '0 1 2 3', 'Error'],
-      correctIndex: 0, explanation: 'range(5) menghasilkan 0-4.',
-      codeSnippet: 'for i in range(5):\n    print(i)'
+      id: 'l2', question: 'Apa output dari kode berikut?', options: ['0\n1\n2\n3\n4', '1\n2\n3\n4\n5', '0\n1\n2\n3', 'Error'],
+      correctIndex: 0, explanation: 'Perulangan menampilkan i dari 0 sampai 4.',
+      codeSnippet: 'untuk i <- 0 sampai 4\ntulis(i)\nakhiruntuk'
     },
     {
-      id: 'l3', question: 'range(1, 6, 2) menghasilkan...', options: ['1,2,3,4,5', '1,3,5', '2,4,6', '1,2,3'],
-      correctIndex: 1, explanation: 'Step 2 mulai dari 1: 1, 3, 5.'
+      id: 'l3', question: 'Perulangan untuk i <- 1 sampai 5 langkah 2 menghasilkan...', options: ['1, 2, 3, 4, 5', '1, 3, 5', '2, 4, 6', '1, 2, 3'],
+      correctIndex: 1, explanation: 'Dengan langkah 2 mulai dari 1: 1, 3, 5.'
     },
     {
-      id: 'l4', question: 'Kata kunci untuk menghentikan perulangan adalah...', options: ['stop', 'break', 'halt', 'exit'],
-      correctIndex: 1, explanation: 'break menghentikan perulangan sepenuhnya.'
+      id: 'l4', question: 'Kata kunci untuk menghentikan perulangan pada pseudocode adalah...', options: ['keluar', 'lanjut', 'mulai', 'ulang'],
+      correctIndex: 0, explanation: 'keluar (break) menghentikan perulangan; lanjut hanya melewati iterasi.'
     },
     {
-      id: 'l5', question: 'Kata kunci untuk melewati iterasi saat ini adalah...', options: ['skip', 'continue', 'next', 'pass'],
-      correctIndex: 1, explanation: 'continue langsung menuju iterasi berikutnya.'
+      id: 'l5', question: 'Kata kunci untuk melewati sisa iterasi saat ini adalah...', options: ['lanjut', 'keluar', 'mulai', 'ulang'],
+      correctIndex: 0, explanation: 'lanjut (continue) melewati sisa iterasi dan lanjut ke iterasi berikutnya.'
     },
     {
-      id: 'l6', question: 'Perulangan while akan berjalan selama...', options: ['kondisi True', 'kondisi False', 'selamanya', 'range habis'],
-      correctIndex: 0, explanation: 'while mengulang selama kondisinya True.'
+      id: 'l6', question: 'Perulangan selama akan terus berjalan selama...', options: ['kondisi benar', 'kondisi salah', 'selamanya', 'rentang habis'],
+      correctIndex: 0, explanation: 'Perulangan selama mengulang selama kondisinya benar.'
     },
     {
-      id: 'l7', question: 'Apa output dari kode berikut?', options: ['0,1,2', '1,2,3', '0,1,2,3,4', '3'],
-      correctIndex: 0, explanation: 'x mulai 0, loop while x < 3 mencetak 0, 1, 2 lalu berhenti.',
-      codeSnippet: 'x = 0\nwhile x < 3:\n    print(x)\n    x += 1'
+      id: 'l7', question: 'Apa output dari kode berikut?', options: ['0\n1\n2', '1\n2\n3', '0\n1\n2\n3\n4', '3'],
+      correctIndex: 0, explanation: 'x mulai 0 dan bertambah 1 selama x < 3, menampilkan 0, 1, 2.',
+      codeSnippet: 'x <- 0\nselama x < 3\n    tulis(x)\n    x <- x + 1\nakhirsementara'
     },
     {
-      id: 'l8', question: 'Untuk menghitung 1+2+..+100, perulangan paling tepat adalah...', options: ['for dengan range', 'while dengan 100 iterasi manual', 'keduanya', 'tidak bisa'],
-      correctIndex: 0, explanation: 'for dengan range(1, 101) paling ringkas untuk jumlah iterasi yang diketahui.'
+      id: 'l8', question: 'Untuk menghitung 1+2+3+...+100, perulangan yang paling ringkas adalah...', options: ['untuk i <- 1 sampai 100', 'selama dengan penghitung manual', 'keduanya', 'tidak bisa'],
+      correctIndex: 0, explanation: 'Perulangan untuk ... sampai ... paling ringkas karena jumlah iterasi sudah diketahui.'
     },
     {
-      id: 'l9', question: 'Apa output dari kode berikut?', options: ['0,1,2,3,4', '0,2,4', '1,3,5', '2,4'],
-      correctIndex: 1, explanation: 'Ganjil di continue, genap dicetak.',
-      codeSnippet: 'for i in range(5):\n    if i % 2 != 0:\n        continue\n    print(i)'
+      id: 'l9', question: 'Apa output dari kode berikut?', options: ['0\n1\n2\n3\n4', '0\n2\n4', '1\n3\n5', '2\n4'],
+      correctIndex: 1, explanation: 'i ganjil dilewati oleh lanjut, hanya bilangan genap 0, 2, 4 yang ditampilkan.',
+      codeSnippet: 'untuk i <- 0 sampai 4\n    jika i mod 2 <> 0 maka\n        lanjut\n    akhirjika\n    tulis(i)\nakhiruntuk'
     },
     {
-      id: 'l10', question: 'Jika kondisi while selalu True tanpa update, terjadi...', options: ['error', 'infinite loop', 'percabangan', 'list kosong'],
-      correctIndex: 1, explanation: 'Infinite loop membuat program berjalan tanpa berhenti.'
+      id: 'l10', question: 'Jika kondisi perulangan selama selalu benar tanpa ada perubahan, yang terjadi adalah...', options: ['perulangan tak berujung', 'percabangan', 'perulangan berhenti', 'galat sintaks'],
+      correctIndex: 0, explanation: 'Tanpa perubahan, kondisi tetap benar sehingga perulangan tidak akan pernah berakhir.'
     }
   ],
   fungsi: [
     {
-      id: 'f1', question: 'Kata kunci untuk mendefinisikan fungsi adalah...', options: ['function', 'def', 'func', 'lambda'],
-      correctIndex: 1, explanation: 'Python menggunakan def untuk mendefinisikan fungsi.'
+      id: 'f1', question: 'Kata kunci untuk mendefinisikan fungsi pada pseudocode adalah...', options: ['fungsi', 'macam', 'def', 'lambda'],
+      correctIndex: 0, explanation: 'fungsi digunakan untuk mendefinisikan sebuah fungsi.'
     },
     {
       id: 'f2', question: 'Apa output dari kode berikut?', options: ['8', '5', '3', '15'],
-      correctIndex: 0, explanation: 'tambah(5,3) mengembalikan 5+3=8.',
-      codeSnippet: 'def tambah(a, b):\n    return a + b\n\nprint(tambah(5, 3))'
+      correctIndex: 0, explanation: 'tambah(5, 3) mengembalikan 5 + 3 = 8.',
+      codeSnippet: 'fungsi tambah(a, b)\n    kembalikan a + b\nakhirfungsi\ntulis(tambah(5, 3))'
     },
     {
-      id: 'f3', question: 'Jika fungsi tidak memiliki return, nilai yang dikembalikan adalah...', options: ['0', 'None', 'False', 'Error'],
-      correctIndex: 1, explanation: 'Fungsi tanpa return mengembalikan None.'
+      id: 'f3', question: 'Jika fungsi tidak memiliki perintah kembalikan, nilai baliknya adalah...', options: ['kosong', '0', 'false', 'galat'],
+      correctIndex: 0, explanation: 'Fungsi tanpa perintah kembalikan tidak menghasilkan nilai (kosong).'
     },
     {
-      id: 'f4', question: 'def sapa(nama="Teman"): Jika dipanggil sapa(), output...', options: ['Error', 'Halo Teman', 'Halo', 'Halo None'],
-      correctIndex: 1, explanation: 'Parameter default digunakan jika tidak diisi.',
-      codeSnippet: 'def sapa(nama="Teman"):\n    print("Halo", nama)\n\nsapa()'
+      id: 'f4', question: 'Apa output dari kode berikut?', options: ['Halo Budi', 'Halo', 'Halo Teman', 'Error'],
+      correctIndex: 0, explanation: 'Argumen "Budi" diteruskan ke parameter nama, sehingga tercetak "Halo Budi".',
+      codeSnippet: 'fungsi sapa(nama)\n    tulis("Halo " + nama)\nakhirfungsi\nsapa("Budi")'
     },
     {
-      id: 'f5', question: 'Parameter yang memiliki nilai default disebut...', options: ['positional', 'default parameter', 'keyword', 'arbitrary'],
-      correctIndex: 1, explanation: 'Default parameter punya nilai awal yang bisa diganti.'
+      id: 'f5', question: 'Parameter yang memiliki nilai awal bawaan disebut...', options: ['parameter default', 'parameter posisi', 'parameter kata kunci', 'parameter tak tentu'],
+      correctIndex: 0, explanation: 'Parameter default memiliki nilai awal yang bisa diganti saat dipanggil.'
     },
     {
-      id: 'f6', question: 'Fungsi yang memanggil dirinya sendiri disebut...', options: ['loop', 'recursion', 'iteration', 'lambda'],
-      correctIndex: 1, explanation: 'Rekursi adalah fungsi yang memanggil dirinya sendiri.'
+      id: 'f6', question: 'Fungsi yang memanggil dirinya sendiri disebut...', options: ['rekursi', 'iterasi', 'perulangan', 'lambda'],
+      correctIndex: 0, explanation: 'Rekursi adalah pemanggilan fungsi terhadap dirinya sendiri.'
     },
     {
-      id: 'f7', question: 'Apa output dari kode berikut?', options: ['2', '3', '1', '0'],
-      correctIndex: 0, explanation: 'luas(2) dengan lebar=1: 2*1=2.',
-      codeSnippet: 'def luas(p, l=1):\n    return p*l\n\nprint(luas(2))'
+      id: 'f7', question: 'Apa output dari kode berikut?', options: ['6', '2', '5', 'Error'],
+      correctIndex: 0, explanation: 'luas(2, 3) = 2 × 3 = 6.',
+      codeSnippet: 'fungsi luas(p, l)\n    kembalikan p * l\nakhirfungsi\ntulis(luas(2, 3))'
     },
     {
-      id: 'f8', question: 'Variabel yang didefinisikan di dalam fungsi bersifat...', options: ['global', 'local', 'static', 'global permanent'],
-      correctIndex: 1, explanation: 'Variabel dalam fungsi adalah local, hanya bisa diakses di sana.'
+      id: 'f8', question: 'Variabel yang didefinisikan di dalam fungsi bersifat...', options: ['lokal', 'global', 'statis', 'menyeluruh'],
+      correctIndex: 0, explanation: 'Variabel di dalam fungsi bersifat lokal dan hanya dapat diakses di sana.'
     },
     {
-      id: 'f9', question: 'Apa output dari kode berikut?', options: ['nilai 5', 'nilai 10', 'Error', 'None'],
-      correctIndex: 1, explanation: 'Fungsi memodifikasi nilai global dengan keyword global.',
-      codeSnippet: 'nilai = 10\ndef tampil():\n    print("nilai", nilai)\n\ntampil()'
+      id: 'f9', question: 'Apa output dari kode berikut?', options: ['nilai 10', 'nilai 5', 'nilai', 'Error'],
+      correctIndex: 0, explanation: 'Fungsi membaca variabel nilai di luar fungsi yang bernilai 10.',
+      codeSnippet: 'nilai <- 10\nfungsi tampil()\n    tulis("nilai", nilai)\nakhirfungsi\ntampil()'
     },
     {
-      id: 'f10', question: 'Fungsi yang tidak butuh parameter dan hanya mencetak disebut...', options: ['void function', 'parameterless', 'return function', 'lambda'],
-      correctIndex: 1, explanation: 'Fungsi tanpa parameter disebut parameterless.'
+      id: 'f10', question: 'Kumpulan perintah yang dijalankan tanpa mengembalikan nilai disebut...', options: ['prosedur', 'operator', 'perulangan', 'variabel'],
+      correctIndex: 0, explanation: 'Prosedur menjalankan perintah tanpa menghasilkan nilai balik.'
     }
   ],
   'list-dictionary': [
     {
-      id: 'd1', question: 'List ditulis dengan...', options: ['()', '[]', '{}', '<>'],
-      correctIndex: 1, explanation: 'List menggunakan kurung siku []'
+      id: 'd1', question: 'Struktur data array pada pseudocode ditulis dengan...', options: ['[ ]', '( )', '{ }', '< >'],
+      correctIndex: 0, explanation: 'Array menggunakan kurung siku [ ].'
     },
     {
       id: 'd2', question: 'Apa output dari kode berikut?', options: ['apel', 'mangga', 'jeruk', 'Error'],
-      correctIndex: 0, explanation: 'Index 0 mengambil elemen pertama.',
-      codeSnippet: 'buah = ["apel", "mangga", "jeruk"]\nprint(buah[0])'
+      correctIndex: 0, explanation: 'Indeks 1 mengambil elemen pertama array, yaitu "apel".',
+      codeSnippet: 'buah <- ["apel", "mangga", "jeruk"]\ntulis(buah[1])'
     },
     {
-      id: 'd3', question: 'Method untuk menambah elemen di akhir list adalah...', options: ['add()', 'append()', 'push()', 'insert()'],
-      correctIndex: 1, explanation: 'append() menambah elemen di akhir list.'
+      id: 'd3', question: 'Struktur data yang menyimpan banyak nilai dan diakses menggunakan indeks disebut...', options: ['array', 'dictionary', 'nilai', 'prosedur'],
+      correctIndex: 0, explanation: 'Array menyimpan banyak nilai yang diakses lewat indeks.'
     },
     {
-      id: 'd4', question: 'Apa output dari kode berikut?', options: ['List berisi ["apel", "mangga", "jeruk", "pisang"]', 'pisang', 'Error', 'apel'],
-      correctIndex: 0, explanation: 'append menambah pisang di akhir list.',
-      codeSnippet: 'buah = ["apel", "mangga", "jeruk"]\nbuah.append("pisang")\nprint(buah)'
+      id: 'd4', question: 'Apa output dari kode berikut?', options: ['3', '1', '2', 'Error'],
+      correctIndex: 0, explanation: 'panjang() menghitung jumlah elemen array, yaitu 3.',
+      codeSnippet: 'data <- [10, 20, 30]\ntulis(panjang(data))'
     },
     {
-      id: 'd5', question: 'Dictionary menyimpan data dalam pasangan...', options: ['index-value', 'key-value', 'key-index', 'array'],
-      correctIndex: 1, explanation: 'Dictionary memakai pasangan key-value.'
+      id: 'd5', question: 'Struktur data yang menyimpan pasangan kunci dan nilai disebut...', options: ['kamus', 'array', 'perulangan', 'fungsi'],
+      correctIndex: 0, explanation: 'Kamus menyimpan pasangan kunci-nilai (key-value).'
     },
     {
-      id: 'd6', question: 'Dictionary ditulis dengan kurung...', options: ['()', '[]', '{}', '::'],
-      correctIndex: 2, explanation: 'Dictionary menggunakan kurung kurawal {}.'
+      id: 'd6', question: 'Pada kamus (dictionary), sebuah nilai diambil menggunakan...', options: ['kunci (key)', 'indeks angka', 'perulangan', 'panjang data'],
+      correctIndex: 0, explanation: 'Nilai pada kamus diakses menggunakan kunci (key), bukan indeks.'
     },
     {
-      id: 'd7', question: 'Apa output dari kode berikut?', options: ['Andi', 'Budi', 'Error', 'None'],
-      correctIndex: 0, explanation: 'data["nama"] mengambil value dari key nama.',
-      codeSnippet: 'data = {"nama": "Andi", "umur": 19}\nprint(data["nama"])'
+      id: 'd7', question: 'Apa output dari kode berikut?', options: ['Andi', 'Budi', 'Error', 'null'],
+      correctIndex: 1, explanation: 'Indeks 2 mengambil elemen kedua array, yaitu "Budi".',
+      codeSnippet: 'data <- ["Andi", "Budi"]\ntulis(data[2])'
     },
     {
-      id: 'd8', question: 'Method untuk menghapus elemen list berdasarkan index adalah...', options: ['remove()', 'pop()', 'delete()', 'drop()'],
-      correctIndex: 1, explanation: 'pop(index) menghapus berdasar index, remove(x) berdasar nilai.'
+      id: 'd8', question: 'Mengakses indeks di luar panjang array akan menghasilkan...', options: ['galat', 'nilai pertama', 'nilai kosong', 'benar'],
+      correctIndex: 0, explanation: 'Indeks di luar jangkauan array menghasilkan galat pada interpreter.'
     },
     {
-      id: 'd9', question: 'Data = {"a": 1, "b": 2}. len(Data) adalah...', options: ['2', '1', '4', 'Error'],
-      correctIndex: 0, explanation: 'len() menghitung jumlah pasangan key-value.'
+      id: 'd9', question: 'Jika data <- [1, 2], maka panjang(data) adalah...', options: ['2', '1', '4', 'galat'],
+      correctIndex: 0, explanation: 'Array berisi 2 elemen, sehingga panjang(data) = 2.'
     },
     {
-      id: 'd10', question: 'Untuk mengecek apakah "nama" ada di dictionary d, gunakan...', options: ['d.check("nama")', '"nama" in d', 'd.has("nama")', '"nama" exists'],
-      correctIndex: 1, explanation: 'Operator in mengecek keberadaan key di dictionary.'
+      id: 'd10', question: 'Apa output dari kode berikut?', options: ['[1, 2, 3]', '1 2 3', '123', 'Error'],
+      correctIndex: 0, explanation: 'tulis() menampilkan seluruh isi array dalam kurung siku.',
+      codeSnippet: 'data <- [1, 2, 3]\ntulis(data)'
     }
   ]
 }
 
 export const pretestQuestions: QuizQuestion[] = [
   {
-    id: 'pt1', question: 'Bahasa Python bersifat...', options: ['Compiled', 'Interpretasi', 'Biner', 'Assembly'],
-    correctIndex: 1, explanation: 'Python dieksekusi oleh interpreter baris per baris.'
+    id: 'pt1', question: 'Bahasa pemrograman yang dieksekusi baris per baris oleh interpreter bersifat...', options: ['Terkompilasi', 'Interpretasi', 'Biner', 'Rangkaian mesin'],
+    correctIndex: 1, explanation: 'Interpreter mengeksekusi kode baris per baris tanpa kompilasi sebelumnya.'
   },
   {
-    id: 'pt2', question: 'Apa output dari print(10 // 3)?', options: ['3.33', '3', '4', '1'],
-    correctIndex: 1, explanation: 'Floor division menghasilkan 3.'
+    id: 'pt2', question: 'Apa output dari kode berikut?', options: ['3.33', '3', '4', '1'],
+    correctIndex: 1, explanation: 'div menghasilkan pembagian dengan pembulatan ke bawah: 3.',
+    codeSnippet: 'tulis(10 div 3)'
   },
   {
     id: 'pt3', question: 'Tipe data dari 3.14 adalah...', options: ['int', 'float', 'str', 'decimal'],
     correctIndex: 1, explanation: 'Bilangan desimal adalah float.'
   },
   {
-    id: 'pt4', question: 'Manakah yang VALID sebagai nama variabel?', options: ['2x', 'x-y', 'x_y', 'if'],
-    correctIndex: 2, explanation: 'Nama variabel memakai underscore dan bukan keyword.'
+    id: 'pt4', question: 'Manakah yang VALID sebagai nama variabel?', options: ['2x', 'x-y', 'x_y', 'x y'],
+    correctIndex: 2, explanation: 'Nama variabel memakai underscore dan tanpa spasi atau tanda hubung.'
   },
   {
     id: 'pt5', question: 'Apa output dari kode berikut?', options: ['Lulus', 'Tidak Lulus', 'Error', 'Tidak ada'],
-    correctIndex: 0, explanation: 'nilai 90 >= 70 → Lulus.',
-    codeSnippet: 'nilai = 90\nif nilai >= 70:\n    print("Lulus")\nelse:\n    print("Tidak Lulus")'
+    correctIndex: 0, explanation: 'nilai 90 >= 70, sehingga mencetak "Lulus".',
+    codeSnippet: 'nilai <- 90\njika nilai >= 70 maka\n    tulis("Lulus")\nselainnya\n    tulis("Tidak Lulus")\nakhirjika'
   },
   {
-    id: 'pt6', question: 'range(1, 4) menghasilkan...', options: ['1,2,3,4', '1,2,3', '0,1,2,3', '4'],
-    correctIndex: 1, explanation: 'range(start, stop) tidak termasuk stop: 1,2,3.'
+    id: 'pt6', question: 'Perulangan untuk i <- 1 sampai 3 menghasilkan...', options: ['1, 2, 3, 4', '1, 2, 3', '0, 1, 2, 3', '3'],
+    correctIndex: 1, explanation: 'Nilai i berjalan dari 1 sampai 3: 1, 2, 3.'
   },
   {
-    id: 'pt7', question: 'Fungsi yang menampilkan output adalah...', options: ['input()', 'print()', 'read()', 'show()'],
-    correctIndex: 1, explanation: 'print() menampilkan output ke layar.'
+    id: 'pt7', question: 'Fungsi yang menampilkan output adalah...', options: ['tulis()', 'baca()', 'baca_ulang()', 'simpan()'],
+    correctIndex: 0, explanation: 'tulis() menampilkan output ke layar.'
   },
   {
-    id: 'pt8', question: 'Apa output dari 2 ** 4?', options: ['8', '16', '6', '24'],
-    correctIndex: 1, explanation: '2 pangkat 4 = 16.'
+    id: 'pt8', question: 'Apa output dari kode berikut?', options: ['8', '16', '6', '24'],
+    correctIndex: 1, explanation: '2 pangkat 4 = 16.',
+    codeSnippet: 'tulis(2 ** 4)'
   },
   {
-    id: 'pt9', question: 'Kata kunci untuk menghentikan perulangan adalah...', options: ['stop', 'break', 'exit', 'return'],
-    correctIndex: 1, explanation: 'break menghentikan perulangan.'
+    id: 'pt9', question: 'Kata kunci untuk menghentikan perulangan pada pseudocode adalah...', options: ['keluar', 'lanjut', 'mulai', 'ulang'],
+    correctIndex: 0, explanation: 'keluar menghentikan perulangan sepenuhnya.'
   },
   {
-    id: 'pt10', question: 'data = {"nama": "Budi"}. akses nilainya dengan...', options: ['data[0]', 'data["nama"]', 'data.nama', 'data("nama")'],
-    correctIndex: 1, explanation: 'Dictionary diakses dengan key: data["nama"].'
+    id: 'pt10', question: 'Jika data <- ["Budi", "Andi"], nilai "Budi" diakses dengan...', options: ['data[1]', 'data[0]', 'data.nama', 'data["Budi"]'],
+    correctIndex: 0, explanation: 'Indeks 1 mengambil elemen pertama array, yaitu "Budi".'
   }
 ]
 
 export const posttestQuestions: QuizQuestion[] = [
   {
-    id: 'po1', question: 'def tambah(a,b): return a+b. Output tambah(3,7)?', options: ['37', '10', '7', '11'],
+    id: 'po1', question: 'Fungsi tambah(a, b) mengembalikan a + b. Output dari tambah(3, 7) adalah...', options: ['37', '10', '7', '11'],
     correctIndex: 1, explanation: '3 + 7 = 10.'
   },
   {
-    id: 'po2', question: 'Apa output nya?', options: ['99', '100', '101', 'Error'],
-    correctIndex: 1, explanation: 'for i in range(1,101) menjumlahkan 1..100 = 5050.',
-    codeSnippet: 'total = 0\nfor i in range(1, 101):\n    total += i\nprint(total)'
+    id: 'po2', question: 'Apa output dari kode berikut?', options: ['5050', '100', '101', '1000'],
+    correctIndex: 0, explanation: 'Menjumlahkan 1 sampai 100 menghasilkan 5050.',
+    codeSnippet: 'total <- 0\nuntuk i <- 1 sampai 100\n    total <- total + i\nakhiruntuk\ntulis(total)'
   },
   {
-    id: 'po3', question: 'list.append(x) berfungsi untuk...', options: ['hapus x', 'tambah x di akhir', 'tambah x di awal', 'mengurutkan'],
-    correctIndex: 1, explanation: 'append menambahkan elemen di akhir list.'
+    id: 'po3', question: 'Struktur data yang elemennya diakses menggunakan indeks adalah...', options: ['array', 'kamus', 'perulangan', 'variabel'],
+    correctIndex: 0, explanation: 'Array menyimpan banyak nilai dan diakses lewat indeks.'
   },
   {
     id: 'po4', question: 'Apa output dari kode berikut?', options: ['8', '6', '5', 'Error'],
-    correctIndex: 0, explanation: '5*2-2 = 8.',
-    codeSnippet: 'x = 5\nprint(x * 2 - 2)'
+    correctIndex: 0, explanation: '5 × 2 - 2 = 8.',
+    codeSnippet: 'x <- 5\ntulis(x * 2 - 2)'
   },
   {
-    id: 'po5', question: 'Nested dictionary adalah...', options: ['dict dalam list', 'dict dalam dict', 'list dalam dict', 'array 2D'],
-    correctIndex: 1, explanation: 'Dictionary yang berisi dictionary lain.'
+    id: 'po5', question: 'Array yang berisi array lain di dalamnya disebut...', options: ['array multidimensi', 'array 1 dimensi', 'array kosong', 'string array'],
+    correctIndex: 0, explanation: 'Array di dalam array membentuk array multidimensi.'
   },
   {
-    id: 'po6', question: 'Apa output dari "Python"[1:4]?', options: ['Pyt', 'yth', 'ytho', 'ython'],
-    correctIndex: 1, explanation: 'Slicing index 1 sampai 3: "yth".'
+    id: 'po6', question: 'Apa output dari kode berikut?', options: ['11', '10', '9', 'Error'],
+    correctIndex: 0, explanation: 'panjang("Pemrograman") = 11.',
+    codeSnippet: 'kata <- "Pemrograman"\ntulis(panjang(kata))'
   },
   {
-    id: 'po7', question: 'break digunakan untuk...', options: ['melanjutkan iterasi', 'menghentikan loop', 'membalik nilai', 'membuat fungsi'],
-    correctIndex: 1, explanation: 'break menghentikan perulangan sepenuhnya.'
+    id: 'po7', question: 'keluar digunakan untuk...', options: ['menghentikan perulangan', 'melanjutkan iterasi', 'membalik nilai', 'membuat fungsi'],
+    correctIndex: 0, explanation: 'keluar menghentikan perulangan sepenuhnya.'
   },
   {
-    id: 'po8', question: 'Output dari bool("") adalah...', options: ['True', 'False', 'Error', 'None'],
-    correctIndex: 1, explanation: 'String kosong dikonversi menjadi False.'
+    id: 'po8', question: 'Apa output dari kode berikut?', options: ['true', 'false', '7', 'Error'],
+    correctIndex: 0, explanation: '7 > 3 bernilai benar (true).',
+    codeSnippet: 'tulis(7 > 3)'
   },
   {
-    id: 'po9', question: 'Parameter yang wajib diisi saat memanggil fungsi disebut...', options: ['default', 'positional', 'optional', 'variadic'],
-    correctIndex: 1, explanation: 'Positional parameter harus diisi urut sesuai deklarasi.'
+    id: 'po9', question: 'Parameter yang wajib diisi saat pemanggilan fungsi disebut parameter...', options: ['wajib', 'bawaan', 'opsional', 'acak'],
+    correctIndex: 0, explanation: 'Parameter yang harus diisi pada setiap pemanggilan disebut parameter wajib.'
   },
   {
-    id: 'po10', question: 'Untuk mengurutkan list tanpa mengubah aslinya, gunakan...', options: ['list.sort()', 'sorted(list)', 'list.reverse()', 'sort()'],
-    correctIndex: 1, explanation: 'sorted() mengembalikan salinan terurut tanpa mengubah asli.'
+    id: 'po10', question: 'Proses mencari dan memperbaiki kesalahan pada program disebut...', options: ['debugging', 'compiling', 'designing', 'hosting'],
+    correctIndex: 0, explanation: 'Debugging adalah proses menemukan dan memperbaiki kesalahan (bug) pada program.'
   }
 ]

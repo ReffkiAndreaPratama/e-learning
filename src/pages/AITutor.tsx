@@ -9,7 +9,7 @@ type Tab = 'chat' | 'explainer' | 'generator'
 const quickPrompts = [
   { icon: Lightbulb, label: 'Jelaskan dengan sederhana', text: 'Jelaskan dengan sederhana apa itu variabel' },
   { icon: Puzzle, label: 'Berikan contoh', text: 'Berikan contoh kode percabangan if elif else' },
-  { icon: Bug, label: 'Bantu cari error', text: 'Kode saya error, bagaimana cara debugging di Python?' },
+  { icon: Bug, label: 'Bantu cari error', text: 'Kode saya error, bagaimana cara debug di pseudocode?' },
   { icon: FileText, label: 'Buat latihan', text: 'Berikan latihan soal perulangan' },
   { icon: Search, label: 'Berikan hint', text: 'Berikan hint untuk memahami fungsi' },
 ]
@@ -57,7 +57,7 @@ function AITutor() {
             </div>
             <div>
               <h2 className="font-semibold text-gray-900 dark:text-white leading-none">AI Tutor</h2>
-              <p className="text-xs text-gray-500 mt-1">Online · Tanyakan apa saja tentang Python</p>
+              <p className="text-xs text-gray-500 mt-1">Online · Tanyakan apa saja tentang pemrograman & pseudocode</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -76,7 +76,7 @@ function AITutor() {
                 <Bot className="w-8 h-8 text-purple-600 dark:text-purple-400" />
               </div>
               <p className="font-medium text-gray-700 dark:text-gray-200">Halo, {user?.name}! 👋</p>
-              <p className="text-sm text-gray-500 mt-1 max-w-sm mx-auto">Saya AI Tutor PyLearn. Silakan bertanya tentang konsep Python, minta latihan, atau minta bantuan debugging.</p>
+              <p className="text-sm text-gray-500 mt-1 max-w-sm mx-auto">Saya AI Tutor PseudoLearn. Silakan bertanya tentang konsep pemrograman, minta latihan, atau minta bantuan debugging.</p>
             </div>
           )}
 
@@ -139,7 +139,7 @@ function AITutor() {
                 }
               }}
               rows={2}
-              placeholder="Tanyakan tentang Python..."
+              placeholder="Tanyakan tentang pemrograman..."
               className="flex-1 glass-input resize-none text-sm"
             />
             <button

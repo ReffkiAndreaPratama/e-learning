@@ -72,7 +72,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <BrainCircuit className="w-5 h-5 text-white" />
               </div>
               <div className="min-w-0">
-                <p className="font-bold text-gray-900 dark:text-white leading-none">PyLearn AI</p>
+                <p className="font-bold text-gray-900 dark:text-white leading-none">PseudoLearn AI</p>
                 <p className="text-[11px] text-gray-500 dark:text-gray-400 mt-1">Interactive Learning</p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
             <BrainCircuit className="w-4 h-4 text-white" />
           </div>
-          <span className="font-bold text-gray-900 dark:text-white text-sm">PyLearn AI</span>
+          <span className="font-bold text-gray-900 dark:text-white text-sm">PseudoLearn AI</span>
         </div>
         <button onClick={() => setMobileOpen(true)} className="text-gray-600 dark:text-gray-300">
           <Menu className="w-6 h-6" />
@@ -159,7 +159,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center">
                   <BrainCircuit className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-bold text-gray-900 dark:text-white">PyLearn AI</span>
+                <span className="font-bold text-gray-900 dark:text-white">PseudoLearn AI</span>
               </div>
               <button onClick={() => setMobileOpen(false)} className="text-gray-500">
                 <X className="w-5 h-5" />

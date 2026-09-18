@@ -59,7 +59,7 @@ function Register() {
             <BrainCircuit className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Buat Akun Baru</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Mulai perjalanan belajarmu bersama PyLearn AI</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Mulai perjalanan belajarmu bersama PseudoLearn AI</p>
         </div>
 
         <div className="glass-strong rounded-3xl p-6 sm:p-8">

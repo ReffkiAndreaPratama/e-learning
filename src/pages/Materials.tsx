@@ -10,7 +10,7 @@ function Materials() {
   return (
     <div>
       <PageHeader
-        title="Materi Python"
+        title="Materi Pemrograman"
         subtitle="Alur belajar dari dasar hingga struktur data"
       />
 

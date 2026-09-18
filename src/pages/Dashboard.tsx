@@ -53,13 +53,13 @@ function Dashboard() {
     <div>
       <div className="mb-6">
         <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Selamat datang, {user?.name} 👋</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Lanjutkan pembelajaran Python-mu.</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Lanjutkan pembelajaran pemrograman-mu.</p>
       </div>
 
       {/* Stat cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <StatCard icon={<TrendingUp className="w-5 h-5" />} label="Progress Belajar" value={`${overallProgress()}%`} sub={`${completedMaterialCount}/${materials.length} materi`} tone="indigo" />
-        <StatCard icon={<BookOpen className="w-5 h-5" />} label="Materi Selesai" value={`${completedMaterialCount}/${materials.length}`} sub="Materi Python" tone="blue" />
+        <StatCard icon={<BookOpen className="w-5 h-5" />} label="Materi Selesai" value={`${completedMaterialCount}/${materials.length}`} sub="Materi Pemrograman" tone="blue" />
         <StatCard icon={<Target className="w-5 h-5" />} label="Rata-rata Quiz" value={`${quizMax > 0 ? Math.round(lastQuizScore) : 0}%`} sub="Terakhir dikerjakan" tone="amber" />
         <StatCard icon={<Flame className="w-5 h-5" />} label="Streak Belajar" value={`${streak} hari`} sub="Tetap konsisten!" tone="green" />
       </div>
@@ -107,7 +107,7 @@ function Dashboard() {
           {/* Materials */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h2 className="font-semibold text-gray-900 dark:text-white">Materi Python</h2>
+              <h2 className="font-semibold text-gray-900 dark:text-white">Materi Pemrograman</h2>
               <Link to="/materi" className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">Semua materi →</Link>
             </div>
             <div className="space-y-3">
@@ -161,7 +161,7 @@ function Dashboard() {
                 <p className="text-xs text-indigo-100">Online siap membantu</p>
               </div>
             </div>
-            <p className="text-sm text-indigo-50 leading-relaxed">Masih bingung dengan konsep Python? Tanyakan langsung kepada AI Tutor.</p>
+            <p className="text-sm text-indigo-50 leading-relaxed">Masih bingung dengan konsep pemrograman? Tanyakan langsung kepada AI Tutor.</p>
             <Link
               to={`/ai-tutor`}
               className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-indigo-600 text-sm font-semibold hover:bg-indigo-50"

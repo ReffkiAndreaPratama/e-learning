@@ -20,13 +20,13 @@ const features = [
   {
     icon: BookOpen,
     title: 'Materi Interaktif',
-    desc: 'Materi Python disusun bertahap dengan contoh kode, ilustrasi, dan visualisasi alur.',
+    desc: 'Materi pseudocode & logika pemrograman disusun bertahap dengan contoh kode, ilustrasi, dan visualisasi alur.',
     tone: 'from-blue-500 to-cyan-500 shadow-blue-500/30',
   },
   {
     icon: Terminal,
-    title: 'Python Playground',
-    desc: 'Coba dan jalankan kode Python langsung di browser tanpa perlu install apa pun.',
+    title: 'Pseudo Playground',
+    desc: 'Coba dan jalankan kode pseudocode langsung di browser tanpa perlu install apa pun.',
     tone: 'from-emerald-500 to-green-500 shadow-emerald-500/30',
   },
   {
@@ -62,7 +62,7 @@ function Landing() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-500 shadow-lg shadow-indigo-500/30 flex items-center justify-center">
               <BrainCircuit className="w-5 h-5 text-white" />
             </div>
-            <span className="font-bold text-gray-900 dark:text-white text-lg">PyLearn <span className="text-gradient">AI</span></span>
+            <span className="font-bold text-gray-900 dark:text-white text-lg">PseudoLearn <span className="text-gradient">AI</span></span>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -99,10 +99,10 @@ function Landing() {
               <Zap className="w-3.5 h-3.5" /> Proyek Makul PBK/CAL
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-[1.1]">
-              Belajar Python <span className="text-gradient">Lebih Interaktif</span>
+Belajar Pemrograman <span className="text-gradient">Lebih Interaktif</span>
             </h1>
-            <p className="mt-5 text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
-              Pelajari dasar pemrograman Python melalui materi interaktif, latihan langsung, quiz, dan AI Tutor yang membantu menjelaskan konsep yang belum kamu pahami.
+            <p className="mt-4 text-base sm:text-lg text-gray-500 dark:text-gray-300 max-w-2xl mx-auto">
+              Pelajari dasar pemrograman melalui pseudocode: materi interaktif, latihan langsung, quiz, dan AI Tutor yang membantu menjelaskan konsep yang belum kamu pahami.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -167,7 +167,7 @@ function Landing() {
       <section className="py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Kenapa Belajar dengan PyLearn AI?</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Kenapa Belajar dengan PseudoLearn AI?</h2>
             <p className="text-gray-500 dark:text-gray-400 mt-2">Metode pembelajaran yang aktif, bukan sekadar membaca</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -189,7 +189,7 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Materi yang Dipelajari</h2>
-            <p className="text-gray-500 dark:text-gray-400 mt-2">Dari dasar hingga struktur data Python</p>
+            <p className="text-gray-500 dark:text-gray-400 mt-2">Dari dasar hingga struktur data (array & string)</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {materials.map(m => (
@@ -225,7 +225,7 @@ function Landing() {
           <div className="mt-8 glass-card rounded-2xl p-6 flex items-start gap-4">
             <Users className="w-6 h-6 text-indigo-500 shrink-0 mt-0.5" />
             <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-              Dirancang untuk <strong>mahasiswa S1 Informatika semester awal</strong> yang baru mempelajari dasar pemrograman Python. Cocok untuk belajar mandiri dengan bantuan AI Tutor kapan saja.
+              Dirancang untuk <strong>mahasiswa S1 Informatika semester awal</strong> yang baru mempelajari dasar pemrograman — fokus pada logika melalui notasi pseudocode yang mudah dipahami. Cocok untuk belajar mandiri dengan bantuan AI Tutor kapan saja.
             </p>
           </div>
         </div>
@@ -241,7 +241,7 @@ function Landing() {
             </div>
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl font-bold text-white">Mulai Perjalanan Belajarmu 🚀</h2>
-              <p className="text-indigo-100 mt-3 max-w-xl mx-auto">Bergabunglah sekarang dan pelajari dasar Python dengan cara yang interaktif dan menyenangkan.</p>
+              <p className="text-indigo-100 mt-3 max-w-xl mx-auto">Bergabunglah sekarang dan pelajari dasar pemrograman dengan cara yang interaktif dan menyenangkan.</p>
               <Link to="/register" className="mt-7 inline-flex items-center gap-2 px-9 py-3.5 rounded-xl bg-white text-indigo-600 font-semibold shadow-xl hover:-translate-y-0.5 hover:bg-indigo-50 transition-all duration-200">
                 Mulai Belajar <ArrowRight className="w-4 h-4" />
               </Link>
@@ -257,7 +257,7 @@ function Landing() {
       <footer className="glass-nav py-8 mt-4 dark:bg-gray-950/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            <span className="font-semibold text-gray-900 dark:text-white">PyLearn AI</span> — Pengembangan Media Pembelajaran Interaktif Berbasis Web untuk Memahami Konsep Dasar Pemrograman Python dengan Dukungan AI Tutor.
+            <span className="font-semibold text-gray-900 dark:text-white">PseudoLearn AI</span> — Pengembangan Media Pembelajaran Interaktif Berbasis Web untuk Memahami Konsep Dasar Pemrograman (logika & pseudocode) dengan Dukungan AI Tutor.
           </p>
           <p className="text-xs text-gray-400 mt-2">Proyek akademik • Mata Kuliah PBK/CAL</p>
         </div>

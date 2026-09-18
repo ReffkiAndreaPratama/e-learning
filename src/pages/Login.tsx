@@ -43,7 +43,7 @@ function Login() {
             <BrainCircuit className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Selamat Datang Kembali!</h1>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Masuk untuk melanjutkan pembelajaran Python</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Masuk untuk melanjutkan pembelajaran pemrograman</p>
         </div>
 
         <div className="glass-strong rounded-3xl p-6 sm:p-8">

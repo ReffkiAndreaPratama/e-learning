@@ -133,13 +133,13 @@ function Profile() {
                 <TrendingUp className="w-4 h-4 text-gray-400" />
                 <span className="text-gray-500 w-28 shrink-0">Level</span>
                 <span className="text-gray-900 dark:text-white font-medium">
-                  {overall >= 10 ? '🐍 Python Beginner' : overall >= 40 ? '🐍 Python Explorer' : overall >= 80 ? '🚀 Python Master' : '🌱 Pemula'}
+                  {overall >= 10 ? '💡 Pemula Logika' : overall >= 40 ? '🧩 PseudoExplorer' : overall >= 80 ? '🚀 PseudoMaster' : '🌱 Pemula'}
                 </span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Target className="w-4 h-4 text-gray-400" />
                 <span className="text-gray-500 w-28 shrink-0">Tujuan</span>
-                <span className="text-gray-900 dark:text-white font-medium">Memahami dasar pemrograman Python</span>
+                <span className="text-gray-900 dark:text-white font-medium">Memahami dasar pemrograman & pseudocode</span>
               </div>
             </div>
           </Card>

@@ -9,7 +9,7 @@ const defaultAchievements = [
   { id: 'first-lesson', name: 'First Lesson', description: 'Menyelesaikan materi pertama', icon: '🎯', earned: false },
   { id: 'streak', name: 'Learning Streak', description: 'Belajar 3 hari berturut-turut', icon: '🔥', earned: false },
   { id: 'perfect-quiz', name: 'Perfect Quiz', description: 'Mendapat nilai 100 di quiz', icon: '💯', earned: false },
-  { id: 'python-beginner', name: 'Python Beginner', description: 'Menyelesaikan 4 materi', icon: '🐍', earned: false },
+  { id: 'pseudo-beginner', name: 'PseudoBeginner', description: 'Menyelesaikan 4 materi', icon: '💡', earned: false },
   { id: 'ai-explorer', name: 'AI Explorer', description: 'Bertanya kepada AI Tutor 10 kali', icon: '🤖', earned: false },
   { id: 'playground-master', name: 'Playground Master', description: 'Menjalankan kode di playground', icon: '💻', earned: false },
 ]
@@ -139,7 +139,7 @@ export function AppProvider({ children }: AppProviderProps) {
     const demoUser: User = {
       id: 'demo',
       name: 'Andi Pratama',
-      email: 'demo@pylearn.ai',
+      email: 'demo@pseudolearn.ai',
       createdAt: new Date().toISOString(),
       isDemo: true,
     }
@@ -160,9 +160,9 @@ export function AppProvider({ children }: AppProviderProps) {
       demo.pretestResult = { id: 'pretest-demo', type: 'pretest', score: 60, totalQuestions: 10, correctAnswers: 6, wrongAnswers: 4, answers: [], completedAt: new Date().toISOString() }
       demo.posttestResult = { id: 'posttest-demo', type: 'posttest', score: 85, totalQuestions: 10, correctAnswers: 8, wrongAnswers: 2, answers: [], completedAt: new Date().toISOString() }
       demo.aiMessages = [
-        { id: 'm1', role: 'assistant', content: 'Halo! Saya AI Tutor. Konsep Python apa yang ingin kamu pelajari?', timestamp: new Date().toISOString() },
+        { id: 'm1', role: 'assistant', content: 'Halo! Saya AI Tutor. Konsep pemrograman apa yang ingin kamu pelajari?', timestamp: new Date().toISOString() },
         { id: 'm2', role: 'user', content: 'Apa perbedaan break dan continue?', timestamp: new Date().toISOString() },
-        { id: 'm3', role: 'assistant', content: '**break** menghentikan perulangan sepenuhnya, sedangkan **continue** hanya melewati iterasi saat ini.\n\nContoh:\n```python\nfor i in range(5):\n    if i == 3:\n        break      # berhenti total, hasilnya 0 1 2\n    print(i)\n\nfor i in range(5):\n    if i == 3:\n        continue   # lewati 3, hasilnya 0 1 2 4\n    print(i)\n```', timestamp: new Date().toISOString() },
+        { id: 'm3', role: 'assistant', content: '**keluar** menghentikan perulangan sepenuhnya, sedangkan **lanjut** hanya melewati iterasi saat ini.\n\nContoh:\n```pseudoCode\nuntuk i <- 1 sampai 5\n  jika i = 3 maka\n    keluar      # berhenti total, hasilnya 1 2\n  akhirjika\n  tulis(i)\nakhiruntuk\n\nuntuk i <- 1 sampai 5\n  jika i = 3 maka\n    lanjut      # lewati 3, hasilnya 1 2 4 5\n  akhirjika\n  tulis(i)\nakhiruntuk\n```', timestamp: new Date().toISOString() },
       ]
       demo.aiConversations = [
         { question: 'Apa perbedaan break dan continue?', topic: 'perulangan', timestamp: new Date().toISOString() },
@@ -173,7 +173,7 @@ export function AppProvider({ children }: AppProviderProps) {
       demo.lastStudyDate = new Date().toISOString().split('T')[0]
       demo.achievements = defaultAchievements.map(a => {
         if (a.id === 'first-lesson') return { ...a, earned: true, earnedAt: new Date().toISOString() }
-        if (a.id === 'python-beginner') return { ...a, earned: true, earnedAt: new Date().toISOString() }
+        if (a.id === 'pseudo-beginner') return { ...a, earned: true, earnedAt: new Date().toISOString() }
         if (a.id === 'ai-explorer') return { ...a, earned: true, earnedAt: new Date().toISOString(), progress: 3, maxProgress: 10 }
         return { ...a, progress: a.id === 'streak' ? 4 : a.id === 'perfect-quiz' ? 0 : a.id === 'playground-master' ? 3 : 0, maxProgress: a.id === 'streak' ? 3 : a.id === 'perfect-quiz' ? 1 : a.id === 'playground-master' ? 5 : 4 }
       })
@@ -296,7 +296,7 @@ export function AppProvider({ children }: AppProviderProps) {
 
       const completedCount = materials.filter(m => (next.topicProgress[m.id])?.completed).length
       if (completedCount >= 4) {
-        const pa = outdatedAchievements.find(a => a.id === 'python-beginner')
+        const pa = outdatedAchievements.find(a => a.id === 'pseudo-beginner')
         if (pa) { pa.earned = true; pa.earnedAt = new Date().toISOString(); pa.progress = 4; pa.maxProgress = 4 }
       }
       if (completedCount >= 1) {

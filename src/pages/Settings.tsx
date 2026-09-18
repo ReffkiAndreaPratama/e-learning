@@ -144,7 +144,7 @@ function Settings() {
         <Card className="p-6">
           <h2 className="font-semibold text-gray-900 dark:text-white mb-3">Tentang Aplikasi</h2>
           <p className="text-sm text-gray-500 leading-relaxed">
-            <strong className="text-gray-700 dark:text-gray-300">PyLearn AI</strong> — Pengembangan Media Pembelajaran Interaktif Berbasis Web untuk Memahami Konsep Dasar Pemrograman Python dengan Dukungan AI Tutor.
+            <strong className="text-gray-700 dark:text-gray-300">PseudoLearn AI</strong> — Pengembangan Media Pembelajaran Interaktif Berbasis Web untuk Memahami Konsep Dasar Pemrograman (logika & pseudocode) dengan Dukungan AI Tutor.
           </p>
           <p className="text-xs text-gray-400 mt-3">
             Versi 1.0 · Proyek akademik Mata Kuliah Pengajaran/Pembelajaran Berbantuan Komputer (PBK/CAL)

@@ -1,22 +1,22 @@
 import React from 'react'
 import { Play, RotateCcw, Eraser, FileCode2, CheckCircle2, XCircle } from 'lucide-react'
 import { useApp } from '../context/AppContext'
-import { executePython } from '../lib/pythonRunner'
+import { executeCode } from '../lib/pseudoRunner'
 import { Card, PageHeader } from '../components/ui'
 
-const defaultCode = `nama = "Andi"
-umur = 19
+const defaultCode = `nama <- "Andi"
+umur <- 19
 
-print("Nama:", nama)
-print("Umur:", umur)`
+tulis("Nama:", nama)
+tulis("Umur:", umur)`
 
 const examples = [
-  { label: 'Hello World', code: 'print("Hello World")' },
-  { label: 'Variabel', code: 'nama = "Budi"\nprint("Halo", nama)' },
-  { label: 'Loop', code: 'for i in range(5):\n    print(i)' },
-  { label: 'Percabangan', code: 'nilai = 80\nif nilai >= 75:\n    print("Lulus")\nelse:\n    print("Tidak Lulus")' },
-  { label: 'Fungsi', code: 'def tambah(a, b):\n    return a + b\n\nhasil = tambah(5, 3)\nprint(hasil)' },
-  { label: 'List', code: 'buah = ["apel", "mangga", "jeruk"]\nfor b in buah:\n    print(b)' },
+  { label: 'Hello World', code: 'tulis("Hello World")' },
+  { label: 'Variabel', code: 'nama <- "Budi"\ntulis("Halo ", nama)' },
+  { label: 'Perulangan', code: 'untuk i <- 1 sampai 5\ntulis(i)\nakhiruntuk' },
+  { label: 'Percabangan', code: 'nilai <- 80\njika nilai >= 75 maka\ntulis("Lulus")\nselainnya\ntulis("Tidak Lulus")\nakhirjika' },
+  { label: 'Fungsi', code: 'fungsi tambah(a, b)\nkembalikan a + b\nakhirfungsi\nhasil <- tambah(5, 3)\ntulis(hasil)' },
+  { label: 'Array', code: 'buah <- ["apel", "mangga", "jeruk"]\nuntuk i <- 1 sampai panjang(buah)\ntulis(buah[i])\nakhiruntuk' },
 ]
 
 function Playground() {
@@ -27,7 +27,7 @@ function Playground() {
   const run = () => {
     setResult({ output: '', error: false, running: true })
     setTimeout(() => {
-      const res = executePython(code)
+      const res = executeCode(code)
       setResult({ output: res.output, error: res.error, errorMessage: res.errorMessage, running: false })
       recordPlaygroundRun()
     }, 600)
@@ -71,8 +71,8 @@ function Playground() {
   return (
     <div>
       <PageHeader
-        title="Python Playground"
-        subtitle="Coba dan jalankan kode Python langsung di browser. Tekan Ctrl+Enter untuk menjalankan."
+        title="Pseudo Playground"
+        subtitle="Coba dan jalankan kode pseudocode (bahasa deskriptif) langsung di browser. Tekan Ctrl+Enter untuk menjalankan."
       />
 
       {/* Examples */}
@@ -97,7 +97,7 @@ function Playground() {
               <span className="w-3 h-3 rounded-full bg-red-500" />
               <span className="w-3 h-3 rounded-full bg-yellow-500" />
               <span className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="ml-3 text-xs text-gray-300 font-mono">kode.py</span>
+              <span className="ml-3 text-xs text-gray-300 font-mono">kode.pseudo</span>
             </div>
             <span className="text-xs text-gray-500">{lineCount} baris</span>
           </div>
@@ -108,7 +108,7 @@ function Playground() {
               onKeyDown={handleKeyDown}
               spellCheck={false}
               rows={16}
-              placeholder={`# Tulis kode Python di sini`}
+              placeholder={`# Tulis kode pseudocode di sini\ntulis("Halo dunia!")`}
               className="w-full bg-gray-900 text-gray-100 font-mono text-sm p-4 pl-5 resize-y min-h-[320px] focus:outline-none leading-relaxed"
               style={{ tabSize: 4 }}
             />
@@ -176,11 +176,11 @@ function Playground() {
       <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-gray-500">
         <span className="inline-flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-          Runtime: Python Simulator (aman, berjalan di browser)
+          Runtime: PseudoCode Simulator (aman, berjalan di browser)
         </span>
         <span className="inline-flex items-center gap-1.5">
           <span className="w-2 h-2 rounded-full bg-indigo-500 inline-block"></span>
-          Mendukung: print, variabel, if/elif/else, for/while, def, list, dict
+          Mendukung: tulis, variabel, jika/selainnya, untuk/selama, fungsi, array
         </span>
       </div>
     </div>

@@ -9,7 +9,7 @@ function Pretest() {
       questions={pretestQuestions}
       type="pretest"
       title="Pretest"
-      subtitle="Kerjakan 10 soal dasar Python untuk mengukur kemampuan awalmu sebelum belajar."
+      subtitle="Kerjakan 10 soal dasar pemrograman untuk mengukur kemampuan awalmu sebelum belajar."
     />
   )
 }

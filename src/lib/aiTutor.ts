@@ -11,193 +11,216 @@ const genericRules: TutorRule[] = [
     response: `**Variabel** adalah "wadah" untuk menyimpan data agar bisa digunakan lagi.
 
 Contoh:
-\`\`\`python
-nama = "Andi"    # wadah nama berisi teks
-umur = 19        # wadah umur berisi angka
+\`\`\`pseudoCode
+nama <- "Andi"    # wadah nama berisi teks
+umur <- 19        # wadah umur berisi angka
 \`\`\`
 
 Setelah disimpan, kamu bisa memakai wadah itu kapan saja:
-\`\`\`python
-print(nama)      # Andi
-print(umur)      # 19
+\`\`\`pseudoCode
+tulis(nama)      # Andi
+tulis(umur)      # 19
 \`\`\`
 
-🧠 **Latihan cepat:** Coba buat variabel \`jurusan = "Informatika"\` lalu cetak dengan \`print(jurusan)\`.`
+🧠 **Latihan cepat:** Coba buat variabel \`jurusan <- "Informatika"\` lalu tampilkan dengan \`tulis(jurusan)\`.`
   },
   {
     keywords: ['tipe data', 'type', 'integer', 'float', 'string', 'boolean', 'int', 'str'],
-    response: `Tipe data menentukan **jenis nilai** yang disimpan Python:
+    response: `Tipe data menentukan **jenis nilai** yang disimpan program:
 
-- **int** → bilangan bulat: \`10\`, \`-3\`, \`0\`
+- **integer** → bilangan bulat: \`10\`, \`-3\`, \`0\`
 - **float** → bilangan desimal: \`3.14\`, \`2.5\`
-- **str** → teks: \`"Halo"\`, \`'Python'\`
-- **bool** → \`True\` / \`False\`
-- **None** → tidak ada nilai
+- **string** → teks: \`"Halo"\`, \`'PseudoLearn'\`
+- **boolean** → \`benar\` / \`salah\` (ditampilkan sebagai \`true\` / \`false\`)
+- **kosong** → tidak ada nilai
 
-Cek tipe data dengan \`type()\`:
-\`\`\`python
-print(type(10))      # <class 'int'>
-print(type("halo"))  # <class 'str'>
+Contoh penyimpanan:
+\`\`\`pseudoCode
+angka <- 10          # integer
+desimal <- 3.14      # float
+teks <- "Halo"       # string
+lulus <- benar       # boolean
+belum <- kosong      # kosong
+
+tulis(angka, desimal, teks, lulus)   # 10 3.14 Halo true
 \`\`\`
 
-⚠️ Input dari \`input()\` selalu bertipe **str**. Untuk angka, konversi dengan \`int()\` atau \`float()\`.`
+⚠️ Input dari \`baca()\` selalu bertipe **string**. Untuk angka, konversi dengan \`int()\` atau \`float()\`.`
   },
   {
     keywords: ['operator', 'aritmatika', 'perbandingan', 'logika', '+', '-', '*', '/', 'mod', 'pangkat', 'eksponen'],
-    response: `Operator di Python ada beberapa jenis:
+    response: `Operator dalam pemrograman ada beberapa jenis:
 
 **Aritmatika:**
-\`\`\`python
-5 + 2   # 7 (tambah)
-5 - 2   # 3 (kurang)
-5 * 2   # 10 (kali)
-5 / 2   # 2.5 (bagi)
-5 // 2  # 2 (bagi bulat)
-5 % 2   # 1 (sisa bagi)
-2 ** 3  # 8 (pangkat)
+\`\`\`pseudoCode
+5 + 2     # 7 (tambah)
+5 - 2     # 3 (kurang)
+5 * 2     # 10 (kali)
+5 / 2     # 2.5 (bagi)
+5 div 2   # 2 (bagi bulat)
+5 mod 2   # 1 (sisa bagi)
+2 ** 3    # 8 (pangkat)
 \`\`\`
 
-**Perbandingan** (hasilnya True/False): \`==\`, \`!=\`, \`>\`, \`<\`, \`>=\`, \`<=\`
+**Perbandingan** (hasilnya benar/salah): \`=\`, \`==\`, \`<>\`, \`!=\`, \`>\`, \`<\`, \`>=\`, \`<=\`
 
-**Logika:** \`and\`, \`or\`, \`not\`
+**Logika:** \`dan\`, \`atau\`, \`tidak\`
 
-💡 \`==\` untuk membandingkan, \`=\` untuk menyimpan nilai — sering tertukar!`
+💡 \`=\` untuk membandingkan, sedangkan \`<-\` untuk menyimpan nilai — sering tertukar!`
   },
   {
     keywords: ['input', 'output', 'print', 'scanf', 'console'],
-    response: `Untuk **output** gunakan \`print()\`:
-\`\`\`python
-nama = "Budi"
-print(nama)                    # Budi
-print(f"Nama: {nama}")         # Nama: Budi (f-string)
-print("A", "B", sep="-")       # A-B
+    response: `Untuk **output** gunakan \`tulis()\`:
+\`\`\`pseudoCode
+nama <- "Budi"
+tulis(nama)                   # Budi
+tulis("Nama:", nama)          # Nama: Budi (argumen dipisah satu spasi)
+tulis("Halo " + nama)         # Halo Budi (menggabung teks dengan +)
 \`\`\`
 
-Untuk **input** gunakan \`input()\`:
-\`\`\`python
-nama = input("Masukkan nama: ")
-umur = int(input("Masukkan umur: "))
+Untuk **input** gunakan \`baca()\`:
+\`\`\`pseudoCode
+nama <- baca("Masukkan nama: ")
+umur <- int(baca("Masukkan umur: "))
 \`\`\`
 
-⚠️ \`input()\` selalu memberikan string. Jika mau angka, bungkus dengan \`int()\` atau \`float()\`.`
+⚠️ \`baca()\` selalu memberikan string. Jika mau angka, bungkus dengan \`int()\` atau \`float()\`.`
   },
   {
     keywords: ['if', 'else', 'elif', 'percabangan', 'kondisi', 'keputusan', 'decision'],
     response: `**Percabangan** membuat program bisa mengambil keputusan:
 
-\`\`\`python
-nilai = 80
+\`\`\`pseudoCode
+nilai <- 80
 
-if nilai >= 70:
-    print("Lulus")
-else:
-    print("Tidak Lulus")
+jika nilai >= 70 maka
+  tulis("Lulus")
+selainnya
+  tulis("Tidak Lulus")
+akhirjika
 \`\`\`
 
 Alurnya seperti percabangan jalan:
-- kondisi **True** → jalankan blok if
-- kondisi **False** → jalankan blok else
+- kondisi **benar** → jalankan blok setelah \`maka\`
+- kondisi **salah** → jalankan blok \`selainnya\`
 
-Untuk banyak kondisi, pakai **elif**:
-\`\`\`python
-if nilai >= 90:
-    grade = "A"
-elif nilai >= 80:
-    grade = "B"
-else:
-    grade = "C"
+Untuk banyak kondisi, susun \`jika\` secara berlapis (tidak ada \`elif\`):
+\`\`\`pseudoCode
+jika nilai >= 90 maka
+  grade <- "A"
+selainnya
+  jika nilai >= 80 maka
+    grade <- "B"
+  selainnya
+    grade <- "C"
+  akhirjika
+akhirjika
 \`\`\`
 
-🔑 Gunakan \`and\`/\`or\` untuk menggabungkan kondisi, dan jangan lupa tanda \`:\` setelah kondisi.`
+🔑 Gunakan \`dan\`/\`atau\` untuk menggabungkan kondisi, dan jangan lupa menutup blok dengan \`akhirjika\`.`
   },
   {
     keywords: ['loop', 'perulangan', 'for', 'while', 'range', 'iterasi', 'ulang'],
     response: `Perulangan mengulang kode tanpa menulisnya berkali-kali.
 
-**for** — dipakai saat jumlah pengulangan sudah diketahui:
-\`\`\`python
-for i in range(5):     # 0,1,2,3,4
-    print(i)
+**untuk** — dipakai saat jumlah pengulangan sudah diketahui:
+\`\`\`pseudoCode
+untuk i <- 1 sampai 5
+  tulis(i)          # 1, 2, 3, 4, 5
+akhiruntuk
 
-for buah in ["apel", "mangga"]:
-    print(buah)
+untuk i <- 1 sampai 10 langkah 2
+  tulis(i)          # 1, 3, 5, 7, 9
+akhiruntuk
+
+untuk i <- 10 menurun sampai 1
+  tulis(i)          # 10, 9, ..., 1
+akhiruntuk
 \`\`\`
 
-**while** — dipakai saat pengulangan bergantung kondisi:
-\`\`\`python
-n = 0
-while n < 3:
-    print(n)
-    n += 1        # JANGAN lupa update! 
+**selama** — dipakai saat pengulangan bergantung kondisi:
+\`\`\`pseudoCode
+n <- 0
+selama n < 3
+  tulis(n)
+  n <- n + 1        # JANGAN lupa update!
+akhirsementara
 \`\`\`
 
-- \`break\` → menghentikan loop
-- \`continue\` → melewati iterasi saat ini
+- \`keluar\` → menghentikan perulangan
+- \`lanjut\` → melewati iterasi saat ini
 
-⚠️ Jika lupa mengupdate kondisi di \`while\`, terjadi **infinite loop**.`
+⚠️ Jika lupa mengupdate kondisi di \`selama\`, terjadi **infinite loop**.`
   },
   {
     keywords: ['function', 'fungsi', 'def', 'return', 'parameter', 'argumen'],
     response: `**Fungsi** adalah blok kode yang bisa dipanggil berulang kali.
 
-\`\`\`python
-def tambah(a, b):
-    return a + b
+\`\`\`pseudoCode
+fungsi tambah(a, b)
+  kembalikan a + b
+akhirfungsi
 
-hasil = tambah(5, 3)
-print(hasil)    # 8
+hasil <- tambah(5, 3)
+tulis(hasil)    # 8
 \`\`\`
 
 Bagian-bagiannya:
-1. \`def\` → kata kunci membuat fungsi
+1. \`fungsi\` → kata kunci membuat fungsi
 2. \`nama_fungsi\` → nama yang dipakai untuk memanggil
 3. \`(a, b)\` → parameter (input)
-4. \`return\` → mengembalikan nilai (opsional)
+4. \`kembalikan\` → mengembalikan nilai (opsional)
 
-Fungsi **tanpa** \`return\` mengembalikan \`None\`. Parameter juga bisa punya nilai default:
-\`\`\`python
-def sapa(nama="Teman"):
-    print(f"Halo, {nama}")
+Fungsi **tanpa** \`kembalikan\` tidak menghasilkan nilai (dianggap \`kosong\`). Contoh:
+\`\`\`pseudoCode
+fungsi sapa(nama)
+  tulis("Halo " + nama)
+akhirfungsi
+
+sapa("Budi")    # Halo Budi
 \`\`\``
   },
   {
     keywords: ['list', 'array', 'append', 'pop', 'remove', 'index'],
-    response: `**List** menyimpan banyak nilai dalam satu variabel, memakai kurung siku \`[]\`:
+    response: `**Array** menyimpan banyak nilai dalam satu variabel, memakai kurung siku \`[]\`:
 
-\`\`\`python
-buah = ["apel", "mangga", "jeruk"]
-print(buah[0])       # apel (index mulai 0)
-print(buah[-1])      # jeruk (dari belakang)
-buah.append("nanas") # tambah di akhir
-buah.remove("apel")  # hapus berdasarkan nilai
-print(len(buah))     # jumlah elemen
+\`\`\`pseudoCode
+buah <- ["apel", "mangga", "jeruk"]
+tulis(buah[1])          # apel (indeks mulai 1)
+tulis(buah[3])          # jeruk
+tulis(panjang(buah))    # 3 (jumlah elemen)
 \`\`\`
 
-Method penting: \`append()\`, \`insert()\`, \`remove()\`, \`pop()\`, \`sort()\`, \`reverse()\`
+**Menambah elemen** di akhir dilakukan pada posisi setelah elemen terakhir, secara konsep:
+\`buah[panjang(buah) + 1] <- "nanas"\`
 
-💡 Membaca/menulis dari index di awal list cepat, tapi di tengah bisa lambat untuk list yang sangat besar.`
+Operasi lain yang sering dipakai (secara konsep):
+- **sort** → mengurutkan elemen (mis. dari kecil ke besar atau A–Z)
+- **reverse** → membalik urutan elemen
+- \`sum(data)\` → menjumlahkan seluruh elemen
+- \`min(3, 7, 1)\` → nilai terkecil, \`max(3, 7, 1)\` → nilai terbesar
+
+💡 Indeks array **mulai dari 1**: elemen pertama ada di \`data[1]\`.`
   },
   {
     keywords: ['dictionary', 'dict', 'key', 'value', 'peta', 'map'],
-    response: `**Dictionary** menyimpan pasangan **key → value**, memakai kurung kurawal \`{}\`:
+    response: `**Dictionary** (peta) menyimpan pasangan **kunci → nilai**.
 
-\`\`\`python
-mahasiswa = {
-    "nama": "Budi",
-    "nim": "12345678",
-    "ipk": 3.75
-}
-
-print(mahasiswa["nama"])          # Budi
-print(mahasiswa.get("ipk"))       # 3.75
-mahasiswa["aktif"] = True         # tambah data baru
-del mahasiswa["nim"]              # hapus data
-
-for k, v in mahasiswa.items():
-    print(f"{k}: {v}")
+Bayangkan data mahasiswa seperti ini:
+\`\`\`
+nama  -> "Budi"
+nim   -> "12345678"
+ipk   -> 3.75
 \`\`\`
 
-🔑 Key harus unik. Tidak seperti list, dictionary tidak berurutan (sebelum Python 3.7).`
+Cara membacanya:
+- \`"nama"\` adalah **kunci**, \`"Budi"\` adalah **nilainya**
+- untuk mengambil nilai, kamu menyebut kuncinya: \`mahasiswa["nama"]\` → \`"Budi"\`
+- untuk menambah atau mengubah data, kamu isi lewat kunci: \`mahasiswa["aktif"] <- benar\`
+
+🔑 Setiap kunci harus unik. Berbeda dengan array yang diakses lewat nomor urut, dictionary diakses lewat kuncinya.
+
+*ℹ️ Interpreter pseudocode di aplikasi ini belum mendukung dictionary secara langsung, jadi contoh di atas bersifat konsep.*`
   },
   {
     keywords: ['error', 'bug', 'salah', 'tidak kerja', 'gagal', 'exception', 'syntax'],
@@ -205,41 +228,44 @@ for k, v in mahasiswa.items():
 
 Periksa hal-hal umum ini:
 
-**1. Indentasi** — Python mengharuskan indentasi konsisten:
-\`\`\`python
-if nilai >= 70:
-    print("Lulus")   # ← harus di-indent 4 spasi
+**1. Kata kunci pembuka/penutup blok** — pastikan tiap blok ditutup dengan benar:
+\`\`\`pseudoCode
+jika nilai >= 70 maka
+  tulis("Lulus")
+akhirjika          # jangan lupa menutup blok!
 \`\`\`
 
-**2. Titik dua \`:\`** — jangan lupa setelah if/for/while/def.
+**2. Struktur perintah** — pastikan penulisannya tepat: \`jika ... maka\`, \`selainnya\`, \`akhirjika\`; \`untuk ... sampai\`, \`akhiruntuk\`; \`selama\`, \`akhirsementara\`.
 
 **3. Tanda kutip** — pastikan string dibuka dan ditutup dengan benar.
 
-**4. Konversi tipe** — mengoper string ke fungsi angka menghasilkan error:
-\`\`\`python
-int("abc")   # ValueError!
+**4. Konversi tipe** — mengoper teks yang bukan angka ke fungsi angka menghasilkan error:
+\`\`\`pseudoCode
+int("abc")   # error!
 \`\`\`
 
 Jika kamu tunjukkan kode yang error ke saya (paste kodenya), saya bisa bantu cari masalahnya!`
   },
   {
     keywords: ['fstring', 'f-string', 'format', 'formatting'],
-    response: `**f-string** adalah cara terbaik untuk menggabungkan teks dan variabel (Python 3.6+):
+    response: `Untuk **memformat tampilan teks**, gabungkan teks dan variabel dengan operator \`+\` atau pisahkan dengan koma di \`tulis()\`:
 
-\`\`\`python
-nama = "Andi"
-ipk = 3.78
+\`\`\`pseudoCode
+nama <- "Andi"
+ipk <- 3.78
 
-print(f"Nama: {nama}, IPK: {ipk:.2f}")
-print(f"IPK di atas 3.5? {ipk > 3.5}")
+tulis("Nama:", nama)             # Nama: Andi
+tulis("Halo " + nama)            # Halo Andi
+tulis("IPK:", ipk)               # IPK: 3.78
+tulis("IPK bulat:", bulat(ipk))  # IPK bulat: 4
 \`\`\`
 
-Format yang berguna:
-- \`{harga:,}\` → pemisah ribuan
-- \`{.2f}\` → 2 angka desimal
-- \`{.1%}\` → format persen
+Tips format yang berguna:
+- beberapa argumen di \`tulis()\` otomatis dipisah satu spasi
+- gabungkan menjadi satu string dengan \`+\`
+- bulatkan angka desimal dengan \`bulat()\`
 
-Tanda \`f\` sebelum kutip membuat {} bisa berisi ekspresi/variabel.`
+Dengan cara ini kamu bisa menampilkan teks dan nilai variabel dengan rapi.`
   }
 ]
 
@@ -283,17 +309,17 @@ export async function getTutorResponse(question: string, currentTopic: string): 
   const greetingMatch = q.match(/(halo|hai|hi|hello|pagi|siang|sore|malam)/)
   if (greetingMatch) {
     const t = topicName ? `🎓 Saat ini kamu sedang berada di materi **${topicName}**. ` : ''
-    return `Halo! 👋 Saya AI Tutor PyLearn. ${t}Bertanya apa saja tentang Python ya, misalnya:
+    return `Halo! 👋 Saya AI Tutor PseudoLearn. ${t}Bertanya apa saja tentang pseudocode ya, misalnya:
 - "Apa itu variabel?"
-- "Bagaimana cara pakai if?"
-- "Jelaskan perulangan for"
+- "Bagaimana cara pakai jika-maka?"
+- "Jelaskan perulangan untuk"
 - "Tolong bantu cari error kode saya"
 
 Mari belajar bersama! 🚀`
   }
 
   if (q.includes('terima kasih') || q.includes('makasih') || q.includes('thanks')) {
-    return `Sama-sama! 🎉 Senang bisa membantu. Jangan sungkan bertanya lagi kalau ada konsep Python yang masih membingungkan. Tetap semangat belajarnya! 💪`
+    return `Sama-sama! 🎉 Senang bisa membantu. Jangan sungkan bertanya lagi kalau ada konsep pseudocode yang masih membingungkan. Tetap semangat belajarnya! 💪`
   }
 
   if (q.includes('contoh') || q.includes('contohkan') || (q.includes('beri') && q.includes('contoh'))) {
@@ -302,18 +328,18 @@ Mari belajar bersama! 🚀`
     if (rule) {
       return `Tentu! Berikut contoh untuk topik ini:\n\n${rule.response}`
     }
-    return `Tentu, berikut contoh program Python sederhana:\n\n\`\`\`python\n# Program menyapa dan menampilkan data mahasiswa\nnama = "Andi"\numur = 20\nipk = 3.75\n\nprint(f"Nama: {nama}")\nprint(f"Umur: {umur}")\nprint(f"IPK: {ipk}")\n\ntotal = sum([1, 2, 3])\nprint(f"Total: {total}")\n\`\`\`\n\nCoba jalankan di Playground dan ubah nilainya sendiri! 💻`
+    return `Tentu, berikut contoh program pseudocode sederhana:\n\n\`\`\`pseudoCode\n# Program menyapa dan menampilkan data mahasiswa\nnama <- "Andi"\numur <- 20\nipk <- 3.75\n\ntulis("Nama:", nama)\ntulis("Umur:", umur)\ntulis("IPK:", ipk)\n\ntotal <- sum([1, 2, 3])\ntulis("Total:", total)\n\`\`\`\n\nCoba jalankan di Playground dan ubah nilainya sendiri! 💻`
   }
 
   if (q.includes('hint') || q.includes('petunjuk') || q.includes('clue')) {
     const topic = detectHelpTopic(q)
     switch (topic) {
       case 'percabangan':
-        return `Hint untuk percabangan 💡:\n\n1. Tulis \`if\` lalu kondisi, contoh: \`if nilai >= 70:\`\n2. Gunakan \`elif\` untuk kondisi kedua\n3. Gunakan \`else\` sebagai pilihan terakhir\n4. Jangan lupa tanda \`:\` dan indentasi\n\nCoba pikirkan: kondisi apa yang benar untuk "lulus"? 🐍`
+        return `Hint untuk percabangan 💡:\n\n1. Tulis \`jika\` lalu kondisi, contoh: \`jika nilai >= 70 maka\`\n2. Untuk kondisi kedua, susun \`jika\` berlapis di dalam \`selainnya\`\n3. Gunakan \`selainnya\` sebagai pilihan terakhir\n4. Jangan lupa menutup blok dengan \`akhirjika\`\n\nCoba pikirkan: kondisi apa yang benar untuk "lulus"? 🐍`
       case 'perulangan':
-        return `Hint untuk perulangan 💡:\n\n1. \`for i in range(jumlah):\` mengulang sejumlah kali\n2. \`range(1, 6)\` berarti angka 1 sampai 5\n3. Jangan lupa indentasi di dalam loop\n\nCoba buat loop yang mencetak 1 sampai 10, lalu coba lagi yang mencetak 10 sampai 1. 🔄`
+        return `Hint untuk perulangan 💡:\n\n1. \`untuk i <- 1 sampai jumlah\` mengulang sejumlah kali\n2. \`untuk i <- 1 sampai 5\` berarti angka 1 sampai 5\n3. Jangan lupa menutup blok dengan \`akhiruntuk\`\n\nCoba buat loop yang mencetak 1 sampai 10, lalu coba lagi yang mencetak 10 sampai 1. 🔄`
       default:
-        return `Hint umum 💡:\n\n1. Mulai dari hal paling sederhana yang kamu tahu pasti benar\n2. Uji satu bagian kode dulu sebelum lanjut\n3. Gunakan \`print()\` untuk melihat nilai variabel (debugging)\n\nCeritakan bagian mana yang paling membingungkan—nanti saya bantu lebih spesifik! 🐍`
+        return `Hint umum 💡:\n\n1. Mulai dari hal paling sederhana yang kamu tahu pasti benar\n2. Uji satu bagian kode dulu sebelum lanjut\n3. Gunakan \`tulis()\` untuk melihat nilai variabel (debugging)\n\nCeritakan bagian mana yang paling membingungkan—nanti saya bantu lebih spesifik! 🐍`
     }
   }
 
@@ -324,7 +350,7 @@ Mari belajar bersama! 🚀`
 
 **Soal:** Buat program yang menentukan apakah sebuah angka **positif, negatif, atau nol**.
 
-Gunakan \`if angka > 0:\`, \`elif angka < 0:\`, dan \`else:\`.
+Gunakan \`jika angka > 0 maka\`, \`jika angka < 0 maka\` secara berlapis, dan \`selainnya\`.
 
 Contoh output yang diharapkan:
 \`\`\`
@@ -336,11 +362,11 @@ Kerjakan dulu ya! Kalau sudah, coba juga versi yang menampilkan keterangan "gena
     }
     return `Berikut latihan singkat 📝:
 
-**Soal:** Buat program yang mencetak angka 1 sampai 10 menggunakan \`for\` dan \`range()\`.
+**Soal:** Buat program yang mencetak angka 1 sampai 10 menggunakan \`untuk\`.
 
-Lalu ubah agar hanya mencetak angka **genap** (pakai \`range(0, 11, 2)\`).
+Lalu ubah agar hanya mencetak angka **genap** (pakai \`untuk i <- 1 sampai 10\` dan cek \`i mod 2 = 0\`, atau gunakan \`langkah 2\`).
 
-Kemudian tantangan kedua: gunakan \`while\` untuk mencetak hitung mundur dari 5 sampai 1. 🔄
+Kemudian tantangan kedua: gunakan \`selama\` untuk mencetak hitung mundur dari 5 sampai 1. 🔄
 
 Jangan lupa jalankan di Playground untuk melihat hasilnya!`
   }
@@ -348,14 +374,14 @@ Jangan lupa jalankan di Playground untuk melihat hasilnya!`
   if (q.includes('analogi') || q.includes('ibarat') || q.includes('bayangkan')) {
     return `Oke, mari pakai analogi! 🏠
 
-Bayangkan Python seperti **dapur**:
+Bayangkan pemrograman seperti **dapur**:
 - **Variabel** → wadah/toples untuk menyimpan bahan (data)
-- **Tipe data** → jenis wadah: botol untuk cairan (float), kotak untuk kering (int), kertas untuk label (str)
-- **if/else** → seperti memilih: "Jika beras tersisa, masak nasi; jika tidak, beli dulu"
-- **for** → seperti memasang 10 telur di teflon satu per satu (pasti jumlahnya)
-- **while** → seperti menunggu air mendidih: terus cek sampai mendidih
+- **Tipe data** → jenis wadah: botol untuk cairan (float), kotak untuk kering (integer), kertas untuk label (string)
+- **jika/selainnya** → seperti memilih: "Jika beras tersisa, masak nasi; jika tidak, beli dulu"
+- **untuk** → seperti memasang 10 telur di teflon satu per satu (pasti jumlahnya)
+- **selama** → seperti menunggu air mendidih: terus cek sampai mendidih
 - **Fungsi** → resep: sekali ditulis, bisa dipakai untuk masakan apa saja
-- **List** → rak bahan yang disusun berurutan
+- **Array** → rak bahan yang disusun berurutan
 - **Dictionary** → buku resep dengan label nama di setiap resep
 
 Mau analogi lebih detail untuk konsep tertentu?`
@@ -369,7 +395,7 @@ Mau analogi lebih detail untuk konsep tertentu?`
         return `Pertanyaan bagus! Kenapa <b>${topic}</b> penting?\n\n${rule.response}\n\nSemoga menjelaskan alasannya! Kalau masih kurang jelas, ceritakan bagian mana yang membingungkan. 🤔`
       }
     }
-    return `Pertanyaan bagus! 🤔 Untuk memahami alasannya, yuk kita lihat biasanya Python dipakai untuk apa.\n\nPython dipilih karena **sintaksnya sederhana** (mirip bahasa Inggris) sehingga programmer pemula bisa fokus pada logika, bukan memutar kepala memahami sintaks. \`\`\`python\nx = 5\nif x > 3:\n    print("lebih besar")\n\`\`\`\n\nBandingkan dengan bahasa lain yang lebih rumit sintaksnya. Mau saya jelaskan konsep spesifik tertentu?`
+    return `Pertanyaan bagus! 🤔 Untuk memahami alasannya, yuk kita lihat biasanya pseudocode dipakai untuk apa.\n\nPseudocode memakai **bahasa deskriptif** yang mirip bahasa sehari-hari sehingga pemula bisa fokus pada logika, bukan memutar kepala memahami sintaks yang rumit. \`\`\`pseudoCode\nx <- 5\njika x > 3 maka\n  tulis("lebih besar")\nakhirjika\n\`\`\`\n\nBandingkan dengan bahasa pemrograman lain yang sintaksnya lebih rumit. Mau saya jelaskan konsep spesifik tertentu?`
   }
 
   // Specific topic answer
@@ -393,22 +419,22 @@ Mau analogi lebih detail untuk konsep tertentu?`
 
   return `Hmm, saya belum yakin bisa menjawab pertanyaan itu. 🤔
 
-Karena peran saya adalah **AI Tutor Python**, saya paling membantu untuk topik seperti:
+Karena peran saya adalah **AI Tutor pemrograman (pseudocode)**, saya paling membantu untuk topik seperti:
 - Variabel dan tipe data
 - Operator
 - Input/Output
-- Percabangan (if/elif/else)
-- Perulangan (for/while)
+- Percabangan (jika/selainnya)
+- Perulangan (untuk/selama)
 - Fungsi
-- List dan Dictionary
+- Array dan Dictionary
 - Debugging/error
 
 Bisa dicoba pertanyaan contoh berikut:
 - "Jelaskan variabel dengan contoh"
-- "Apa bedanya break dan continue?"
-- "Bagaimana cara pakai dictionary?"
+- "Apa bedanya keluar dan lanjut?"
+- "Bagaimana cara pakai array?"
 
-Kalau kamu bertanya di luar materi Python, saya mohon maaf dan saya arahkan kembali ke materi belajar ya! 😊`
+Kalau kamu bertanya di luar materi pemrograman, saya mohon maaf dan saya arahkan kembali ke materi belajar ya! 😊`
 }
 
 export function generateQuickPrompt(question: string): string {

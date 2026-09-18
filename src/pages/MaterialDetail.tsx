@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 import { materials } from '../data/materials'
-import { executePython } from '../lib/pythonRunner'
+import { executeCode } from '../lib/pseudoRunner'
 import { Card, Badge, ProgressBar, CodeBlock } from '../components/ui'
 
 function MaterialDetail() {
@@ -68,7 +68,7 @@ function MaterialDetail() {
       setPracticeResult({ output: '', error: true })
       return
     }
-    const result = executePython(practiceInput)
+    const result = executeCode(practiceInput)
     setPracticeResult({ output: result.output, error: result.error })
     setPracticeAttempts(a => a + 1)
     if (!result.error && result.output.trim().length > 0) {
@@ -234,8 +234,7 @@ function MaterialDetail() {
                   rows={4}
                   spellCheck={false}
                   className="w-full px-3 py-2.5 rounded-xl bg-gray-900 text-gray-100 font-mono text-sm resize-y focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  placeholder="nama = 'Budi'
-print(f'Halo, {nama}!')"
+                  placeholder={'nama <- "Budi"\ntulis("Halo, ", nama)'}
                 />
                 <div className="flex items-center gap-2 mt-2">
                   <button onClick={handlePracticeRun} className="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700">

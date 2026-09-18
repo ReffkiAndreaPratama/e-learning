@@ -4,134 +4,146 @@ export const materials: Topic[] = [
   {
     id: 'pengenalan-python',
     number: 1,
-    title: 'Pengenalan Python',
-    description: 'Memahami apa itu Python, karakteristik Python, dan struktur program sederhana.',
+    title: 'Pengenalan Pemrograman',
+    description: 'Memahami apa itu pemrograman, karakteristik bahasa pemrograman, dan struktur program sederhana.',
     difficulty: 'Beginner',
     estimatedMinutes: 10,
-    icon: '🐍',
+    icon: '💻',
     subTopics: [
       {
         id: 'apa-itu-python',
-        title: 'Apa itu Python?',
-        content: `Python adalah bahasa pemrograman tingkat tinggi yang dirancang oleh Guido van Rossum pada tahun 1991. Python dikenal karena kesederhanaan sintaksnya sehingga mudah dipelajari, terutama bagi pemula.
+        title: 'Apa itu Pemrograman?',
+        content: `Pemrograman adalah proses menulis serangkaian instruksi yang dapat dipahami dan dieksekusi oleh komputer untuk menyelesaikan suatu masalah.
 
-Python banyak digunakan dalam:
-- Pengembangan web (Django, Flask)
-- Ilmu data dan machine learning (NumPy, Pandas, TensorFlow)
-- Otomasi dan scripting
-- Game development (Pygame)
-- Internet of Things (IoT)
+Sebelum menulis kode, kita merancang **algoritma**, yaitu langkah-langkah logis yang tersusun berurutan untuk mencapai tujuan tertentu. Contoh sederhana: menentukan bilangan terbesar dari dua bilangan.
 
-Python menggunakan pendekatan interpretasi, artinya kode dieksekusi baris per baris tanpa perlu dikompilasi terlebih dahulu.`,
-        codeExample: `# Program pertama Python
-print("Hello World!")
-print("Selamat datang di PyLearn AI!")
-print("Mari belajar Python bersama.")`,
-        output: `Hello World!
-Selamat datang di PyLearn AI!
-Mari belajar Python bersama.`
+Konsep penting:
+- **Algoritma** — langkah berpikir yang belum berbentuk kode.
+- **Bahasa pemrograman** — alat untuk menuliskan algoritma agar bisa dieksekusi komputer.
+- **Kode sumber** — teks program yang ditulis manusia.
+
+Bahasa pemrograman dieksekusi dengan dua cara utama:
+1. **Kompilasi** — seluruh kode sumber diterjemahkan menjadi program (kode mesin) sekaligus sebelum dijalankan.
+2. **Interpretasi** — kode dieksekusi baris per baris oleh penerjemah (interpreter), tanpa perlu diubah seluruhnya terlebih dahulu.
+
+Kedua pendekatan sama-sama bertujuan menerjemahkan instruksi menjadi tindakan nyata oleh komputer.`,
+        codeExample: `# Algoritma: menentukan bilangan terbesar
+# dari dua bilangan
+a <- 8
+b <- 3
+
+jika a > b maka
+  terbesar <- a
+selainnya
+  terbesar <- b
+akhirjika
+
+tulis("Bilangan terbesar:", terbesar)`,
+        output: `Bilangan terbesar: 8`
       },
       {
         id: 'karakteristik-python',
-        title: 'Karakteristik Python',
-        content: `Python memiliki beberapa karakteristik unggul:
+        title: 'Karakteristik Bahasa Pemrograman',
+        content: `Setiap bahasa pemrograman memiliki karakteristik yang memengaruhi cara kita menulis dan menjalankan program.
 
-1. **Sederhana** - Sintaks Python mirip dengan bahasa Inggris sehingga mudah dibaca dan ditulis.
+1. **Sederhana** — Sintaks yang mirip bahasa sehari-hari membuat kode mudah dibaca dan ditulis.
 
-2. **Interpretasi** - Kode Python dieksekusi langsung tanpa kompilasi, memudahkan debugging.
+2. **Interpretasi / kompilasi** — Bahasa interpretasi dieksekusi langsung baris per baris; bahasa kompilasi diterjemahkan seluruhnya sebelum dijalankan.
 
-3. **Dinamis** - Tipe data ditentukan secara otomatis saat runtime, tidak perlu deklarasi tipe.
+3. **Dinamis** — Tipe data ditentukan otomatis saat program berjalan, tidak perlu dideklarasikan secara eksplisit.
 
-4. **Multi-paradigma** - Mendukung OOP, procedural, dan functional programming.
+4. **Multi-paradigma** — Mendukung gaya prosedural, berorientasi objek, maupun fungsional.
 
-5. **Open Source** - Python gratis dan memiliki komunitas besar di seluruh dunia.
+5. **Terbuka dan gratis** — Banyak bahasa bersifat terbuka (open source) dengan komunitas besar.
 
-6. **Portable** - Kode Python bisa dijalankan di berbagai platform (Windows, Linux, macOS) tanpa perubahan.`,
-        codeExample: `# Python bersifat dinamis
-nama = "Budi"      # string
-umur = 20           # integer
-tinggi = 170.5      # float
-mahasiswa = True    # boolean
+6. **Portabel** — Program yang sama dapat dijalankan di berbagai sistem operasi.
 
-# Tipe data berubah otomatis
-x = 10
-print(type(x))     # <class 'int'>
-x = "sekarang string"
-print(type(x))     # <class 'str'>`,
-        output: `<class 'int'>
-<class 'str'>`
+Karakteristik ini menentukan kapan suatu bahasa cocok dipakai untuk kebutuhan tertentu.`,
+        codeExample: `# Pendekatan dinamis: tipe mengikuti nilai
+nama <- "Budi"        # teks
+umur <- 20            # bilangan bulat
+tinggi <- 170.5       # bilangan desimal
+aktif <- benar        # boolean
+
+# Nilai dapat berganti tipe saat program berjalan
+x <- 10
+tulis("Nilai x:", x)
+x <- "sekarang teks"
+tulis("Nilai x:", x)`,
+        output: `Nilai x: 10
+Nilai x: sekarang teks`
       },
       {
         id: 'struktur-program',
-        title: 'Struktur Program Python',
-        content: `Program Python tersusun dari baris-baris kode yang dieksekusi dari atas ke bawah. Python menggunakan indentasi (spasi) untuk menandai blok kode, bukan kurung seperti bahasa lain.
+        title: 'Struktur Dasar Program',
+        content: `Sebuah program disusun dari baris-baris kode yang dieksekusi dari atas ke bawah. Banyak bahasa pemrograman menggunakan indentasi (spasi di awal baris) untuk menandai blok kode tertentu.
 
-Struktur dasar program Python:
+Struktur dasar sebuah program:
 
-1. **Komentar** - Catatan yang tidak dieksekusi
-2. **Statement** - Pernyataan/perintah yang dieksekusi
-3. **Indentasi** - Penanda blok kode (4 spasi standar)
+1. **Komentar** — Catatan untuk pembaca manusia, tidak dieksekusi. Ditulis dengan tanda \`#\` di awal baris.
+2. **Statement** — Perintah/instruksi yang benar-benar dieksekusi.
+3. **Indentasi** — Penanda blok kode di dalam struktur seperti percabangan dan perulangan.
 
-Komentar ditulis dengan tanda \`#\` di awal baris. Komentar hanya untuk pembaca manusia dan dilewat oleh interpreter.`,
+Komentar hanya membantu manusia memahami kode; interpreter akan mengabaikannya.`,
         codeExample: `# Ini komentar - tidak dieksekusi
 
 # Program menghitung luas persegi panjang
-panjang = 10
-lebar = 5
+panjang <- 10
+lebar <- 5
 
 # Rumus luas
-luas = panjang * lebar
+luas <- panjang * lebar
 
-print("Panjang:", panjang)
-print("Lebar:", lebar)
-print("Luas:", luas)`,
+tulis("Panjang:", panjang)
+tulis("Lebar:", lebar)
+tulis("Luas:", luas)`,
         output: `Panjang: 10
 Lebar: 5
 Luas: 50`
       },
       {
         id: 'fungsi-print',
-        title: 'Fungsi print()',
-        content: `Fungsi \`print()\` digunakan untuk menampilkan output ke layar. Ini adalah fungsi pertama yang harus dikuasai.
+        title: 'Menampilkan Output (tulis)',
+        content: `Fungsi \`tulis()\` digunakan untuk menampilkan output ke layar. Ini adalah fungsi pertama yang harus dikuasai.
 
-Beberapa cara menggunakan print():
+Beberapa cara menggunakan tulis():
 
-1. **Teks biasa** - \`print("Hello")\`
-2. **Variabel** - \`print(nama)\`
-3. **Gabungan** - \`print("Nama:", nama)\`
-4. **F-string** - \`print(f"Halo {nama}")\` (Python 3.6+)
-5. **Parameter end** - Mengganti akhiran baris (default \`\\n\`)
-6. **Parameter sep** - Mengganti pemisah (default spasi)`,
+1. **Teks biasa** — \`tulis("Halo")\`
+2. **Variabel** — \`tulis(nama)\`
+3. **Banyak argumen** — \`tulis("Nama:", nama)\` menghasilkan \`Nama: Budi\`
+4. **Konkatenasi** — \`tulis("Halo " + nama)\`
+
+Setiap pemanggilan \`tulis()\` mencetak satu baris (diakhiri baris baru). Nilai yang dipisah koma dalam satu pemanggilan dicetak dengan satu spasi di antaranya.
+
+Teks ditulis di dalam tanda kutip, sedangkan variabel ditulis tanpa tanda kutip.`,
         codeExample: `# Teks biasa
-print("Hello World!")
+tulis("Halo Dunia!")
 
-# Print dengan variabel
-nama = "Andi"
-umur = 19
-print("Nama:", nama)
-print("Umur:", umur)
+# Teks dengan variabel
+nama <- "Andi"
+umur <- 19
+tulis("Nama:", nama)
+tulis("Umur:", umur)
 
-# F-string (cara modern)
-print(f"Nama saya {nama}, umur {umur} tahun")
+# Konkatenasi teks dan variabel
+tulis("Nama saya " + nama + ", umur " + str(umur) + " tahun")
 
-# Parameter end dan sep
-print("A", "B", "C", sep="-")
-print("Tanpa", "ganti", "baris", end="...")`,
-        output: `Hello World!
+# Penggabungan dengan pemisah (sep)
+tulis("A", "B", "C", sep="-")`,
+        output: `Halo Dunia!
 Nama: Andi
 Umur: 19
 Nama saya Andi, umur 19 tahun
-A-B-C
-Tanpa ganti baris...`
+A-B-C`
       }
     ],
-    summary: 'Python adalah bahasa pemrograman sederhana, interpretasi, dan dinamis. Gunakan print() untuk menampilkan output. Python menggunakan indentasi untuk struktur kode.'
+    summary: 'Algoritma adalah langkah logis untuk menyelesaikan masalah. Bahasa pemrograman menuliskan algoritma menjadi kode yang dieksekusi komputer (interpretasi atau kompilasi). Gunakan tulis() untuk menampilkan output.'
   },
   {
     id: 'variabel-tipe-data',
     number: 2,
     title: 'Variabel dan Tipe Data',
-    description: 'Memahami cara mendeklarasikan variabel dan berbagai tipe data dasar di Python.',
+    description: 'Memahami cara mendeklarasikan variabel dan berbagai tipe data dasar.',
     difficulty: 'Beginner',
     estimatedMinutes: 12,
     icon: '📦',
@@ -139,194 +151,166 @@ Tanpa ganti baris...`
       {
         id: 'pengertian-variabel',
         title: 'Pengertian Variabel',
-        content: `Variabel adalah nama yang digunakan untuk menyimpan data di dalam memori komputer. Di Python, Anda tidak perlu mendeklarasikan tipe data secara eksplisit — cukup beri nama dan masukkan nilainya.
+        content: `Variabel adalah nama yang digunakan untuk menyimpan data di dalam memori komputer. Anda tidak perlu menyebutkan tipe data secara eksplisit — cukup beri nama dan masukkan nilainya dengan tanda \`<-\`.
 
-Aturan penamaan variabel di Python:
-1. Harus dimulai dengan huruf atau underscore (_)
-2. Bisa mengandung huruf, angka, dan underscore
+Aturan penamaan variabel:
+1. Harus dimulai dengan huruf atau garis bawah (_)
+2. Boleh mengandung huruf, angka, dan garis bawah
 3. **Tidak boleh** menggunakan spasi atau karakter khusus
-4. **Case-sensitive** — \`nama\` dan \`Nama\` adalah variabel berbeda
-5. Tidak boleh menggunakan keyword Python (if, for, while, dll.)`,
+4. **Berdasarkan huruf besar/kecil** — \`nama\` dan \`Nama\` adalah variabel berbeda
+5. Tidak boleh menggunakan kata kunci bahasa (jika, untuk, selama, dll.)
+
+Contoh: \`nama <- "Siti"\` menyimpan teks, \`ipk <- 3.75\` menyimpan bilangan desimal.`,
         codeExample: `# Pendeklarasian variabel
-nama = "Siti"
-nim = "12345678"
-ipk = 3.75
-aktif = True
+nama <- "Siti"
+nim <- "12345678"
+ipk <- 3.75
+aktif <- benar
 
 # Penamaan yang benar
-nama_mahasiswa = "Budi"
-_nilai = 90
-angkatan2024 = 2024
+nama_mahasiswa <- "Budi"
+_nilai <- 90
+angkatan2024 <- 2024
 
-# Penamaan yang SALAH
-# 2angkatan = 2024  # Error! diawali angka
-# nama siswa = "A"  # Error! ada spasi
-# for = 5           # Error! keyword Python
+# Penamaan yang SALAH (mengakibatkan error)
+# 2angkatan <- 2024   # Error! diawali angka
+# nama siswa <- "A"   # Error! ada spasi
+# untuk <- 5          # Error! kata kunci bahasa
 
-print("Nama:", nama)
-print("NIM:", nim)
-print("IPK:", ipk)
-print("Aktif:", aktif)`,
+tulis("Nama:", nama)
+tulis("NIM:", nim)
+tulis("IPK:", ipk)
+tulis("Aktif:", aktif)`,
         output: `Nama: Siti
 NIM: 12345678
 IPK: 3.75
-Aktif: True`
+Aktif: true`
       },
       {
         id: 'tipe-data',
         title: 'Tipe Data Dasar',
-        content: `Python memiliki beberapa tipe data dasar:
+        content: `Bahasa pemrograman menyediakan beberapa tipe data dasar:
 
-1. **int** (Integer) — Bilangan bulat, tanpa desimal
-   Contoh: 10, -5, 0, 1000
+1. **Integer** — Bilangan bulat, tanpa desimal. Contoh: 10, -5, 0, 1000
 
-2. **float** (Floating Point) — Bilangan desimal
-   Contoh: 3.14, -0.5, 100.0
+2. **Desimal (float)** — Bilangan dengan desimal. Contoh: 3.14, -0.5, 100.0
 
-3. **str** (String) — Teks, ditulis dalam tanda kutip
-   Contoh: "Hello", 'Python', """Multi-line"""
+3. **String** — Teks, ditulis di dalam tanda kutip. Contoh: "Halo", "Belajar"
 
-4. **bool** (Boolean) — Nilai benar atau salah
-   Contoh: True, False
+4. **Boolean** — Nilai benar atau salah. Contoh: benar, salah
 
-5. **None** — Tidak ada nilai
-   Contoh: None
+5. **Kosong (null)** — Tidak ada nilai. Contoh: kosong
 
-Anda bisa mengecek tipe data dengan fungsi \`type()\`.`,
-        codeExample: `# Integer
-umur = 20
-jumlah_mahasiswa = 100
-print("Umur:", umur, "-> Tipe:", type(umur))
+Nilai boolean dicetak sebagai \`true\` (benar) atau \`false\` (salah). Nilai kosong menandai data yang belum diisi.`,
+        codeExample: `# Bilangan bulat
+umur <- 20
+jumlah_mahasiswa <- 100
+tulis("Umur:", umur)
+tulis("Jumlah mahasiswa:", jumlah_mahasiswa)
 
-# Float
-ipk = 3.75
-tinggi = 170.5
-print("IPK:", ipk, "-> Tipe:", type(ipk))
+# Bilangan desimal
+ipk <- 3.75
+tinggi <- 170.5
+tulis("IPK:", ipk)
+tulis("Tinggi:", tinggi)
 
-# String
-nama = "Budi"
-alamat = 'Jl. Merdeka No. 10'
-print("Nama:", nama, "-> Tipe:", type(nama))
+# Teks
+nama <- "Budi"
+tulis("Nama:", nama)
 
 # Boolean
-aktif = True
-lulus = False
-print("Aktif:", aktif, "-> Tipe:", type(aktif))
-
-# None
-nilai = None
-print("Nilai:", nilai, "-> Tipe:", type(nilai))`,
-        output: `Umur: 20 -> Tipe: <class 'int'>
-IPK: 3.75 -> Tipe: <class 'float'>
-Nama: Budi -> Tipe: <class 'str'>
-Aktif: True -> Tipe: <class 'bool'>
-Nilai: None -> Tipe: <class 'NoneType'>`
+aktif <- benar
+lulus <- salah
+tulis("Aktif:", aktif)
+tulis("Lulus:", lulus)`,
+        output: `Umur: 20
+Jumlah mahasiswa: 100
+IPK: 3.75
+Tinggi: 170.5
+Nama: Budi
+Aktif: true
+Lulus: false`
       },
       {
         id: 'konversi-tipe',
         title: 'Konversi Tipe Data',
-        content: `Terkkadang kita perlu mengubah tipe data dari satu ke tipe lain. Proses ini disebut **type casting** atau **type conversion**.
+        content: `Terkadang kita perlu mengubah data dari satu tipe ke tipe lain. Proses ini disebut **konversi tipe** atau **type casting**.
 
 Fungsi konversi:
-- \`int()\` — ke integer
-- \`float()\` — ke float
-- \`str()\` — ke string
-- \`bool()\` — ke boolean
+- \`int(...)\` — mengubah menjadi integer
+- \`float(...)\` — mengubah menjadi float
+- \`str(...)\` — mengubah menjadi string
 
-**Perhatikan:** Tidak semua konversi berhasil. Misalnya, \`int("abc")\` akan menghasilkan error.
+**Perhatikan:** Tidak semua konversi berhasil. Misalnya, \`int("abc")\` akan menghasilkan error karena teks tersebut bukan angka.
 
-Konversi boolean:
-- \`0\`, \`0.0\`, \`""\`, \`None\` → False
-- Selain itu → True`,
-        codeExample: `# String ke Integer
-nilai_str = "85"
-nilai_int = int(nilai_str)
-print("Tipe awal:", type(nilai_str))
-print("Tipe akhir:", type(nilai_int))
-print("Nilai:", nilai_int)
+Aturan konversi boolean umumnya: nilai 0, teks kosong, dan nilai kosong dianggap salah; selain itu dianggap benar.`,
+        codeExample: `# String ke integer
+nilai_teks <- "85"
+nilai_angka <- int(nilai_teks)
+tulis("Nilai:", nilai_angka)
 
-# Integer ke Float
-angka = 10
-desimal = float(angka)
-print(f"{angka} -> {desimal}")
+# Integer ke float
+angka <- 10
+desimal <- float(angka)
+tulis(angka, "->", desimal)
 
-# Angka ke String
-harga = 50000
-harga_str = str(harga)
-print(f"Harga: Rp{harga_str}")
-
-# Konversi ke Boolean
-print(f"bool(0) = {bool(0)}")
-print(f"bool(1) = {bool(1)}")
-print(f"bool('') = {bool('')}")
-print(f"bool('halo') = {bool('halo')}")`,
-        output: `Tipe awal: <class 'str'>
-Tipe akhir: <class 'int'>
-Nilai: 85
-10 -> 10.0
-Harga: Rp50000
-bool(0) = False
-bool(1) = True
-bool('') = False
-bool('halo') = True`
+# Angka ke string
+harga <- 50000
+harga_teks <- str(harga)
+tulis("Harga: Rp" + harga_teks)`,
+        output: `Nilai: 85
+10 -> 10
+Harga: Rp50000`
       },
       {
         id: 'operasi-string',
         title: 'Operasi pada String',
-        content: `String di Python sangat fleksibel. Beberapa operasi yang bisa dilakukan:
+        content: `String sangat fleksibel. Beberapa operasi yang bisa dilakukan:
 
-1. **Konkatenasi** — Menggabungkan string dengan \`+\`
-2. **Pengulangan** — Mengulang string dengan \`*\`
-3. **Indexing** — Mengakses karakter tertentu dengan \`[index]\`
-4. **Slicing** — Mengambil substr \`[awal:akhir]\`
-5. **Method** — Fungsi bawaan seperti \`.upper()\`, \`.lower()\`, \`.strip()\`
+1. **Konkatenasi** — Menggabungkan teks dengan \`+\`
+2. **Indeks** — Mengakses karakter tertentu dengan \`[posisi]\` (indeks dimulai dari 1)
+3. **Panjang** — \`panjang(teks)\` untuk mengetahui jumlah karakter
 
-Index di Python dimulai dari 0. Index negatif dimult dari belakang.`,
+Dalam notasi pseudocode yang dipakai di sini, indeks string dimulai dari 1, sama seperti indeks array. Karakter pada \`teks[1]\` adalah karakter pertama.`,
         codeExample: `# Konkatenasi
-depan = "Hello"
-belakang = "World"
-gabungan = depan + " " + belakang
-print(gabungan)
+depan <- "Halo"
+belakang <- "Dunia"
+gabungan <- depan + " " + belakang
+tulis(gabungan)
 
-# Pengulangan
-print("=" * 30)
-print("Ha" * 3)
+# Panjang teks
+kata <- "Belajar"
+tulis("Panjang kata:", panjang(kata))
 
-# Indexing
-kata = "Python"
-print(f"Karakter pertama: {kata[0]}")
-print(f"Karakter terakhir: {kata[-1]}")
+# Akses karakter pertama dan terakhir
+tulis("Karakter pertama:", kata[1])
+tulis("Karakter terakhir:", kata[panjang(kata)])
 
-# Slicing
-print(f"3 karakter pertama: {kata[:3]}")
-print(f"Sejak index 2: {kata[2:]}")
+# Mengulang teks memakai perulangan untuk
+untuk i <- 1 sampai 3
+  tulis("Ha")
+akhiruntuk
 
-# Method string
-teks = "  Halo Dunia  "
-print(teks.strip())       # Hilangkan spasi
-print(teks.upper())       # Huruf besar
-print(teks.lower())       # Huruf kecil
-print(teks.replace("Dunia", "Python"))`,
-        output: `Hello World
-==============================
-HaHaHa
-Karakter pertama: P
-Karakter terakhir: n
-3 karakter pertama: Pyt
-Sejak index 2: thon
-Halo Dunia
-  HALO DUNIA  
-  halo dunia  
-  Halo Python  `
+# Gabungan variabel dan teks
+nama <- "Budi"
+tulis("Halo, " + nama + "!")`,
+        output: `Halo Dunia
+Panjang kata: 7
+Karakter pertama: B
+Karakter terakhir: r
+Ha
+Ha
+Ha
+Halo, Budi!`
       }
     ],
-    summary: 'Variabel menyimpan data dengan nama tertentu. Tipe dasar: int, float, str, bool, None. Gunakan type() untuk mengecek tipe dan fungsi casting untuk konversi.'
+    summary: 'Variabel menyimpan data dengan nama tertentu memakai tanda <-. Tipe dasar: integer, desimal, string, boolean, dan kosong. Gunakan int(), float(), str() untuk konversi tipe data.'
   },
   {
     id: 'operator',
     number: 3,
     title: 'Operator',
-    description: 'Memahami berbagai jenis operator dalam Python: aritmatika, perbandingan, logika, dan assignment.',
+    description: 'Memahami berbagai jenis operator: aritmatika, perbandingan, logika, dan penugasan.',
     difficulty: 'Beginner',
     estimatedMinutes: 10,
     icon: '🔢',
@@ -341,66 +325,66 @@ Halo Dunia
 | + | Penjumlahan | 5 + 3 | 8 |
 | - | Pengurangan | 5 - 3 | 2 |
 | * | Perkalian | 5 * 3 | 15 |
-| / | Pembagian | 10 / 3 | 3.333 |
-| // | Floor division | 10 // 3 | 3 |
-| % | Modulus (sisa bagi) | 10 % 3 | 1 |
+| / | Pembagian | 10 / 2 | 5 |
+| div | Bagi bulat (floor) | 15 div 4 | 3 |
+| mod | Sisa bagi (modulus) | 15 mod 4 | 3 |
 | ** | Eksponen (pangkat) | 2 ** 3 | 8 |
 
-Catatan: \`/\` selalu menghasilkan float, sedangkan \`//\` menghasilkan integer (dibulatkan ke bawah).`,
-        codeExample: `a = 15
-b = 4
+Catatan: \`/\` menghasilkan bilangan desimal, sedangkan \`div\` menghasilkan bilangan bulat (dibulatkan ke bawah). \`mod\` menghasilkan sisa pembagian.`,
+        codeExample: `a <- 15
+b <- 4
 
-print(f"{a} + {b} = {a + b}")
-print(f"{a} - {b} = {a - b}")
-print(f"{a} * {b} = {a * b}")
-print(f"{a} / {b} = {a / b}")
-print(f"{a} // {b} = {a // b}")
-print(f"{a} % {b} = {a % b}")
-print(f"{a} ** {b} = {a ** b}")`,
+tulis("15 + 4 =", a + b)
+tulis("15 - 4 =", a - b)
+tulis("15 * 4 =", a * b)
+tulis("15 / 2 =", 15 / 2)
+tulis("15 div 4 =", 15 div 4)
+tulis("15 mod 4 =", 15 mod 4)
+tulis("2 ** 3 =", 2 ** 3)`,
         output: `15 + 4 = 19
 15 - 4 = 11
 15 * 4 = 60
-15 / 4 = 3.75
-15 // 4 = 3
-15 % 4 = 3
-15 ** 4 = 50625`
+15 / 2 = 7.5
+15 div 4 = 3
+15 mod 4 = 3
+2 ** 3 = 8`
       },
       {
         id: 'operator-perbandingan',
         title: 'Operator Perbandingan',
-        content: `Operator perbandingan menghasilkan nilai boolean (True/False).
+        content: `Operator perbandingan menghasilkan nilai boolean (benar/salah).
 
 | Operator | Keterangan | Contoh | Hasil |
 |----------|-----------|---------|-------|
-| == | Sama dengan | 5 == 5 | True |
-| != | Tidak sama dengan | 5 != 3 | True |
-| > | Lebih besar dari | 5 > 3 | True |
-| < | Lebih kecil dari | 5 < 3 | False |
-| >= | Lebih besar atau sama | 5 >= 5 | True |
-| <= | Lebih kecil atau sama | 3 <= 5 | True |
+| = atau == | Sama dengan | 5 = 5 | benar |
+| <> atau != | Tidak sama dengan | 5 <> 3 | benar |
+| > | Lebih besar dari | 5 > 3 | benar |
+| < | Lebih kecil dari | 5 < 3 | salah |
+| >= | Lebih besar atau sama dengan | 5 >= 5 | benar |
+| <= | Lebih kecil atau sama dengan | 3 <= 5 | benar |
 
-**Perhatikan:** \`==\` untuk membandingkan, \`=\` untuk menugaskan nilai.`,
-        codeExample: `x = 10
-y = 5
+**Perhatikan:** gunakan \`=\` atau \`==\` untuk membandingkan, sedangkan \`<-\` untuk menugaskan nilai. Hasil boolean dicetak sebagai \`true\` atau \`false\`.`,
+        codeExample: `x <- 10
+y <- 5
 
-print(f"{x} == {y}: {x == y}")
-print(f"{x} != {y}: {x != y}")
-print(f"{x} > {y}: {x > y}")
-print(f"{x} < {y}: {x < y}")
-print(f"{x} >= {x}: {x >= x}")
-print(f"{x} <= {y}: {x <= y}")
+tulis(x, "=", y, ":", x = y)
+tulis(x, "<>", y, ":", x <> y)
+tulis(x, ">", y, ":", x > y)
+tulis(x, "<", y, ":", x < y)
+tulis(x, ">=", x, ":", x >= x)
+tulis(x, "<=", y, ":", x <= y)
 
-# Perbandingan string
-print(f'"abc" == "abc": {"abc" == "abc"}')
-print(f'"abc" == "Abc": {"abc" == "Abc"}')`,
-        output: `10 == 5: False
-10 != 5: True
-10 > 5: True
-10 < 5: False
-10 >= 10: True
-10 <= 5: False
-"abc" == "abc": True
-"abc" == "Abc": False`
+# Perbandingan teks
+tulis("abc = abc:", "abc" = "abc")
+tulis("abc = Abc:", "abc" = "Abc")`,
+        output: `10 = 5 : false
+10 <> 5 : true
+10 > 5 : true
+10 < 5 : false
+10 >= 10 : true
+10 <= 5 : false
+abc = abc: true
+abc = Abc: false`
       },
       {
         id: 'operator-logika',
@@ -409,104 +393,100 @@ print(f'"abc" == "Abc": {"abc" == "Abc"}')`,
 
 | Operator | Keterangan | Contoh |
 |----------|-----------|---------|
-| and | Benar jika KEDUA benar | True and False → False |
-| or | Benar jika SALAH SATU benar | True or False → True |
-| not | Membalik nilai | not True → False |
+| dan (and) | Benar jika KEDUA benar | benar dan salah -> salah |
+| atau (or) | Benar jika SALAH SATU benar | benar atau salah -> benar |
+| tidak (not) | Membalik nilai | tidak benar -> salah |
 
-**Tabel Kebenaran for:**
-- True and True = True
-- True and False = False
-- False and False = False
+**Tabel kebenaran \`dan\`:**
+- benar dan benar = benar
+- benar dan salah = salah
+- salah dan salah = salah
 
-- True or True = True
-- True or False = True
-- False or False = False
+**Tabel kebenaran \`atau\`:**
+- benar atau benar = benar
+- benar atau salah = benar
+- salah atau salah = salah
 
-- not True = False
-- not False = True`,
-        codeExample: `usia = 25
-penghasilan = 5000000
+**\`tidak\`** membalik nilai: \`tidak benar\` = salah, \`tidak salah\` = benar.`,
+        codeExample: `usia <- 25
+penghasilan <- 5000000
 
-# Operator AND
-kredit_diterima = usia >= 21 and penghasilan >= 3000000
-print(f"Kredit diterima: {kredit_diterima}")
+# Operator dan
+kredit_diterima <- usia >= 21 dan penghasilan >= 3000000
+tulis("Kredit diterima:", kredit_diterima)
 
-# Operator OR
-diskon = usia <= 12 or usia >= 60
-print(f"Dapat diskon: {diskon}")
+# Operator atau
+diskon <- usia <= 12 atau usia >= 60
+tulis("Dapat diskon:", diskon)
 
-# Operator NOT
-is_admin = False
-is_not_admin = not is_admin
-print(f"Bukan admin: {is_not_admin}")
+# Operator tidak
+is_admin <- salah
+bukan_admin <- tidak is_admin
+tulis("Bukan admin:", bukan_admin)
 
 # Gabungan
-lulus = True
-bayar = False
-bisa_wisuda = lulus and bayar
-print(f"Bisa wisuda: {bisa_wisuda}")
+lulus <- benar
+bayar <- salah
+bisa_wisuda <- lulus dan bayar
+tulis("Bisa wisuda:", bisa_wisuda)
 
-cetak = not bayar
-print(f"Langsung cetak: {cetak}")`,
-        output: `Kredit diterima: True
-Dapat diskon: False
-Bukan admin: True
-Bisa wisuda: False
-Langsung cetak: True`
+langsung_cetak <- tidak bayar
+tulis("Langsung cetak:", langsung_cetak)`,
+        output: `Kredit diterima: true
+Dapat diskon: false
+Bukan admin: true
+Bisa wisuda: false
+Langsung cetak: true`
       },
       {
         id: 'operator-assignment',
         title: 'Operator Assignment',
-        content: `Operator assignment digunakan untuk menugaskan atau memperbarui nilai variabel.
+        content: `Operator penugasan digunakan untuk menugaskan atau memperbarui nilai variabel.
 
-| Operator | Contoh | Sama dengan |
-|----------|--------|-------------|
-| = | x = 5 | x = 5 |
-| += | x += 3 | x = x + 3 |
-| -= | x -= 2 | x = x - 2 |
-| *= | x *= 4 | x = x * 4 |
-| /= | x /= 2 | x = x / 2 |
-| //= | x //= 3 | x = x // 3 |
-| %= | x %= 2 | x = x % 2 |
-| **= | x **= 3 | x = x ** 3 |
+| Perintah | Arti |
+|----------|------|
+| x <- 5 | x diberi nilai 5 |
+| x := 3 | x diberi nilai 3 (tanda lain yang dibolehkan) |
+| x <- x + 3 | x diperbarui dengan nilai lama ditambah 3 |
+| total <- total + nilai | menjumlahkan nilai ke total |
 
-Operator augmented assignment (+=, -=, dll) membuat kode lebih ringkas.`,
-        codeExample: `# Assignment biasa
-x = 10
-print(f"x = {x}")
+Pola \`x <- x + ...\` membuat kode lebih jelas membaca urutan pembaruan. Selalu tulis ulang nama variabel di ruas kanan saat memperbarui nilainya.`,
+        codeExample: `# Penugasan biasa
+x <- 10
+tulis("x =", x)
 
-# Augmented assignment
-x += 5
-print(f"x += 5 -> x = {x}")
+# Memperbarui nilai
+x <- x + 5
+tulis("Setelah x <- x + 5:", x)
 
-x -= 3
-print(f"x -= 3 -> x = {x}")
+x <- x - 3
+tulis("Setelah x <- x - 3:", x)
 
-x *= 2
-print(f"x *= 2 -> x = {x}")
+x <- x * 2
+tulis("Setelah x <- x * 2:", x)
 
-x //= 3
-print(f"x //= 3 -> x = {x}")
+x <- x div 3
+tulis("Setelah x <- x div 3:", x)
 
-x **= 2
-print(f"x **= 2 -> x = {x}")
+x <- x ** 2
+tulis("Setelah x <- x ** 2:", x)
 
-# Contoh penggunaan
-total = 0
-total += 100  # Belanja 1
-total += 250  # Belanja 2
-total += 150  # Belanja 3
-print(f"Total belanja: {total}")`,
+# Contoh penggunaan pada belanja
+total <- 0
+total <- total + 100  # Belanja 1
+total <- total + 250  # Belanja 2
+total <- total + 150  # Belanja 3
+tulis("Total belanja:", total)`,
         output: `x = 10
-x += 5 -> x = 15
-x -= 3 -> x = 12
-x *= 2 -> x = 24
-x //= 3 -> x = 8
-x **= 2 -> x = 64
+Setelah x <- x + 5: 15
+Setelah x <- x - 3: 12
+Setelah x <- x * 2: 24
+Setelah x <- x div 3: 8
+Setelah x <- x ** 2: 64
 Total belanja: 500`
       }
     ],
-    summary: 'Python memiliki operator aritmatika (+, -, *, /, //, %, **), perbandingan (==, !=, >, <, >=, <=), logika (and, or, not), dan assignment (+=, -=, dll).'
+    summary: 'Operator aritmatika (+, -, *, /, div, mod, **), perbandingan (=, <>, <, >, <=, >=), logika (dan, atau, tidak), dan penugasan dengan <-.'
   },
   {
     id: 'input-output',
@@ -519,266 +499,265 @@ Total belanja: 500`
     subTopics: [
       {
         id: 'fungsi-print-lanjutan',
-        title: 'Fungsi print() Lanjutan',
-        content: `Fungsi \`print()\` memiliki beberapa parameter opsional:
+        title: 'Fungsi tulis() Lanjutan',
+        content: `Fungsi \`tulis()\` memiliki beberapa cara lanjutan untuk mengatur tampilan output:
 
-- **sep** — Pemisah antar nilai (default: " ")
-- **end** — Karakter di akhir output (default: "\\n")
-- **file** — Tempat output ditampilkan (default: sys.stdout)
+- **sep** — teks pemisah antar nilai (nilai awal: satu spasi). Contoh: \`tulis("a", "b", sep="-")\` mencetak \`a-b\`.
+- **Banyak argumen** — semua nilai dicetak dalam satu baris, dipisah pemisah yang ditentukan.
 
-Parameter \`end\` sangat berguna jika kita ingin mencetak beberapa nilai dalam satu baris, atau mencetak tanpa ganti baris.`,
-        codeExample: `# Parameter sep
-print("A", "B", "C", sep=", ")
-print("2024", "01", "15", sep="-")
+Setiap pemanggilan \`tulis()\` menutup output dengan baris baru. Untuk mencetak banyak nilai dalam satu baris, gabungkan semuanya dalam satu pemanggilan \`tulis()\`.
 
-# Parameter end
-print("Memuat", end=" ")
-print(".", end=" ")
-print(".", end=" ")
-print("Selesai!")
+Parameter \`sep\` sangat berguna, misalnya untuk memformat tanggal dengan pemisah tanda \`-\`.`,
+        codeExample: `# Parameter pemisah (sep)
+tulis("A", "B", "C", sep=", ")
+tulis("2024", "01", "15", sep="-")
 
-# Gabungan
-print("Hasil:", 100, 200, sep=" | ", end=" [OK]\\n")
+# Beberapa tulis() menghasilkan masing-masing satu baris
+tulis("Memuat")
+tulis(".")
+tulis(".")
+tulis("Selesai!")
 
-# Output ke file (konsep)
-# with open("output.txt", "w") as f:
-#     print("Hello File", file=f)`,
+# Banyak argumen dalam satu baris
+tulis("Hasil:", 100, 200, sep=" | ")`,
         output: `A, B, C
 2024-01-15
-Memuat . . Selesai!
-Hasil: 100 | 200 [OK]`
+Memuat
+.
+.
+Selesai!
+Hasil: | 100 | 200`
       },
       {
         id: 'fungsi-input',
-        title: 'Fungsi input()',
-        content: `Fungsi \`input()\` digunakan untuk menerima masukan dari pengguna melalui keyboard.
+        title: 'Membaca Input (baca)',
+        content: `Fungsi \`baca()\` digunakan untuk menerima masukan dari pengguna melalui papan ketik.
 
 **Cara menggunakan:**
-\`\`\`python
-nama = input("Masukkan nama: ")
-\`\`\`
+nama <- baca()
 
-Teks dalam kurung adalah **prompt** yang ditampilkan ke pengguna.
+Fungsi \`baca()\` membaca satu baris masukan lalu **selalu mengembalikan teks (string)**, meskipun pengguna mengetik angka. Jika ingin angka, hasilnya harus dikonversi terlebih dahulu memakai \`int()\` atau \`float()\`.
 
-**Perhatikan:** \`input()\` SELALU mengembalikan tipe **string**, meskipun pengguna memasukkan angka. Jika ingin angka, harus dikonversi manual.`,
-        codeExample: `# Konsep input() - tidak bisa dijalankan di playground
-# karena memerlukan input dari keyboard
+**Catatan:** pada penafsir otomatis (playground) tidak ada papan ketik yang aktif, sehingga \`baca()\` mengembalikan teks kosong (""). Karena itu contoh kode berikut tidak bergantung pada isi masukan — kita mensimulasikan nilai yang akan diketik pengguna.`,
+        codeExample: `# Pada penafsir otomatis, baca() mengembalikan teks kosong,
+# sehingga contoh berikut mensimulasikan alur pemakaiannya.
 
-# Contoh penggunaan:
-# nama = input("Masukkan nama: ")
-# umur = int(input("Masukkan umur: "))
+# nama <- baca()         # menerima ketikan pengguna
+# umur <- int(baca())    # hasil dikonversi ke angka
 
-# Simulasi dengan nilai tetap
-nama = "Budi"
-umur_str = "20"
+# Simulasi nilai yang diketik pengguna
+nama <- "Budi"
+umur_teks <- "20"
 
-# Konversi tipe
-umur = int(umur_str)
+# Konversi dari teks ke angka
+umur <- int(umur_teks)
 
-print(f"Nama: {nama}")
-print(f"Umur: {umur} tahun")
-print(f"Tipe umur: {type(umur)}")`,
+tulis("Nama:", nama)
+tulis("Umur:", umur, "tahun")`,
         output: `Nama: Budi
-Umur: 20 tahun
-Tipe umur: <class 'int'>`
+Umur: 20 tahun`
       },
       {
         id: 'konversi-input',
         title: 'Konversi Tipe Input',
-        content: `Karena \`input()\` selalu menghasilkan string, kita perlu mengkonversinya:
+        content: `Karena \`baca()\` selalu menghasilkan teks, hasilnya perlu dikonversi sesuai kebutuhan:
 
-- \`int(input())\` — untuk bilangan bulat
-- \`float(input())\` — untuk bilangan desimal
-- \`str(input())\` — untuk teks (default)
+- \`int(baca())\` — untuk bilangan bulat
+- \`float(baca())\` — untuk bilangan desimal
+- \`baca()\` langsung — untuk teks (nilai awal)
 
-**Tips:** Selalu gunakan try-except untuk menangani input yang tidak valid, agar program tidak crash.`,
-        codeExample: `# Contoh program kalkulator sederhana
-# (Simulasi dengan nilai tetap)
+**Tips:** Pastikan isi masukan benar-benar berupa angka sebelum dikonversi, agar program tidak mengalami error.`,
+        codeExample: `# Simulasi kalkulator sederhana
+# Dalam program interaktif:
+# a <- float(baca())
+# b <- float(baca())
 
-# Dalam program nyata:
-# a = float(input("Masukkan angka pertama: "))
-# operator = input("Masukkan operator (+,-,*,/): ")
-# b = float(input("Masukkan angka kedua: "))
+a <- 10
+b <- 5
+op <- "+"
 
-a = 10
-b = 3
-op = "+"
+hasil <- 0
+jika op = "+" maka
+  hasil <- a + b
+akhirjika
+jika op = "-" maka
+  hasil <- a - b
+akhirjika
+jika op = "*" maka
+  hasil <- a * b
+akhirjika
+jika op = "/" maka
+  hasil <- a / b
+akhirjika
 
-if op == "+":
-    hasil = a + b
-elif op == "-":
-    hasil = a - b
-elif op == "*":
-    hasil = a * b
-elif op == "/":
-    if b != 0:
-        hasil = a / b
-    else:
-        hasil = "Error: Bagi dengan 0"
-else:
-    hasil = "Operator tidak valid"
-
-print(f"{a} {op} {b} = {hasil}")`,
-        output: `10 + 3 = 13`
+tulis(a, op, b, "=", hasil)`,
+        output: `10 + 5 = 15`
       },
       {
         id: 'format-output',
         title: 'Format Output',
-        content: `Python menyediakan beberapa cara untuk memformat output:
+        content: `Ada beberapa cara untuk menyusun (memformat) output agar mudah dibaca:
 
-1. **f-string** (Python 3.6+) — Cara terbaik dan paling modern
-   \`f"Nilai: {variabel}"\`
+1. **Banyak argumen** — \`tulis("Nama:", nama)\` mencetak \`Nama: Andi\`, nilai dipisah satu spasi.
+2. **Pemisah khusus** — \`tulis(nilai1, nilai2, sep=", ")\` memisah dengan tanda lain.
+3. **Gabungan teks** — \`tulis("Halo " + nama)\` menyatukan teks dan nilai.
+4. **Fungsi bantu** — \`bulat()\` untuk pembulatan, \`str()\` untuk mengubah angka menjadi teks.
 
-2. **str.format()** — Cara lama tapi masih dipakai
-   \`"Nilai: {}".format(variabel)\`
+Gunakan kombinasi argumen dan teks agar hasil tampilan rapi dan mudah dibaca.`,
+        codeExample: `nama <- "Andi"
+ipk <- 3.78
 
-3. **% formatting** — Cara paling tua
-   \`"Nilai: %s" % variabel\`
+# Banyak argumen
+tulis("Nama:", nama)
+tulis("IPK:", ipk)
 
-F-string paling direkomendasikan karena paling mudah dibaca dan ditulis. Anda bisa memasukkan ekspresi langsung di dalam kurung kurawal.`,
-        codeExample: `nama = "Andi"
-ipk = 3.78
-semester = 4
+# Gabungan teks dan variabel
+tulis("Mahasiswa " + nama + " memiliki IPK " + str(ipk))
 
-# F-string (recommended)
-print(f"Nama: {nama}")
-print(f"IPK: {ipk:.2f}")  # 2 angka desimal
-print(f" semester {semester}")
+# Pembulatan
+tulis("Bulatkan 7.8:", bulat(7.8))
 
-# Format angka
-harga = 1500000
-print(f"Harga: Rp{harga:,}".replace(",", "."))
-
-# Format persentase
-skor = 0.856
-print(f"Skor: {skor:.1%}")
-
-# Ekspresi dalam f-string
-print(f"IPK >= 3.5? {ipk >= 3.5}")`,
+# Operasi langsung di dalam tulis
+tulis("6 + 2 =", 6 + 2)
+tulis("10 div 3 =", 10 div 3)`,
         output: `Nama: Andi
 IPK: 3.78
- semester 4
-Harga: Rp1.500.000
-Skor: 85.6%
-IPK >= 3.5? True`
+Mahasiswa Andi memiliki IPK 3.78
+Bulatkan 7.8: 8
+6 + 2 = 8
+10 div 3 = 3`
       }
     ],
-    summary: 'input() menerima masukan pengguna (selalu string, perlu dikonversi). print() menampilkan output. Gunakan f-string untuk format output yang mudah dibaca.'
+    summary: 'baca() menerima masukan pengguna (selalu teks, perlu dikonversi). tulis() menampilkan output. Gunakan banyak argumen atau sep untuk format output yang rapi.'
   },
   {
     id: 'percabangan',
     number: 5,
     title: 'Percabangan',
-    description: 'Memahami struktur percabangan if, elif, dan else untuk pengambilan keputusan.',
+    description: 'Memahami struktur percabangan untuk pengambilan keputusan dalam program.',
     difficulty: 'Beginner',
     estimatedMinutes: 15,
     icon: '🔀',
     subTopics: [
       {
         id: 'if-else',
-        title: 'if dan else',
-        content: `Percabangan \`if-else\` digunakan untuk membuat keputusan dalam program. Program akan menjalankan blok kode yang berbeda tergantung kondisi.
+        title: 'jika dan selainnya',
+        content: `Percabangan \`jika\` digunakan untuk membuat keputusan dalam program. Program menjalankan blok kode yang berbeda tergantung kondisi.
 
 **Sintaks:**
-\`\`\`python
-if kondisi:
-    # dijalankan jika kondisi True
-else:
-    # dijalankan jika kondisi False
-\`\`\`
+
+    jika kondisi maka
+      # dijalankan jika kondisi benar
+    selainnya
+      # dijalankan jika kondisi salah
+    akhirjika
 
 **Penting:**
-- Kondisi harus bernilai True atau False
-- Gunakan \`:\` di akhir baris if/elif/else
-- Indentasi 4 spasi untuk blok kode
-- Bisa pakai \`and\`/\`or\` untuk multiple conditions`,
-        codeExample: `nilai = 80
+- Kondisi harus bernilai benar atau salah (boolean)
+- Setiap \`jika\` ditutup dengan \`akhirjika\`
+- Gunakan \`dan\`/\`atau\` untuk menggabungkan beberapa kondisi
+- Bagian \`selainnya\` bersifat opsional (boleh tidak ditulis)`,
+        codeExample: `nilai <- 80
 
-if nilai >= 70:
-    print("Selamat, Anda LULUS!")
-else:
-    print("Anda TIDAK lulus. Tetap semangat!")
+jika nilai >= 70 maka
+  tulis("Selamat, Anda LULUS!")
+selainnya
+  tulis("Anda TIDAK lulus. Tetap semangat!")
+akhirjika
 
-# With and/or
-usia = 25
-ktp = True
+# Menggabungkan kondisi dengan dan
+usia <- 25
+ktp <- benar
+jika usia >= 17 dan ktp maka
+  tulis("Boleh membuat KTP")
+akhirjika
 
-if usia >= 17 and ktp:
-    print("Boleh membuat KTP")
-
-# Nested if
-nilai = 85
-if nilai >= 70:
-    if nilai >= 90:
-        print("Predikat: Sangat Baik")
-    elif nilai >= 80:
-        print("Predikat: Baik")
-    else:
-        print("Predikat: Cukup")
-else:
-    print("Tidak Lulus")`,
+# Percabangan berlapis (nested jika)
+nilai <- 85
+jika nilai >= 70 maka
+  jika nilai >= 90 maka
+    tulis("Predikat: Sangat Baik")
+  selainnya
+    jika nilai >= 80 maka
+      tulis("Predikat: Baik")
+    selainnya
+      tulis("Predikat: Cukup")
+    akhirjika
+  akhirjika
+selainnya
+  tulis("Tidak Lulus")
+akhirjika`,
         output: `Selamat, Anda LULUS!
 Boleh membuat KTP
 Predikat: Baik`
       },
       {
         id: 'elif',
-        title: 'elif (Else If)',
-        content: `Digunakan untuk mengecek **lebih dari dua** kondisi secara berurutan.
+        title: 'Percabangan Berlapis',
+        content: `Untuk mengecek **lebih dari dua** kondisi secara berurutan, tidak tersedia kata kunci khusus untuk kondisi lanjutan. Solusinya adalah **menyusun beberapa \`jika\` berlapis** (nested jika).
 
-**Sintaks:**
-\`\`\`python
-if kondisi1:
-    # blok 1
-elif kondisi2:
-    # blok 2
-elif kondisi3:
-    # blok 3
-else:
-    # blok default
-\`\`\`
+Pola umum:
+
+    jika kondisi1 maka
+      # blok 1
+    selainnya
+      jika kondisi2 maka
+        # blok 2
+      selainnya
+        # blok default
+      akhirjika
+    akhirjika
 
 **Alur eksekusi:**
-1. Cek kondisi1 → jika True, jalankan blok 1
-2. Jika False, cek kondisi2 → jika True, jalankan blok 2
-3. Jika False, cek kondisi3 → dst.
-4. Jika semua False, jalankan else
+1. Cek kondisi1 → jika benar, jalankan blok 1
+2. Jika salah, cek kondisi2 → jika benar, jalankan blok 2
+3. Jika semua salah, jalankan blok \`selainnya\` terakhir
 
 Hanya **satu** blok yang akan dieksekusi.`,
-        codeExample: `# Program grade mahasiswa
-nilai = 85
+        codeExample: `# Predikat nilai mahasiswa
+nilai <- 85
 
-if nilai >= 90:
-    grade = "A"
-elif nilai >= 80:
-    grade = "B"
-elif nilai >= 70:
-    grade = "C"
-elif nilai >= 60:
-    grade = "D"
-else:
-    grade = "E"
+jika nilai >= 90 maka
+  grade <- "A"
+selainnya
+  jika nilai >= 80 maka
+    grade <- "B"
+  selainnya
+    jika nilai >= 70 maka
+      grade <- "C"
+    selainnya
+      jika nilai >= 60 maka
+        grade <- "D"
+      selainnya
+        grade <- "E"
+      akhirjika
+    akhirjika
+  akhirjika
+akhirjika
 
-print(f"Nilai: {nilai}")
-print(f"Grade: {grade}")
+tulis("Nilai:", nilai)
+tulis("Grade:", grade)
 
-# Contoh lain: Kalkulator sederhana
-a = 10
-b = 3
-op = "-"
+# Contoh lain: memilih operasi
+a <- 10
+b <- 3
+op <- "-"
 
-if op == "+":
-    hasil = a + b
-elif op == "-":
-    hasil = a - b
-elif op == "*":
-    hasil = a * b
-elif op == "/":
-    hasil = a / b
-else:
-    hasil = "Operator tidak dikenal"
+jika op = "+" maka
+  hasil <- a + b
+selainnya
+  jika op = "-" maka
+    hasil <- a - b
+  selainnya
+    jika op = "*" maka
+      hasil <- a * b
+    selainnya
+      hasil <- "Operator tidak dikenal"
+    akhirjika
+  akhirjika
+akhirjika
 
-print(f"{a} {op} {b} = {hasil}")`,
+tulis(a, op, b, "=", hasil)`,
         output: `Nilai: 85
 Grade: B
 10 - 3 = 7`
@@ -788,135 +767,124 @@ Grade: B
         title: 'Visualisasi Alur Keputusan',
         content: `Bayangkan alur percabangan seperti diagram alur (flowchart):
 
-\`\`\`
         [Kondisi]
        /         \\
-    True         False
+    Benar        Salah
      |             |
   [Blok A]     [Blok B]
-\`\`\`
 
-Untuk if-elif-else:
+Untuk beberapa kondisi:
 
-\`\`\`
-   [Kondisi 1] ──False──→ [Kondisi 2] ──False──→ [Blok Else]
-       │True                    │True
-    [Blok A]                [Blok B]
-\`\`\`
+   [Kondisi 1] --Salah--> [Kondisi 2] --Salah--> [Blok Selainnya]
+       |Benar                |Benar
+    [Blok A]             [Blok B]
 
-Program selalu mengecek kondisi dari atas ke bawah dan menjalankan blok pertama yang kondisinya True.`,
+Program selalu memeriksa kondisi dari atas ke bawah dan menjalankan blok pertama yang kondisinya benar.`,
         codeExample: `# Simulasi keputusan cuaca
-cuaca = "hujan"
+cuaca <- "hujan"
 
-if cuaca == "cerah":
-    kegiatan = "bersepeda"
-elif cuaca == "mendung":
-    kegiatan = "berjalan kaki"
-elif cuaca == "hujan":
-    kegiatan = "di dalam ruangan"
-else:
-    kegiatan = "tidak ada"
+jika cuaca = "cerah" maka
+  kegiatan <- "bersepeda"
+selainnya
+  jika cuaca = "mendung" maka
+    kegiatan <- "berjalan kaki"
+  selainnya
+    jika cuaca = "hujan" maka
+      kegiatan <- "di dalam ruangan"
+    selainnya
+      kegiatan <- "tidak ada"
+    akhirjika
+  akhirjika
+akhirjika
 
-print(f"Cuaca: {cuaca}")
-print(f"Kegiatan: {kegiatan}")
+tulis("Cuaca:", cuaca)
+tulis("Kegiatan:", kegiatan)
 
 # Keputusan belanja
-harga = 75000
-saldo = 100000
+harga <- 75000
+saldo <- 100000
 
-if saldo >= harga:
-    sisa = saldo - harga
-    print(f"Berhasil! Sisa saldo: Rp{sisa}")
-else:
-    kekurangan = harga - saldo
-    print(f"Saldo tidak cukup! Kurang Rp{kekurangan}")`,
+jika saldo >= harga maka
+  sisa <- saldo - harga
+  tulis("Berhasil! Sisa saldo: Rp" + str(sisa))
+selainnya
+  kekurangan <- harga - saldo
+  tulis("Saldo tidak cukup! Kurang Rp" + str(kekurangan))
+akhirjika`,
         output: `Cuaca: hujan
 Kegiatan: di dalam ruangan
 Berhasil! Sisa saldo: Rp25000`
       }
     ],
-    summary: 'Percabangan if-elif-else memungkinkan program membuat keputusan. Kondisi dievaluasi dari atas ke bawah, dan hanya satu blok yang dieksekusi.'
+    summary: 'Percabangan jika-selainnya memungkinkan program membuat keputusan. Kondisi dievaluasi dari atas ke bawah. Untuk banyak kondisi, susun jika berlapis; hanya satu blok yang dieksekusi.'
   },
   {
     id: 'perulangan',
     number: 6,
     title: 'Perulangan',
-    description: 'Memahami perulangan for dan while untuk mengulang eksekusi kode.',
+    description: 'Memahami perulangan untuk mengulang eksekusi kode.',
     difficulty: 'Beginner',
     estimatedMinutes: 15,
     icon: '🔄',
     subTopics: [
       {
         id: 'for-loop',
-        title: 'Perulangan for',
-        content: `Perulangan \`for\` digunakan untuk iterasi atas sequence (range, list, string, dll).
+        title: 'Perulangan untuk',
+        content: `Perulangan \`untuk\` digunakan untuk mengulang blok kode sejumlah kali yang sudah diketahui.
 
 **Sintaks:**
-\`\`\`python
-for variabel in range(start, stop, step):
-    # blok kode
-\`\`\`
+- \`untuk i <- mulai sampai akhir ... akhiruntuk\` — maju satu-satu.
+- \`untuk i <- mulai sampai akhir langkah nilai ... akhiruntuk\` — maju dengan langkah tertentu.
+- \`untuk i <- akhir menurun sampai mulai ... akhiruntuk\` — mundur dari besar ke kecil.
 
-**range()** menghasilkan deret angka:
-- \`range(5)\` → 0, 1, 2, 3, 4
-- \`range(1, 6)\` → 1, 2, 3, 4, 5
-- \`range(0, 10, 2)\` → 0, 2, 4, 6, 8
+Setiap iterasi variabel \`i\` otomatis diperbarui sesuai langkah, dan bisa dipakai di dalam blok perulangan.
 
-for juga bisa iterasi atas list, string, dan dictionary.`,
-        codeExample: `# Range sederhana
-print("=== Angka 0-4 ===")
-for i in range(5):
-    print(f"Ke-{i}")
+Contoh deret yang dihasilkan:
+- \`untuk i <- 1 sampai 5\` → 1, 2, 3, 4, 5
+- \`untuk i <- 1 sampai 9 langkah 2\` → 1, 3, 5, 7, 9
+- \`untuk i <- 5 menurun sampai 1\` → 5, 4, 3, 2, 1`,
+        codeExample: `# Deret 1-5
+tulis("=== Angka 1-5 ===")
+untuk i <- 1 sampai 5
+  tulis(i)
+akhiruntuk
 
-# Range dengan start dan stop
-print("\\n=== Angka 1-5 ===")
-for i in range(1, 6):
-    print(i)
+# Deret dengan langkah
+tulis("=== Angka ganjil 1-9 ===")
+untuk i <- 1 sampai 9 langkah 2
+  tulis(i)
+akhiruntuk
 
-# Range dengan step
-print("\\n=== Angka genap 0-8 ===")
-for i in range(0, 9, 2):
-    print(i)
+# Deret menurun
+tulis("=== Angka 5-1 ===")
+untuk i <- 5 menurun sampai 1
+  tulis(i)
+akhiruntuk
 
-# Iterasi string
-print("\\n=== Huruf dalam Python ===")
-for huruf in "Python":
-    print(huruf)
-
-# Iterasi list
-print("\\n=== Daftar buah ===")
-buah = ["apel", "mangga", "jeruk"]
-for b in buah:
-    print(f"Saya suka {b}")`,
-        output: `=== Angka 0-4 ===
-Ke-0
-Ke-1
-Ke-2
-Ke-3
-Ke-4
-
-=== Angka 1-5 ===
+# Iterasi array dengan untuk
+tulis("=== Daftar buah ===")
+buah <- ["apel", "mangga", "jeruk"]
+untuk i <- 1 sampai panjang(buah)
+  tulis("Saya suka " + buah[i])
+akhiruntuk`,
+        output: `=== Angka 1-5 ===
 1
 2
 3
 4
 5
-
-=== Angka genap 0-8 ===
-0
-2
+=== Angka ganjil 1-9 ===
+1
+3
+5
+7
+9
+=== Angka 5-1 ===
+5
 4
-6
-8
-
-=== Huruf dalam Python ===
-P
-y
-t
-h
-o
-n
-
+3
+2
+1
 === Daftar buah ===
 Saya suka apel
 Saya suka mangga
@@ -924,51 +892,49 @@ Saya suka jeruk`
       },
       {
         id: 'while-loop',
-        title: 'Perulangan while',
-        content: `Perulangan \`while\` mengulang selama kondisi masih True.
+        title: 'Perulangan selama',
+        content: `Perulangan \`selama\` mengulang eksekusi selama kondisinya masih benar.
 
 **Sintaks:**
-\`\`\`python
-while kondisi:
-    # blok kode
-    # jangan lupa update kondisi!
-\`\`\`
 
-**Peringatan:** Jika kondisi selalu True, akan terjadi **infinite loop** (perulangan tak terhingga). Selalu pastikan ada cara untuk menghentikan loop.
+    selama kondisi
+      # blok kode
+      # pastikan kondisi diperbarui!
+    akhirsementara
 
-**Kapan pakai for vs while:**
-- Pakai \`for\` jika sudah tahu jumlah iterasi
-- Pakai \`while\` jika iterasi bergantung pada kondisi`,
-        codeExample: `# While sederhana
-print("=== Hitung mundur ===")
-hitung = 5
-while hitung > 0:
-    print(hitung)
-    hitung -= 1
-print("Lepas landas! 🚀")
+**Peringatan:** Jika kondisi selalu benar, terjadi **perulangan tak terhingga** (infinite loop). Selalu pastikan ada bagian yang memperbarui variabel kondisi.
 
-# While dengan kondisi
-print("\\n=== Tebak angka ===")
-target = 7
-tebakan = 1
+**Kapan memakai untuk vs selama:**
+- Pakai \`untuk\` jika jumlah perulangan sudah diketahui.
+- Pakai \`selama\` jika perulangan bergantung pada kondisi.`,
+        codeExample: `# Hitung mundur
+tulis("=== Hitung mundur ===")
+hitung <- 5
+selama hitung > 0
+  tulis(hitung)
+  hitung <- hitung - 1
+akhirsementara
+tulis("Lepas landas!")
 
-while tebakan != target:
-    # Simulasi: langsung benar di percobaan ke-3
-    if tebakan < target:
-        print(f"Tebakan {tebakan}: Terlalu kecil!")
-    tebakan += 1
+# Selama dengan kondisi pencarian
+tulis("=== Mencari angka ===")
+target <- 7
+tebakan <- 1
+selama tebakan < target
+  tulis("Tebakan " + str(tebakan) + ": Terlalu kecil!")
+  tebakan <- tebakan + 1
+akhirsementara
 
-print(f"Benar! Angka adalah {target}")
-print(f"Percobaan: {tebakan - 1}")`,
+tulis("Benar! Angka adalah " + str(target))
+tulis("Percobaan:", tebakan - 1)`,
         output: `=== Hitung mundur ===
 5
 4
 3
 2
 1
-Lepas landas! 🚀
-
-=== Tebak angka ===
+Lepas landas!
+=== Mencari angka ===
 Tebakan 1: Terlalu kecil!
 Tebakan 2: Terlalu kecil!
 Tebakan 3: Terlalu kecil!
@@ -976,73 +942,74 @@ Tebakan 4: Terlalu kecil!
 Tebakan 5: Terlalu kecil!
 Tebakan 6: Terlalu kecil!
 Benar! Angka adalah 7
-Percobaan: 7`
+Percobaan: 6`
       },
       {
         id: 'break-continue',
-        title: 'break dan continue',
-        content: `Dua kata kunci penting dalam perulangan:
+        title: 'keluar dan lanjut',
+        content: `Dua perintah penting dalam perulangan:
 
-**break** — Menghentikan perulangan sepenuhnya
-Ketika \`break\` dijalankan, perulangan langsung berhenti dan program melanjutkan ke baris setelah perulangan.
+**keluar** — Menghentikan perulangan sepenuhnya. Ketika \`keluar\` dijalankan, perulangan langsung berhenti dan program melanjutkan ke baris setelah perulangan.
 
-**continue** — Melewati iterasi saat ini
-Ketika \`continue\` dijalankan, sisa blok kode dalam iterasi itu dilewatkan dan langsung ke iterasi berikutnya.
+**lanjut** — Melewati iterasi saat ini. Ketika \`lanjut\` dijalankan, sisa blok kode pada iterasi itu dilewatkan dan langsung menuju iterasi berikutnya.
 
-Gunakan \`break\` dan \`continue\` dengan hati-hati agar logika program tetap jelas.`,
-        codeExample: `# break - Hentikan saat ditemukan
-print("=== Mencari angka 5 ===")
-for i in range(1, 11):
-    if i == 5:
-        print(f"Ditemukan angka {i}! Berhenti.")
-        break
-    print(f"Cek angka {i}...")
+Gunakan \`keluar\` dan \`lanjut\` dengan hati-hati agar logika program tetap jelas.`,
+        codeExample: `# keluar - berhenti saat ditemukan
+tulis("=== Mencari angka 5 ===")
+untuk i <- 1 sampai 10
+  jika i = 5 maka
+    tulis("Ditemukan angka " + str(i) + "! Berhenti.")
+    keluar
+  akhirjika
+  tulis("Cek angka " + str(i) + "...")
+akhiruntuk
 
-# continue - Lewati yang ganjil
-print("\\n=== Bilangan genap 1-10 ===")
-for i in range(1, 11):
-    if i % 2 != 0:  # Ganjil
-        continue
-    print(i)
+# lanjut - lewati yang ganjil
+tulis("=== Bilangan genap 1-10 ===")
+untuk i <- 1 sampai 10
+  jika i mod 2 <> 0 maka
+    lanjut
+  akhirjika
+  tulis(i)
+akhiruntuk
 
-# break dengan while
-print("\\n=== Proses hingga batas ===")
-data = [10, 25, 30, 5, 40, 15]
-total = 0
-for val in data:
-    total += val
-    if total > 50:
-        print(f"Total melebihi 50: {total}")
-        break
-    print(f"Tambah {val}, total: {total}")`,
+# keluar saat total melebihi batas
+tulis("=== Proses hingga batas ===")
+data <- [10, 25, 30, 5, 40, 15]
+total <- 0
+untuk i <- 1 sampai panjang(data)
+  total <- total + data[i]
+  jika total > 50 maka
+    tulis("Total melebihi 50:", total)
+    keluar
+  akhirjika
+  tulis("Tambah " + str(data[i]) + ", total: " + str(total))
+akhiruntuk`,
         output: `=== Mencari angka 5 ===
 Cek angka 1...
 Cek angka 2...
 Cek angka 3...
 Cek angka 4...
 Ditemukan angka 5! Berhenti.
-
 === Bilangan genap 1-10 ===
 2
 4
 6
 8
 10
-
 === Proses hingga batas ===
 Tambah 10, total: 10
 Tambah 25, total: 35
-Tambah 30, total: 65
 Total melebihi 50: 65`
       }
     ],
-    summary: 'for digunakan untuk iterasi pada range/list, while untuk kondisi. break menghentikan loop, continue melewati iterasi saat ini. Selalu hindari infinite loop.'
+    summary: 'untuk dipakai jika jumlah iterasi sudah diketahui, selama dipakai jika bergantung pada kondisi. keluar menghentikan perulangan, lanjut melewati iterasi saat ini. Hindari perulangan tak terhingga.'
   },
   {
     id: 'fungsi',
     number: 7,
     title: 'Fungsi',
-    description: 'Memahami cara mendefinisikan dan memanggil fungsi di Python.',
+    description: 'Memahami cara mendefinisikan dan memanggil fungsi.',
     difficulty: 'Beginner',
     estimatedMinutes: 12,
     icon: '⚡',
@@ -1053,366 +1020,350 @@ Total melebihi 50: 65`
         content: `Fungsi adalah blok kode yang dapat digunakan berulang kali. Fungsi membantu mengorganisasi kode dan menghindari duplikasi.
 
 **Sintaks:**
-\`\`\`python
-def nama_fungsi(parameter):
-    # isi fungsi
-    return nilai  # opsional
-\`\`\`
+
+    fungsi nama_fungsi(parameter)
+      # isi fungsi
+      kembalikan nilai   # opsional
+    akhirfungsi
 
 **Karakteristik:**
-1. Dimulai dengan kata kunci \`def\`
-2. Diikuti nama fungsi dan parameter dalam kurung
-3. Diakhiri \`:\` dan blok kode terindentasi
-4. Bisa mengembalikan nilai dengan \`return\`
-5. Tanpa \`return\`, fungsi mengembalikan \`None\``,
-        codeExample: `# Fungsi sederhana
-def sapa():
-    print("Halo! Selamat datang di PyLearn AI!")
+1. Dimulai dengan kata kunci \`fungsi\`
+2. Diikuti nama fungsi dan parameter di dalam kurung
+3. Berisi blok kode yang diindentasi
+4. Bisa mengembalikan nilai dengan \`kembalikan\`
+5. Tanpa \`kembalikan\`, fungsi tidak menghasilkan nilai tertentu`,
+        codeExample: `# Fungsi sederhana (tanpa parameter)
+fungsi sapa()
+  tulis("Halo! Selamat datang di aplikasi belajar!")
+akhirfungsi
 
 # Memanggil fungsi
 sapa()
-sapa()  # Bisa dipanggil berulang kali
+sapa()
 
 # Fungsi dengan parameter
-def sapa_nama(nama):
-    print(f"Halo, {nama}!")
+fungsi sapa_nama(nama)
+  tulis("Halo, " + nama + "!")
+akhirfungsi
 
 sapa_nama("Budi")
 sapa_nama("Siti")
 
-# Fungsi dengan return
-def tambah(a, b):
-    return a + b
+# Fungsi dengan kembalikan
+fungsi tambah(a, b)
+  kembalikan a + b
+akhirfungsi
 
-hasil = tambah(5, 3)
-print(f"5 + 3 = {hasil}")
+hasil <- tambah(5, 3)
+tulis("5 + 3 =", hasil)
 
-# Fungsi dengan multiple return
-def info_mahasiswa(nama, ipk):
-    if ipk >= 3.5:
-        status = "Cum Laude"
-    else:
-        status = "Reguler"
-    return nama, ipk, status
+# Fungsi dengan kondisi
+fungsi status_ipk(ipk)
+  jika ipk >= 3.5 maka
+    kembalikan "Cum Laude"
+  selainnya
+    kembalikan "Reguler"
+  akhirjika
+akhirfungsi
 
-n, i, s = info_mahasiswa("Andi", 3.7)
-print(f"\\n{n} - IPK: {i} - {s}")`,
-        output: `Halo! Selamat datang di PyLearn AI!
-Halo! Selamat datang di PyLearn AI!
+status <- status_ipk(3.7)
+tulis("Andi - IPK: 3.7 -", status)`,
+        output: `Halo! Selamat datang di aplikasi belajar!
+Halo! Selamat datang di aplikasi belajar!
 Halo, Budi!
 Halo, Siti!
 5 + 3 = 8
-
 Andi - IPK: 3.7 - Cum Laude`
       },
       {
         id: 'parameter-default',
-        title: 'Parameter dan Default Value',
-        content: `Fungsi bisa memiliki beberapa jenis parameter:
+        title: 'Parameter dan Nilai Default',
+        content: `Fungsi bisa menerima parameter dengan beberapa aturan:
 
-1. **Positional parameter** — Harus diisi saat memanggil
-2. **Default parameter** — Memiliki nilai default, opsional diisi
-3. **Keyword argument** — Memanggil dengan nama parameter
-4. **Arbitrary parameter (*args)** — Menerima argumen dalam jumlah banyak
+1. **Parameter wajib** — harus diisi nilainya saat fungsi dipanggil.
+2. **Urutan argumen** — nilai dari pemanggilan mengikuti urutan parameter pada definisi.
+3. **Nilai awal (default)** — beberapa bahasa mengizinkan parameter diberi nilai awal sehingga boleh tidak diisi saat pemanggilan.
 
-Aturan:
-- Parameter wajib diletakkan SEBELUM parameter default
-- Saat memanggil, argumen positional harus sebelum keyword`,
-        codeExample: `# Default parameter
-def hitung_luas(panjang, lebar=1):
-    return panjang * lebar
+Aturan utamanya: jumlah dan urutan argumen saat memanggil harus sesuai dengan definisi parameter fungsi.`,
+        codeExample: `# Fungsi dengan parameter wajib
+fungsi hitung_luas(panjang, lebar)
+  kembalikan panjang * lebar
+akhirfungsi
 
-print(hitung_luas(5, 3))     # 15
-print(hitung_luas(5))        # 5 (lebar default = 1)
+tulis("Luas 5x3:", hitung_luas(5, 3))
+tulis("Luas 5x1:", hitung_luas(5, 1))
 
-# Keyword argument
-def buat_profil(nama, umur, kota="Jakarta"):
-    return f"{nama}, {umur} tahun, {kota}"
+# Fungsi dengan banyak parameter
+fungsi buat_profil(nama, umur, kota)
+  tulis(nama + ", " + str(umur) + " tahun, " + kota)
+akhirfungsi
 
-print(buat_profil("Budi", 20))
-print(buat_profil("Siti", 21, kota="Bandung"))
+buat_profil("Budi", 20, "Jakarta")
+buat_profil("Siti", 21, "Bandung")
 
-# *args - argumen variabel
-def jumlahkan(*angka):
-    total = 0
-    for a in angka:
-        total += a
-    return total
+# Fungsi menjumlahkan seluruh isi array
+fungsi jumlahkan(data)
+  total <- 0
+  untuk i <- 1 sampai panjang(data)
+    total <- total + data[i]
+  akhiruntuk
+  kembalikan total
+akhirfungsi
 
-print(f"Jumlah: {jumlahkan(1, 2, 3, 4, 5)}")
-
-# **kwargs
-def info(**data):
-    for key, val in data.items():
-        print(f"  {key}: {val}")
-
-print("\\nProfil:")
-info(nama="Andi", umur=20, jurusan="Informatika")`,
-        output: `15
-5
+angka <- [1, 2, 3, 4, 5]
+tulis("Jumlah:", jumlahkan(angka))`,
+        output: `Luas 5x3: 15
+Luas 5x1: 5
 Budi, 20 tahun, Jakarta
 Siti, 21 tahun, Bandung
-Jumlah: 15
-
-Profil:
-  nama: Andi
-  umur: 20
-  jurusan: Informatika`
+Jumlah: 15`
       },
       {
         id: 'scope-fungsi',
-        title: 'Scope Variabel',
-        content: `**Scope** adalah area di mana variabel bisa diakses.
+        title: 'Lingkup Variabel (Scope)',
+        content: `**Lingkup (scope)** adalah area di mana sebuah variabel bisa diakses.
 
-1. **Local scope** — Variabel yang didefinisikan di dalam fungsi hanya bisa diakses di dalam fungsi itu saja.
+1. **Lingkup lokal** — Variabel yang didefinisikan di dalam fungsi hanya bisa diakses di dalam fungsi itu saja.
 
-2. **Global scope** — Variabel yang didefinisikan di luar fungsi bisa diakses di mana saja (termasuk di dalam fungsi).
+2. **Lingkup global** — Variabel yang didefinisikan di luar fungsi bisa diakses di mana saja, termasuk di dalam fungsi.
 
-3. **global keyword** — Digunakan untuk memodifikasi variabel global dari dalam fungsi.
-
-**Tip:** Usahakan hindari penggunaan \`global\` agar kode lebih mudah dipahami.`,
-        codeExample: `# Local scope
-def fungsi_lokal():
-    x = 10  # Variabel lokal
-    print(f"Dalam fungsi: x = {x}")
+**Tip:** Susun nama variabel dengan jelas agar kode mudah dipahami dan tidak bingung membedakan variabel lokal dan global.`,
+        codeExample: `# Variabel lokal
+fungsi fungsi_lokal()
+  x <- 10
+  tulis("Dalam fungsi: x =", x)
+akhirfungsi
 
 fungsi_lokal()
-# print(x)  # Error! x tidak dikenal di luar
+# x tidak dikenal di luar fungsi (akan error)
 
-# Global scope
-nama = "Global"
+# Variabel global
+nama <- "Global"
 
-def tampilkan_nama():
-    print(f"Nama: {nama}")
+fungsi tampilkan_nama()
+  tulis("Nama:", nama)
+akhirfungsi
 
 tampilkan_nama()
 
-# Perbedaan local vs global
-nilai = 100  # Global
+# Perbedaan variabel lokal dan global
+nilai <- 100  # global
 
-def ubah_nilai():
-    nilai = 50  # Ini variabel BARU (lokal)
-    print(f"Dalam fungsi: {nilai}")
+fungsi ubah_nilai()
+  nilai_lokal <- 50  # variabel baru di dalam fungsi
+  tulis("Dalam fungsi:", nilai_lokal)
+akhirfungsi
 
 ubah_nilai()
-print(f"Di luar fungsi: {nilai}")`,
+tulis("Di luar fungsi:", nilai)`,
         output: `Dalam fungsi: x = 10
 Nama: Global
 Dalam fungsi: 50
 Di luar fungsi: 100`
       }
     ],
-    summary: 'Fungsi didefinisikan dengan def, bisa memiliki parameter, default value, dan return value. Variabel lokal hanya bisa diakses di dalam fungsi.'
+    summary: 'Fungsi didefinisikan dengan kata kunci fungsi, bisa memiliki parameter, nilai awal, dan mengembalikan nilai dengan kembalikan. Variabel lokal hanya bisa diakses di dalam fungsi.'
   },
   {
     id: 'list-dictionary',
     number: 8,
-    title: 'List dan Dictionary',
-    description: 'Memahami struktur data list dan dictionary untuk menyimpan koleksi data.',
+    title: 'Array (Larik)',
+    description: 'Memahami struktur data array (larik) untuk menyimpan koleksi data.',
     difficulty: 'Beginner',
     estimatedMinutes: 15,
     icon: '📚',
     subTopics: [
       {
         id: 'list-dasar',
-        title: 'List Dasar',
-        content: `List adalah struktur data yang menyimpan **beberapa nilai** dalam satu variabel. List bersifat **mutable** (bisa diubah setelah dibuat).
+        title: 'Array Dasar',
+        content: `Array (larik) adalah struktur data yang menyimpan **beberapa nilai** dalam satu variabel. Array bersifat **dapat diubah** (mutable), artinya isinya bisa diganti setelah dibuat.
 
 **Karakteristik:**
 - Ditulis dalam kurung siku \`[]\`
-- Bisa menyimpan tipe data berbeda
-- Diurutkan (ordered)
-- Boleh ada duplikat
-- Index dimulai dari 0
-- Index negatif dari belakang: -1, -2, -3, ...`,
-        codeExample: `# Membuat list
-buah = ["apel", "mangga", "jeruk"]
-angka = [10, 20, 30, 40, 50]
-campuran = [1, "dua", 3.0, True]
+- Bisa menyimpan tipe data berbeda dalam satu array
+- Berurutan (ordered)
+- Boleh ada nilai yang sama (duplikat)
+- **Indeks dimulai dari 1** — \`data[1]\` adalah elemen pertama
+- \`panjang(data)\` menghitung jumlah elemen`,
+        codeExample: `# Membuat array
+buah <- ["apel", "mangga", "jeruk"]
+angka <- [10, 20, 30, 40, 50]
 
 # Akses elemen
-print(f"Buah pertama: {buah[0]}")
-print(f"Buah terakhir: {buah[-1]}")
+tulis("Buah pertama:", buah[1])
+tulis("Buah terakhir:", buah[3])
 
-# Slicing
-print(f"Dua pertama: {buah[:2]}")
-print(f"Sejak index 1: {buah[1:]}")
+# Info panjang array
+tulis("Jumlah buah:", panjang(buah))
 
-# Info list
-print(f"Jumlah buah: {len(buah)}")
+# Ubah isi elemen
+angka[2] <- 99
+tulis("Elemen kedua sekarang:", angka[2])
 
-# Looping
-print("\\nDaftar buah:")
-for i, b in enumerate(buah):
-    print(f"  {i+1}. {b}")`,
+# Looping array
+tulis("Daftar buah:")
+untuk i <- 1 sampai panjang(buah)
+  tulis(buah[i])
+akhiruntuk`,
         output: `Buah pertama: apel
 Buah terakhir: jeruk
-Dua pertama: ['apel', 'mangga']
-Sejak index 1: ['mangga', 'jeruk']
 Jumlah buah: 3
-
+Elemen kedua sekarang: 99
 Daftar buah:
-  1. apel
-  2. mangga
-  3. jeruk`
+apel
+mangga
+jeruk`
       },
       {
         id: 'list-method',
-        title: 'Method List',
-        content: `List memiliki banyak method bawaan:
+        title: 'Operasi pada Array',
+        content: `Beberapa operasi yang bisa dilakukan pada array:
 
-| Method | Fungsi | Contoh |
-|--------|--------|--------|
-| append(x) | Tambah di akhir | list.append(4) |
-| insert(i, x) | Tambah di index i | list.insert(0, "a") |
-| remove(x) | Hapus nilai x | list.remove(3) |
-| pop(i) | Hapus & kembalikan index i | list.pop(0) |
-| sort() | Urutkan | list.sort() |
-| reverse() | Balik urutan | list.reverse() |
-| clear() | Hapus semua | list.clear() |
-| index(x) | Cari index x | list.index(2) |
-| count(x) | Hitung kemunculan x | list.count(2) |
+| Operasi | Contoh |
+|---------|--------|
+| Baca elemen | data[posisi] |
+| Ubah elemen | data[posisi] <- nilai_baru |
+| Banyak elemen | panjang(data) |
+| Jumlah seluruh nilai | sum(data) |
+| Nilai terkecil/terbesar | min(data), max(data) |
+| Pembulatan | bulat(x) |
+| Akar kuadrat | akar(x) |
+| Pangkat | pangkat(a, b) |
 
-**Catatan:** \`sort()\` mengubah list asli. Untuk salinan terurut, gunakan \`sorted(list)\`.`,
-        codeExample: `# Method list
-angka = [3, 1, 4, 1, 5, 9, 2, 6]
+Iterasi atas seluruh elemen sering dilakukan dengan \`untuk\` menggunakan indeks 1 sampai \`panjang(array)\`.`,
+        codeExample: `# Mengolah data array
+angka <- [8, 3, 10, 6, 2]
 
-# append
-angka.append(7)
-print(f"Setelah append(7): {angka}")
+tulis("Banyak elemen:", panjang(angka))
+tulis("Jumlah total:", sum(angka))
+tulis("Nilai terkecil:", min(angka))
+tulis("Nilai terbesar:", max(angka))
 
-# insert
-angka.insert(0, 0)
-print(f"Setelah insert(0, 0): {angka}")
+# Ubah satu elemen
+angka[2] <- 7
+tulis("Elemen kedua sekarang:", angka[2])
 
-# remove
-angka.remove(1)  # Hapus nilai pertama yang 1
-print(f"Setelah remove(1): {angka}")
+# Rata-rata: 8 + 7 + 10 + 6 + 2 = 33, bagi 5 = 6.6 -> 6
+rata_rata <- sum(angka) div panjang(angka)
+tulis("Rata-rata (pembulatan bawah):", rata_rata)
 
-# pop
-elemen = angka.pop()
-print(f"Setelah pop(): {angka}, yang diambil: {elemen}")
-
-# sort
-angka.sort()
-print(f"Setelah sort(): {angka}")
-
-# reverse
-angka.reverse()
-print(f"Setelah reverse(): {angka}")
-
-# count
-print(f"Jumlah kemunculan 1: {angka.count(1)}")
-
-# Membuat list dengan list comprehension
-kuadrat = [x**2 for x in range(1, 6)]
-print(f"Kuadrat 1-5: {kuadrat}")`,
-        output: `Setelah append(7): [3, 1, 4, 1, 5, 9, 2, 6, 7]
-Setelah insert(0, 0): [0, 3, 1, 4, 1, 5, 9, 2, 6, 7]
-Setelah remove(1): [0, 3, 4, 1, 5, 9, 2, 6, 7]
-Setelah pop(): [0, 3, 4, 1, 5, 9, 2, 6], yang diambil: 7
-Setelah sort(): [0, 1, 2, 3, 4, 5, 6, 9]
-Setelah reverse(): [9, 6, 5, 4, 3, 2, 1, 0]
-Jumlah kemunculan 1: 1
-Kuadrat 1-5: [1, 4, 9, 16, 25]`
+# Fungsi matematika
+tulis("Akar 16:", akar(16))
+tulis("Bulatkan 3.6:", bulat(3.6))
+tulis("2 pangkat 3:", pangkat(2, 3))`,
+        output: `Banyak elemen: 5
+Jumlah total: 29
+Nilai terkecil: 2
+Nilai terbesar: 10
+Elemen kedua sekarang: 7
+Rata-rata (pembulatan bawah): 6
+Akar 16: 4
+Bulatkan 3.6: 4
+2 pangkat 3: 8`
       },
       {
         id: 'dictionary',
-        title: 'Dictionary',
-        content: `Dictionary adalah struktur data yang menyimpan data dalam pasangan **key-value**.
+        title: 'Array Lanjutan (Nested Loop)',
+        content: `Array juga bisa berisi array lain (array multidimensi), misalnya matriks atau tabel. Untuk membaca seluruh isinya digunakan **perulangan berlapis (nested loop)** — satu \`untuk\` di dalam \`untuk\` yang lain.
 
-**Karakteristik:**
-- Ditulis dalam kurung kurawal \`{}\`
-- Setiap elemen berupa \`key: value\`
-- Key harus **unique** dan **immutable** (string, int, tuple)
-- Value bisa tipe apa saja
-- Diakses menggunakan key, bukan index
-- Bersifat mutable`,
-        codeExample: `# Membuat dictionary
-mahasiswa = {
-    "nama": "Budi",
-    "nim": "12345678",
-    "ipk": 3.75,
-    "aktif": True
-}
+Contoh array 2 dimensi (matriks 2 baris x 3 kolom). Elemen pada baris \`i\`, kolom \`j\` diakses dengan \`matriks[i][j]\`.
 
-# Akses value
-print(f"Nama: {mahasiswa['nama']}")
-print(f"NIM: {mahasiswa.get('nim', 'Tidak ada')}")
-print(f"Jurusan: {mahasiswa.get('jurusan', 'Belum ditentukan')}")
+Pola umum:
 
-# Looping dictionary
-print("\\nData mahasiswa:")
-for key, val in mahasiswa.items():
-    print(f"  {key}: {val}")
+    untuk i <- 1 sampai jumlah_baris
+      untuk j <- 1 sampai jumlah_kolom
+        # proses matriks[i][j]
+      akhiruntuk
+    akhiruntuk
 
-# Hanya key
-print(f"\\nKolom: {list(mahasiswa.keys())}")`,
-        output: `Nama: Budi
-NIM: 12345678
-Jurusan: Belum ditentukan
+Nilai \`panjang(matriks)\` menghitung jumlah baris, sedangkan \`panjang(matriks[1])\` menghitung jumlah kolom pada baris pertama.`,
+        codeExample: `# Matriks 2 baris x 3 kolom
+matriks <- [[2, 4, 6], [1, 3, 5]]
 
-Data mahasiswa:
-  nama: Budi
-  nim: 12345678
-  ipk: 3.75
-  aktif: True
+# Jumlah baris dan kolom
+tulis("Jumlah baris:", panjang(matriks))
+tulis("Jumlah kolom:", panjang(matriks[1]))
 
-Kolom: ['nama', 'nim', 'ipk', 'aktif']`
+# Membaca dengan perulangan berlapis
+tulis("Isi matriks:")
+untuk i <- 1 sampai panjang(matriks)
+  untuk j <- 1 sampai panjang(matriks[i])
+    tulis("Baris " + str(i) + " kolom " + str(j) + ":", matriks[i][j])
+  akhiruntuk
+akhiruntuk
+
+# Menjumlahkan seluruh elemen dengan loop berlapis
+total <- 0
+untuk i <- 1 sampai panjang(matriks)
+  untuk j <- 1 sampai panjang(matriks[i])
+    total <- total + matriks[i][j]
+  akhiruntuk
+akhiruntuk
+tulis("Jumlah seluruh elemen:", total)`,
+        output: `Jumlah baris: 2
+Jumlah kolom: 3
+Isi matriks:
+Baris 1 kolom 1: 2
+Baris 1 kolom 2: 4
+Baris 1 kolom 3: 6
+Baris 2 kolom 1: 1
+Baris 2 kolom 2: 3
+Baris 2 kolom 3: 5
+Jumlah seluruh elemen: 21`
       },
       {
         id: 'dictionary-method',
-        title: 'Operasi Dictionary',
-        content: `Beberapa operasi penting pada dictionary:
+        title: 'Statistik dan Pencarian pada Array',
+        content: `Array banyak dipakai untuk menghitung statistik sederhana dan mencari data.
 
-| Operasi | Contoh | Keterangan |
-|---------|--------|------------|
-| Tambah | d["key"] = val | Menambah elemen baru |
-| Ubah | d["key"] = val | Mengubah value |
-| Hapus | del d["key"] | Menghapus elemen |
-| Cek | "key" in d | Mengecek keberadaan key |
-| Length | len(d) | Jumlah elemen |
-| Update | d.update(d2) | Menggabungkan dictionary |
-| Clear | d.clear() | Menghapus semua elemen |
+Beberapa teknik yang umum:
+- **Rata-rata** — jumlah seluruh nilai dibagi banyaknya nilai: \`sum(data) div panjang(data)\`.
+- **Pencarian linier** — memeriksa setiap elemen dari indeks 1 sampai nilai yang dicari ditemukan.
+- **Keluar lebih awal** — gunakan \`keluar\` begitu nilai ditemukan agar pencarian berhenti.
 
-**Nested dictionary** — Dictionary dalam dictionary.`,
-        codeExample: `# Operasi dictionary
-kontak = {}
-kontak["Andi"] = "08123456"
-kontak["Budi"] = "08234567"
-kontak["Siti"] = "08345678"
-print(f"Kontak: {kontak}")
+Contoh berikut mencari nilai tertentu lalu menghitung berapa banyak nilai di atas rata-rata.`,
+        codeExample: `# Data nilai mahasiswa
+nilai <- [80, 65, 90, 75, 88]
 
-# Ubah value
-kontak["Budi"] = "08999999"
-print(f"Setelah update: {kontak}")
+# Rata-rata seluruh nilai
+rata <- sum(nilai) div panjang(nilai)
+tulis("Rata-rata:", rata)
 
-# Hapus
-del kontak["Siti"]
-print(f"Setelah hapus: {kontak}")
+# Nilai tertinggi dan terendah
+tulis("Tertinggi:", max(nilai))
+tulis("Terendah:", min(nilai))
 
-# Cek key
-print(f"Ada Andi? {"Andi" in kontak}")
+# Pencarian linier nilai 90
+cari <- 90
+ditemukan <- 0
+untuk i <- 1 sampai panjang(nilai)
+  jika nilai[i] = cari maka
+    ditemukan <- i
+    keluar
+  akhirjika
+akhiruntuk
 
-# Nested dictionary
-kelas = {
-    "A1": {"mahasiswa": 30, "wali": "Pak Budi"},
-    "A2": {"mahasiswa": 28, "wali": "Pak Ani"}
-}
+jika ditemukan <> 0 maka
+  tulis("Nilai " + str(cari) + " ditemukan di indeks " + str(ditemukan))
+selainnya
+  tulis("Nilai " + str(cari) + " tidak ditemukan")
+akhirjika
 
-print("\\nInfo Kelas:")
-for kelas_nama, info in kelas.items():
-    print(f"  {kelas_nama}: {info['mahasiswa']} mhs, Wali: {info['wali']}")`,
-        output: `Kontak: {'Andi': '08123456', 'Budi': '08234567', 'Siti': '08345678'}
-Setelah update: {'Andi': '08123456', 'Budi': '08999999', 'Siti': '08345678'}
-Setelah hapus: {'Andi': '08123456', 'Budi': '08999999'}
-Ada Andi? True
-
-Info Kelas:
-  A1: 30 mhs, Wali: Pak Budi
-  A2: 28 mhs, Wali: Pak Ani`
+# Menghitung nilai di atas rata-rata
+di_atas <- 0
+untuk i <- 1 sampai panjang(nilai)
+  jika nilai[i] > rata maka
+    di_atas <- di_atas + 1
+  akhirjika
+akhiruntuk
+tulis("Jumlah nilai di atas rata-rata:", di_atas)`,
+        output: `Rata-rata: 79
+Tertinggi: 90
+Terendah: 65
+Nilai 90 ditemukan di indeks 3
+Jumlah nilai di atas rata-rata: 3`
       }
     ],
-    summary: 'List menyimpan data berurutan dalam []. Dictionary menyimpan pasangan key-value dalam {}. Keduanya mutable dan memiliki banyak method bawaan.'
+    summary: 'Array menyimpan banyak nilai dalam satu variabel; indeks dimulai dari 1. Pakai untuk sampai/langkah, sum, min/max, akar, bulat, dan perulangan berlapis untuk mengolah data.'
   }
 ]

@@ -23,7 +23,7 @@ function AILog() {
 
   const exportJson = () => {
     const payload = {
-      app: 'PyLearn AI',
+      app: 'PseudoLearn AI',
       feature: 'AI Tutor Usage Log',
       summary: {
         totalConversations: aiConversations.length,

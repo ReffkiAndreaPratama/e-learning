@@ -93,7 +93,7 @@ function SUS() {
 
   const downloadJson = () => {
     const payload = {
-      app: 'PyLearn AI',
+      app: 'PseudoLearn AI',
       instrument: 'System Usability Scale (SUS)',
       results,
       average,
@@ -189,7 +189,7 @@ function SUS() {
             <h2 className="font-semibold text-gray-900 dark:text-white">Kuesioner SUS</h2>
           </div>
           <p className="text-xs text-gray-500 mb-5 flex items-center gap-1.5">
-            <Info className="w-3.5 h-3.5" /> Beri nilai 1 (Sangat Tidak Setuju) sampai 5 (Sangat Setuju) untuk setiap pernyataan berdasarkan pengalaman menggunakan PyLearn AI.
+            <Info className="w-3.5 h-3.5" /> Beri nilai 1 (Sangat Tidak Setuju) sampai 5 (Sangat Setuju) untuk setiap pernyataan berdasarkan pengalaman menggunakan PseudoLearn AI.
           </p>
 
           <div className="space-y-5">
